@@ -430,8 +430,8 @@ country_event = {
 				country_event = { id = annexs_u_puppets.2 hours = 2 }
 			}
 		every_state = {
-			limit = { OR { is_owned_by = RUS OWNER = { is_subject_of = RUS } } OWNER = { NOT = { tag = USR tag = ODS } } is_core_of = KUR }
-			KUR = { transfer_state = PREV }
+			limit = { OR { is_owned_by = RUS OWNER = { is_subject_of = RUS } } OWNER = { NOT = { tag = USR tag = ODS } } is_core_of = COU }
+			COU = { transfer_state = PREV }
 		}
 		RUS = { set_country_flag = RUS_brest_peace_white set_country_flag = RUS_brest_peace_fired }
 		hidden_effect = { FRA = { country_event = { id = treaty_of_brest.101 days = 3 } } ENG = { country_event = { id = treaty_of_brest.101 days = 3 } } }
@@ -448,11 +448,11 @@ country_event = {
 		#RUS = { white_peace = LUX }
 		RUS = {
 			if = {
-				limit = { RUS = { NOT = { controls_state = 341 controls_state = 860 controls_state = 949 } } }
+				limit = { RUS = { NOT = { controls_state = 341 controls_state = 797 controls_state = 949 } } }
 				random_country = {
 					limit = { original_tag = TUR exists = yes }
 					every_state = {
-						limit = { is_owned_by = RUS is_core_of = PREV NOT = { state = 341 state = 949 state = 860 state = 863 state = 864 state = 898 } }
+						limit = { is_owned_by = RUS is_core_of = PREV NOT = { state = 341 state = 949 state = 797 state = 863 state = 864 state = 898 } }
 						PREV = {
 							transfer_state = PREV
 						}
@@ -697,6 +697,7 @@ country_event = {
 	
 	option = {
 		name = treaty_of_brest.10.a #отправить делегацию
+		complete_national_focus = UKR_peace_negotiations_with_GER
 		GER = { country_event = treaty_of_brest.11 }
 		ai_chance = {
 			factor = 1
@@ -705,6 +706,7 @@ country_event = {
 	option = {
 		name = treaty_of_brest.10.b #мы будем воевать на стороне антанты
 		add_war_support = 0.05
+		complete_national_focus = UKR_war_for_freedom
 		trigger = {
 			is_ai = no
 		}
@@ -1951,7 +1953,7 @@ country_event = {
 						limit = {
 							OWNER = { OR = { is_subject_of = RUS original_tag = RUS original_tag = SLT } }
 							OR = {
-								state = 797
+								state = 860
 								AND = {
 									region = 132
 									NOT = { state = 215 }
@@ -2023,11 +2025,11 @@ country_event = {
 		}
 		RUS = {
 			if = {
-				limit = { RUS = { NOT = { controls_state = 341 controls_state = 860 controls_state = 949 } } }
+				limit = { RUS = { NOT = { controls_state = 341 controls_state = 797 controls_state = 949 } } }
 				random_country = {
 					limit = { original_tag = TUR exists = yes }
 					every_state = {
-						limit = { is_owned_by = RUS is_core_of = PREV NOT = { state = 341 state = 949 state = 860 state = 863 state = 864 state = 898 } }
+						limit = { is_owned_by = RUS is_core_of = PREV NOT = { state = 341 state = 949 state = 797 state = 863 state = 864 state = 898 } }
 						PREV = {
 							transfer_state = PREV
 						}
@@ -2422,11 +2424,11 @@ country_event = {
 		}
 		RUS = {
 			if = {
-				limit = { RUS = { NOT = { controls_state = 341 controls_state = 860 controls_state = 949 } } }
+				limit = { RUS = { NOT = { controls_state = 341 controls_state = 797 controls_state = 949 } } }
 				random_country = {
 					limit = { original_tag = TUR exists = yes }
 					every_state = {
-						limit = { is_owned_by = RUS is_core_of = PREV NOT = { state = 341 state = 949 state = 860 state = 863 state = 864 state = 898 } }
+						limit = { is_owned_by = RUS is_core_of = PREV NOT = { state = 341 state = 949 state = 797 state = 863 state = 864 state = 898 } }
 						PREV = {
 							transfer_state = PREV
 						}
@@ -3011,11 +3013,11 @@ country_event = {
 		#RUS = { white_peace = LUX }
 		RUS = {
 			if = {
-				limit = { RUS = { NOT = { controls_state = 341 controls_state = 860 controls_state = 949 } } }
+				limit = { RUS = { NOT = { controls_state = 341 controls_state = 797 controls_state = 949 } } }
 				random_country = {
 					limit = { original_tag = TUR exists = yes }
 					every_state = {
-						limit = { is_owned_by = RUS is_core_of = PREV NOT = { state = 341 state = 949 state = 860 state = 863 state = 864 state = 898 } }
+						limit = { is_owned_by = RUS is_core_of = PREV NOT = { state = 341 state = 949 state = 797 state = 863 state = 864 state = 898 } }
 						PREV = {
 							transfer_state = PREV
 						}
@@ -3145,11 +3147,11 @@ country_event = {
 					}
 			}
 			if = {
-				limit = { RUS = { NOT = { controls_state = 341 controls_state = 860 controls_state = 949 } } }
+				limit = { RUS = { NOT = { controls_state = 341 controls_state = 797 controls_state = 949 } } }
 				random_country = {
 					limit = { original_tag = TUR exists = yes }
 					every_state = {
-						limit = { is_owned_by = RUS is_core_of = PREV NOT = { state = 341 state = 949 state = 860 state = 863 state = 864 state = 898 } }
+						limit = { is_owned_by = RUS is_core_of = PREV NOT = { state = 341 state = 949 state = 797 state = 863 state = 864 state = 898 } }
 						PREV = {
 							transfer_state = PREV
 						}
@@ -3528,7 +3530,7 @@ country_event = {
 	
 	option = {
 		name = treaty_of_brest.52.a
-		country_event = treaty_of_brest.42 #treaty_of_brest.41
+		country_event = treaty_of_brest.41
 		RUS = { country_event = treaty_of_brest.53 }
 	}
 }
@@ -3663,7 +3665,7 @@ country_event = {
 		trigger = { has_country_flag = brest_hardest }
 		name = treaty_of_brest.61.e
 		set_capital = 219
-		GER = { country_event = treaty_of_brest.42 } #treaty_of_brest.41
+		GER = { country_event = treaty_of_brest.41 }
 		set_country_flag = RUS_fourth_allrussian_congress_of_soviets
 		clr_country_flag = Lenin_threatens_his_resignation
 		ai_chance = {
@@ -3741,7 +3743,7 @@ country_event = {
 	option = {
 		trigger = { has_country_flag = brest_hardest }
 		name = treaty_of_brest.62.e
-		GER = { country_event = treaty_of_brest.42 } #treaty_of_brest.41
+		GER = { country_event = treaty_of_brest.41 }
 		ai_chance = {
 			factor = 1
 		}
@@ -3752,6 +3754,187 @@ country_event = {
 		add_war_support = -0.075
 		ai_chance = {
 			factor = 1
+		}
+	}
+}
+# Предложение Украины если революционная война в РСФСР
+country_event = {
+	id = treaty_of_brest.71
+	title = treaty_of_brest.71.t
+	desc = treaty_of_brest.71.d
+	picture = GFX_report_event_februrary_revolution
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		UKR = { add_timed_idea = { idea = brest_negotiation_truce_Russia_and_allies days = 170 } }
+		GER = { add_timed_idea = { idea = brest_negotiation_truce_small_Central_powers days = 170 } }
+		AUH = { add_timed_idea = { idea = brest_negotiation_truce_small_Central_powers days = 170 } }
+		BUL = { add_timed_idea = { idea = brest_negotiation_truce_small_Central_powers days = 170 } }
+		TUR = { add_timed_idea = { idea = brest_negotiation_truce_small_Central_powers days = 170 } }
+	}
+	
+	option = {
+		name = treaty_of_brest.71.a #начать переговоры по сепаратному миру с Украиной
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				NOT = { surrender_progress > 0.2 }
+			}
+			modifier = {
+				factor = 0
+				OR = {
+					has_government = communism
+					has_government = radical_socialism
+					has_government = social_democracy
+				}
+			}
+		}
+		UKR = { country_event = { id = treaty_of_brest.72 days = 3 } }
+	}
+	option = {
+		name = treaty_of_brest.71.b #немедленный демократический мир без аннексий и контрибуций
+		ai_chance = {
+			factor = 0
+			modifier = {
+				add = 99999
+				surrender_progress > 0.2
+			}
+			modifier = {
+				add = 99999
+				NOT = {
+					OR = {
+						controls_state = 763
+						controls_state = 85
+						controls_state = 62
+						controls_state = 64
+						controls_state = 87
+						controls_state = 1115
+						controls_state = 88
+					}
+				}
+			}
+			modifier = {
+				add = 99999
+				OR = {
+					has_government = communism
+					has_government = radical_socialism
+					has_government = social_democracy
+				}
+			}
+		}
+		UKR = { country_event = treaty_of_brest.73 }
+	}
+	option = {
+		name = treaty_of_brest.2.c #война до победного конца
+		trigger = { always = no }
+		ai_chance = {
+			factor = 0
+		}
+		UKR = { country_event = treaty_of_brest.74 }
+	}
+}
+
+# Мир с вводом немецких войск
+country_event = {
+	id = treaty_of_brest.72
+	title = treaty_of_brest.72.t
+	desc = treaty_of_brest.72.d
+	picture = GFX_report_event_februrary_revolution
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = treaty_of_brest.72.a
+		every_country = {
+			limit = {
+				OR = {
+					has_idea = brest_negotiation_truce_Russia_and_allies
+					has_idea = brest_negotiation_truce_small_Central_powers
+				}
+			}
+			remove_ideas = {
+				brest_negotiation_truce_Russia_and_allies
+				brest_negotiation_truce_small_Central_powers
+			}
+		}
+		every_country = {
+			limit = { OR = { tag = GER tag = AUH tag = SNS tag = TRG tag = TUR is_in_faction_with = GER is_in_faction_with = AUH is_in_faction_with = SNS is_in_faction_with = TRG is_in_faction_with = TUR AND = { is_in_faction_with = BUL NOT = { is_in_faction_with = ENG } } } OR = { is_faction_leader = yes is_in_faction = no } }
+			white_peace = UKR
+		}
+		UKR = {
+			if = {
+				limit = { is_faction_leader = no is_in_faction_with = ENG }
+				leave_faction = yes
+			}
+			add_stability = 0.1
+		}
+		GER = { UKR = { subjecting_script_with_transfer_parties_dominion = yes } }
+	}
+}
+
+# Немедленный демократический мир без аннексий и контрибуций
+country_event = {
+	id = treaty_of_brest.73
+	title = treaty_of_brest.73.t
+	desc = treaty_of_brest.73.d
+	picture = GFX_report_event_februrary_revolution
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = treaty_of_brest.73.a
+		every_country = {
+			limit = {
+				OR = {
+					has_idea = brest_negotiation_truce_Russia_and_allies
+					has_idea = brest_negotiation_truce_small_Central_powers
+				}
+			}
+			remove_ideas = {
+				brest_negotiation_truce_Russia_and_allies
+				brest_negotiation_truce_small_Central_powers
+			}
+		}
+		every_country = {
+			limit = { OR = { tag = GER tag = AUH tag = SNS tag = TRG tag = TUR is_in_faction_with = GER is_in_faction_with = AUH is_in_faction_with = SNS is_in_faction_with = TRG is_in_faction_with = TUR AND = { is_in_faction_with = BUL NOT = { is_in_faction_with = ENG } } } OR = { is_faction_leader = yes is_in_faction = no } }
+			white_peace = UKR
+		}
+		UKR = {
+			if = {
+				limit = { is_faction_leader = no is_in_faction_with = ENG }
+				leave_faction = yes
+			}
+			add_stability = 0.1
+		}
+	}
+}
+
+# Отказ немцев от переговоров с хохлами
+country_event = {
+	id = treaty_of_brest.74
+	title = treaty_of_brest.74.t
+	desc = treaty_of_brest.74.d
+	picture = GFX_report_event_februrary_revolution
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = treaty_of_brest.74.a
+		add_war_support = 0.2
+		complete_national_focus = UKR_war_for_freedom
+		every_country = {
+			limit = {
+				OR = {
+					has_idea = brest_negotiation_truce_Russia_and_allies
+					has_idea = brest_negotiation_truce_small_Central_powers
+				}
+			}
+			remove_ideas = {
+				brest_negotiation_truce_Russia_and_allies
+				brest_negotiation_truce_small_Central_powers
+			}
 		}
 	}
 }
@@ -3944,12 +4127,12 @@ country_event = {
 				}
 				else = {
 					every_state = {
-						limit = { OR = { is_core_of = KUR state = 12 } is_owned_by = RUS NOT = { is_controlled_by = RUS } }
-						KUR = { transfer_state = PREV }
+						limit = { OR = { is_core_of = COU state = 12 } is_owned_by = RUS NOT = { is_controlled_by = RUS } }
+						COU = { transfer_state = PREV }
 					}
 					RUS = {
 						declare_war_on = {
-							target = KUR
+							target = COU
 							type = annex_everything
 						}
 					}

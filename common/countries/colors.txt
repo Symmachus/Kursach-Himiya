@@ -515,7 +515,7 @@ PAP = {
 	color = rgb { 211 220 178 }
 	color_ui = rgb { 248 229 12 }
 }
-KUR = {
+COU = {
 	color = rgb { 99 137 153 }
 	color_ui = rgb { 99 137 153 }
 }
@@ -594,9 +594,20 @@ RUS = {
 	color = rgb { 88 97 154 }
 	color_ui = rgb { 59 72 244 }
 }
+
 MCW = {
 	color = rgb { 122 80 84 }
 	color_ui = rgb { 122 80 84 }
+}
+
+YAR = {
+	color = rgb { 131 141 142 }
+	color_ui = rgb { 131 141 142 }
+}
+
+NVA = {
+	color = rgb { 131 141 142 }
+	color_ui = rgb { 131 141 142 }
 }
 
 SIB = {
@@ -630,6 +641,10 @@ PRM = {
 FER = {
 	color = rgb { 0 91 187 }
 	color_ui = rgb { 0 91 187 }
+}
+HRB = {
+	color = rgb { 255 120 101 }
+	color_ui = rgb { 255 120 101 }
 }
 
 CPG = {
@@ -685,6 +700,10 @@ ODS = {
 FRT = {
 	color = rgb { 15 15 15 }
 	color_ui = rgb { 8 8 8 }
+}
+GRG = {
+	color = rgb { 31 131 60 }
+	color_ui = rgb { 31 131 60 }
 }
 
 KRN = {

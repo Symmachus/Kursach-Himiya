@@ -6,6 +6,8 @@ set_stability = 0.9
 set_war_support = 0.3
 set_convoys = 25
 
+add_random_ministers = yes
+add_random_ministers = yes
 set_research_slots = 2
 
 set_technology = {
@@ -106,6 +108,7 @@ set_technology = {
 		# Industry
 		basic_manual_machine_tools = 1
 		improved_manual_machine_tools = 1
+		basic_machine_tools = 1
 		high_volume_industrial_production = 1
 		industrial_railways = 1
 		

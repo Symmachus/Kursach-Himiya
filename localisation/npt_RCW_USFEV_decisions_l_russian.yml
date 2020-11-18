@@ -1,5 +1,12 @@
 ﻿l_russian:
  
+ forming_ural_gonvernment:0 "Создание Временного областного правительства Урала"
+ forming_ural_gonvernment_desc:0 "Мы можем создать в Екатеринбурге буферное правительство, которое будет мало что решать, но ликвидирует напряжённость на границе между двумя антибольшевистскими правительствами."
+ destruction_ural_gonvernment:0 "Интегрировать [URL.GetName]"
+ destruction_ural_gonvernment_desc:0 "В виду изменения внешнеполитической обстановке в этом буфере больше нет смысла, поэтому мы должны присоединить его."
+ whites_captured_TAN:0 "Захват Танну-Тувы"
+ 
+ 
  rcw_Caucasian_raids_DON_desisions:0 "Набеги в Закавказье"
  raid_to_Samur:0 "Рейд за Самур"
  raid_to_Kahetiya:0 "Вторжение в Кахетию"
@@ -33,7 +40,19 @@
  BKL_reform_BRY_units:0 "Реформировать бурятские отряды"
  BKL_create_ZKL:0 "Поддержать Дальневосточную краевую раду"
  
+ BKL_REO_integrate_PRM:0 "Интегрировать [PRM.GetName]"
  
+ BKL_eser_retreate_to_west:0 "Отступление на запад"
+ 
+ rcw_BKL_coup_in_PRM_decisions: "Переворот во Владивостоке"
+ 
+ send_troops_to_PRM: "Перебросить солдат в Приморье"
+ take_support_from_PRM_cossacks: "Заручиться поддержкой казаков"
+ politactivities_in_PRM: "Политическая работа в Приморье"
+ call_JAP_support_for_PRM: "Запросить поддержку японский войск"
+ send_eq_to_ukranians_of_PRM: "Спонсировать украинцев Закитайщины"
+ pressure_by_authority_to_PRM: "Давление полномочиями"
+ coup_in_PRM: "Переворот!"
  
  
  form_RF_category:0 "Федерализация"
@@ -63,7 +82,7 @@
  integrate_local_administration_in_non_core_1040:0 "Интегрировать администрацию в регионе [1040.GetName]"
  integrate_local_administration_in_non_core_717:0 "Интегрировать администрацию в регионе [717.GetName]"
  integrate_local_administration_in_non_core_951:0 "Интегрировать администрацию в регионе [951.GetName]"
- integrate_local_administration_in_non_core_798:0 "Интегрировать администрацию в регионе [798.GetName]"
+ integrate_local_administration_in_non_core_1209:0 "Интегрировать администрацию в регионе [1209.GetName]"
  integrate_local_administration_in_non_core_950:0 "Интегрировать администрацию в регионе [950.GetName]"
  integrate_local_administration_in_non_core_714:0 "Интегрировать администрацию в регионе [714.GetName]"
  integrate_local_administration_in_non_core_761:0 "Интегрировать администрацию в регионе [761.GetName]"

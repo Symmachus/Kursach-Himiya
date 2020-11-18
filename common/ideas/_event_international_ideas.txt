@@ -73,6 +73,17 @@ ideas = {
 				attack_bonus_against = -10
 			}
 		}
+
+		brest_negotiation_truce_small_Central_powers = {
+			removal_cost = -1
+			
+			picture = truce_for_duration_of_negotiations
+			
+			targeted_modifier = {
+				tag = UKR
+				attack_bonus_against = -10
+			}
+		}
 		
 		alliance_neutrality = {
 			removal_cost = -1
@@ -98,6 +109,7 @@ ideas = {
 			}
 		}
 		
+
 		ROM_bonus_against_Central_powers = {
 			removal_cost = -1
 			
@@ -149,6 +161,20 @@ ideas = {
 			}
 			modifier = {
 				surrender_limit = 0.3
+			}
+		}
+		
+		TUR_bonus_against_RUS_WW1 = {
+			removal_cost = -1
+			
+			available = { has_war_with = RUS has_capitulated = no }
+			cancel_if_invalid = yes
+			
+			picture = kostyl
+			
+			targeted_modifier = {
+				tag = RUS
+				defense_bonus_against = 0.3
 			}
 		}
 	}

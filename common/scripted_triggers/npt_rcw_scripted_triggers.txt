@@ -22,6 +22,7 @@ former_russian_empire_ukraine_country = {
 		original_tag = USR
 		original_tag = ODS
 		original_tag = FRT
+		original_tag = GRG
 		original_tag = CRI
 	}
 }
@@ -60,6 +61,7 @@ is_any_former_russian_empire_country = {
 		original_tag = WVA
 		original_tag = URL
 		original_tag = MCW
+		original_tag = YAR
 		
 		original_tag = KHI
 		original_tag = BUK
@@ -94,6 +96,7 @@ is_former_russian_empire_russian_settled_non_cossack_country = {
 		original_tag = WVA
 		original_tag = URL
 		original_tag = MCW
+		original_tag = YAR
 		original_tag = CRI
 		
 		original_tag = KRN
@@ -124,6 +127,7 @@ is_former_russian_empire_settled_non_cossack_country = {
 		original_tag = PRM
 		original_tag = URL
 		original_tag = MCW
+		original_tag = YAR
 		
 		original_tag = KHI
 		original_tag = BUK
@@ -150,6 +154,7 @@ is_main_former_russian_empire_country_without_other_triggers = {
 		original_tag = NRR
 		original_tag = RGR
 		original_tag = MCW
+		original_tag = YAR
 	}
 }
 is_main_former_russian_empire_country = {
@@ -185,6 +190,7 @@ is_main_former_russian_empire_country = {
 		}
 		original_tag = RGR
 		original_tag = MCW
+		original_tag = YAR
 	}
 }
 is_main_former_russian_empire_country_exept_Siberia = {
@@ -216,6 +222,7 @@ is_main_former_russian_empire_country_exept_Siberia = {
 		}
 		original_tag = RGR
 		original_tag = MCW
+		original_tag = YAR
 	}
 }
 russian_country_can_call_national_assambly = {

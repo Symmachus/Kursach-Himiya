@@ -135,6 +135,22 @@ bookmarks = {
 				BUL_san_stefan_ideal
 			}
 		}
+		
+		"BKL"={
+			minor = yes
+			history = "BKL_RUSSIANREVOLUTION_DESC"
+			ideology = authoritarism
+			ideas = {
+				cossaks_regionalism
+				help_from_foreign_interventionists
+				marching_army_idea
+			}
+			focuses = {
+				BKL_base_preparation
+				BKL_provisional_regional_government
+				BKL_government_of_the_REO
+			}
+		}
 
 		"DON"={
 			minor = yes
@@ -149,6 +165,23 @@ bookmarks = {
 				DON_Don_Peoples_Republic
 				DON_Don_Caucasian_Union
 				DON_Cazakiya
+			}
+		}
+
+
+		"UKR"={
+			minor = yes
+			history = "UKR_RUSSIANREVOLUTION_DESC"
+			ideology = social_liberalism
+			ideas = {
+				UKR_weak_cultural_influence
+				UKR_weak_state_suppression_apparatus_1
+				UKR_lack_of_officers
+			}
+			focuses = {
+				UKR_kkor
+				UKR_interfere_with_the_congress
+				UKR_war_against_Russia
 			}
 		}
 
@@ -179,6 +212,9 @@ bookmarks = {
 			}
 			RUS = {
 				set_variable = { var = global.num_of_allrussian_congress_of_soviets value = 1 }
+			}
+			UKR = {
+				set_variable = { var = global.num_of_universal value = 3 }
 			}
 			CRI = {
 				country_event = { id = rcw.32 hours = 2 }

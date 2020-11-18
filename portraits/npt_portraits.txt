@@ -581,7 +581,6 @@ CPG = {
 			"gfx/leaders/generic_russia_7.dds"
 			"gfx/leaders/generic_russia_8.dds"
 			"gfx/leaders/generic_russia_9.dds"
-			"gfx/leaders/generic_russia_10.dds"
 		}
 	}
 	
@@ -621,7 +620,7 @@ CPG = {
 		}
 		national_syndicalism = {
 				male = { 
-					"gfx/leaders/generic_russia_8.dds" 
+					"gfx/leaders/generic_russia_8.dds"
 			}
 		}
 	}
@@ -644,7 +643,6 @@ PRM = {
 			"gfx/leaders/generic_russia_7.dds"
 			"gfx/leaders/generic_russia_8.dds"
 			"gfx/leaders/generic_russia_9.dds"
-			"gfx/leaders/generic_russia_10.dds"
 		}
 	}
 	
@@ -684,7 +682,7 @@ PRM = {
 		}
 		national_syndicalism = {
 				male = { 
-					"gfx/leaders/generic_russia_8.dds" 
+					"gfx/leaders/generic_russia_8.dds"
 			}
 		}
 	}
@@ -707,7 +705,6 @@ SIB = {
 			"gfx/leaders/generic_russia_7.dds"
 			"gfx/leaders/generic_russia_8.dds"
 			"gfx/leaders/generic_russia_9.dds"
-			"gfx/leaders/generic_russia_10.dds"
 		}
 	}
 	
@@ -747,7 +744,7 @@ SIB = {
 		}
 		national_syndicalism = {
 				male = { 
-					"gfx/leaders/generic_russia_8.dds" 
+					"gfx/leaders/generic_russia_8.dds"
 			}
 		}
 	}
@@ -770,7 +767,6 @@ BKL = {
 			"gfx/leaders/generic_russia_7.dds"
 			"gfx/leaders/generic_russia_8.dds"
 			"gfx/leaders/generic_russia_9.dds"
-			"gfx/leaders/generic_russia_10.dds"
 		}
 	}
 	
@@ -810,7 +806,7 @@ BKL = {
 		}
 		national_syndicalism = {
 				male = { 
-					"gfx/leaders/generic_russia_8.dds" 
+					"gfx/leaders/generic_russia_8.dds"
 			}
 		}
 	}
@@ -875,7 +871,6 @@ RUS = {
 			"gfx/leaders/generic_russia_7.dds"
 			"gfx/leaders/generic_russia_8.dds"
 			"gfx/leaders/generic_russia_9.dds"
-			"gfx/leaders/generic_russia_10.dds"
 		}
 	}
 	
@@ -915,7 +910,7 @@ RUS = {
 		}
 		national_syndicalism = {
 				male = { 
-					"gfx/leaders/generic_russia_8.dds" 
+					"gfx/leaders/generic_russia_8.dds"
 			}
 		}
 	}
@@ -938,7 +933,6 @@ RSS = {
 			"gfx/leaders/generic_russia_7.dds"
 			"gfx/leaders/generic_russia_8.dds"
 			"gfx/leaders/generic_russia_9.dds"
-			"gfx/leaders/generic_russia_10.dds"
 		}
 	}
 	
@@ -978,7 +972,7 @@ RSS = {
 		}
 		national_syndicalism = {
 				male = { 
-					"gfx/leaders/generic_russia_8.dds" 
+					"gfx/leaders/generic_russia_8.dds"
 			}
 		}
 	}
@@ -1001,7 +995,6 @@ CCA = {
 			"gfx/leaders/generic_russia_7.dds"
 			"gfx/leaders/generic_russia_8.dds"
 			"gfx/leaders/generic_russia_9.dds"
-			"gfx/leaders/generic_russia_10.dds"
 		}
 	}
 	
@@ -1041,7 +1034,7 @@ CCA = {
 		}
 		national_syndicalism = {
 				male = { 
-					"gfx/leaders/generic_russia_8.dds" 
+					"gfx/leaders/generic_russia_8.dds"
 			}
 		}
 	}
@@ -1064,7 +1057,6 @@ OCH = {
 			"gfx/leaders/generic_russia_7.dds"
 			"gfx/leaders/generic_russia_8.dds"
 			"gfx/leaders/generic_russia_9.dds"
-			"gfx/leaders/generic_russia_10.dds"
 		}
 	}
 	
@@ -1104,7 +1096,7 @@ OCH = {
 		}
 		national_syndicalism = {
 				male = { 
-					"gfx/leaders/generic_russia_8.dds" 
+					"gfx/leaders/generic_russia_8.dds"
 			}
 		}
 	}
@@ -1127,7 +1119,6 @@ DON = {
 			"gfx/leaders/generic_russia_7.dds"
 			"gfx/leaders/generic_russia_8.dds"
 			"gfx/leaders/generic_russia_9.dds"
-			"gfx/leaders/generic_russia_10.dds"
 		}
 	}
 	
@@ -1167,7 +1158,7 @@ DON = {
 		}
 		national_syndicalism = {
 				male = { 
-					"gfx/leaders/generic_russia_8.dds" 
+					"gfx/leaders/generic_russia_8.dds"
 			}
 		}
 	}
@@ -1190,7 +1181,6 @@ KUB = {
 			"gfx/leaders/generic_russia_7.dds"
 			"gfx/leaders/generic_russia_8.dds"
 			"gfx/leaders/generic_russia_9.dds"
-			"gfx/leaders/generic_russia_10.dds"
 		}
 	}
 	
@@ -1230,7 +1220,7 @@ KUB = {
 		}
 		national_syndicalism = {
 				male = { 
-					"gfx/leaders/generic_russia_8.dds" 
+					"gfx/leaders/generic_russia_8.dds"
 			}
 		}
 	}
@@ -1253,7 +1243,6 @@ VLG = {
 			"gfx/leaders/generic_russia_7.dds"
 			"gfx/leaders/generic_russia_8.dds"
 			"gfx/leaders/generic_russia_9.dds"
-			"gfx/leaders/generic_russia_10.dds"
 		}
 	}
 	
@@ -1316,7 +1305,6 @@ KRN = {
 			"gfx/leaders/generic_russia_7.dds"
 			"gfx/leaders/generic_russia_8.dds"
 			"gfx/leaders/generic_russia_9.dds"
-			"gfx/leaders/generic_russia_10.dds"
 		}
 	}
 	
@@ -1379,7 +1367,6 @@ MCW = {
 			"gfx/leaders/generic_russia_7.dds"
 			"gfx/leaders/generic_russia_8.dds"
 			"gfx/leaders/generic_russia_9.dds"
-			"gfx/leaders/generic_russia_10.dds"
 		}
 	}
 	
@@ -1419,7 +1406,7 @@ MCW = {
 		}
 		national_syndicalism = {
 				male = { 
-					"gfx/leaders/generic_russia_8.dds" 
+					"gfx/leaders/generic_russia_8.dds"
 			}
 		}
 	}
@@ -1442,7 +1429,6 @@ SCH = {
 			"gfx/leaders/generic_russia_7.dds"
 			"gfx/leaders/generic_russia_8.dds"
 			"gfx/leaders/generic_russia_9.dds"
-			"gfx/leaders/generic_russia_10.dds"
 		}
 	}
 	
@@ -1482,7 +1468,7 @@ SCH = {
 		}
 		national_syndicalism = {
 				male = { 
-					"gfx/leaders/generic_russia_8.dds" 
+					"gfx/leaders/generic_russia_8.dds"
 			}
 		}
 	}
@@ -1505,7 +1491,6 @@ NRR = {
 			"gfx/leaders/generic_russia_7.dds"
 			"gfx/leaders/generic_russia_8.dds"
 			"gfx/leaders/generic_russia_9.dds"
-			"gfx/leaders/generic_russia_10.dds"
 		}
 	}
 	
@@ -1545,7 +1530,7 @@ NRR = {
 		}
 		national_syndicalism = {
 				male = { 
-					"gfx/leaders/generic_russia_8.dds" 
+					"gfx/leaders/generic_russia_8.dds"
 			}
 		}
 	}
@@ -1568,7 +1553,6 @@ NWA = {
 			"gfx/leaders/generic_russia_7.dds"
 			"gfx/leaders/generic_russia_8.dds"
 			"gfx/leaders/generic_russia_9.dds"
-			"gfx/leaders/generic_russia_10.dds"
 		}
 	}
 	
@@ -1608,7 +1592,7 @@ NWA = {
 		}
 		national_syndicalism = {
 				male = { 
-					"gfx/leaders/generic_russia_8.dds" 
+					"gfx/leaders/generic_russia_8.dds"
 			}
 		}
 	}
@@ -1631,7 +1615,6 @@ WVA = {
 			"gfx/leaders/generic_russia_7.dds"
 			"gfx/leaders/generic_russia_8.dds"
 			"gfx/leaders/generic_russia_9.dds"
-			"gfx/leaders/generic_russia_10.dds"
 		}
 	}
 	
@@ -1671,7 +1654,7 @@ WVA = {
 		}
 		national_syndicalism = {
 				male = { 
-					"gfx/leaders/generic_russia_8.dds" 
+					"gfx/leaders/generic_russia_8.dds"
 			}
 		}
 	}
@@ -1694,7 +1677,6 @@ RVA = {
 			"gfx/leaders/generic_russia_7.dds"
 			"gfx/leaders/generic_russia_8.dds"
 			"gfx/leaders/generic_russia_9.dds"
-			"gfx/leaders/generic_russia_10.dds"
 		}
 	}
 	
@@ -1734,7 +1716,7 @@ RVA = {
 		}
 		national_syndicalism = {
 				male = { 
-					"gfx/leaders/generic_russia_8.dds" 
+					"gfx/leaders/generic_russia_8.dds"
 			}
 		}
 	}

@@ -6,6 +6,8 @@ set_stability = 0.75
 set_war_support = 0.3
 set_convoys = 10
 
+add_random_ministers = yes
+add_random_ministers = yes
 set_research_slots = 2
 
 set_technology = {
@@ -188,4 +190,5 @@ create_corps_commander = { name = "Vladimir Tolstov" id = 89152 portrait_path = 
 
 add_ideas = {
 	cossaks_regionalism
+	marching_army_idea
 }

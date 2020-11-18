@@ -56,7 +56,7 @@ country_event = {
 			every_unit_leader = { limit = { has_id = 77299 } set_nationality = BKL }
 			BKL = {
 				#transfer_state = 761
-				#transfer_state = 798
+				#transfer_state = 1209
 				transfer_state = 950
 				#transfer_state = 951
 				add_ideas = neutral_foreign_policy_law
@@ -525,7 +525,11 @@ country_event = {
 		}
 		every_state = {
 			limit = {
-				is_owned_by = RUS
+				OR = {
+					is_owned_by = RUS
+					is_owned_by = FER
+					is_owned_by = HRB
+				}
 				OR = {
 					state = 717
 					state = 560
@@ -612,7 +616,11 @@ country_event = {
 		}
 		every_state = {
 			limit = {
-				is_owned_by = RUS
+				OR = {
+					is_owned_by = RUS
+					is_owned_by = FER
+					is_owned_by = HRB
+				}
 				OR = {
 					state = 717
 					state = 560
@@ -2617,6 +2625,19 @@ country_event = {
 	
 	option = {
 		name = rcw_usfev.21.a
+		if = {
+			limit = {
+				tag = SIB
+				has_country_leader = { name = "Ivan Mikhailov" ruling_only = yes }
+				has_government = social_conservatism
+			}
+			set_party_name = {
+				ideology = social_conservatism
+				long_name = SIB_despotism_party_long
+				name = SIB_despotism_party
+			}
+			set_country_flag = Ivan_Mikhailov_dead
+		}
 		kill_country_leader = yes
 		add_political_power = -50
 		add_stability = -0.05
@@ -3349,7 +3370,7 @@ country_event = {
 		if = {
 				limit = { BKL = { exists = yes } OR = { SIB = { controls_state = 651 } SIB = { controls_state = 251 } } }
 				every_state = {
-					limit = { OR = { OR = { is_core_of = BKL is_controlled_by = BKL } OR = { state = 950 state = 761 state = 714 state = 798 state = 717 } } is_owned_by = RUS }
+					limit = { OR = { OR = { is_core_of = BKL is_controlled_by = BKL } OR = { state = 950 state = 761 state = 714 state = 1209 state = 717 } } is_owned_by = RUS }
 					BKL = { transfer_state = PREV }
 					remove_core_of = RUS
 				}
@@ -3400,7 +3421,7 @@ country_event = {
 							state = 653
 							state = 761
 							state = 714
-							state = 798
+							state = 1209
 							state = 573
 							state = 582
 							state = 651
@@ -3454,7 +3475,7 @@ country_event = {
 						state = 653
 						state = 761
 						state = 714
-						state = 798
+						state = 1209
 						state = 573
 						state = 582
 						state = 651
@@ -3750,7 +3771,7 @@ country_event = {
 	
 	option = {
 		name = rcw_usfev.55.c #Пепеляев
-		trigger = { has_country_leader = { name = "Viktor Pepelyaev" ruling_only = no } }
+		trigger = { OR = { has_country_leader = { name = "Viktor Pepelyaev" ruling_only = no } has_country_leader = { name = "Anatoly Pepelyaev" ruling_only = no } } }
 		set_politics = { ruling_party = national_syndicalism }
 		add_ideas = military_dictatorship_gov_form
 		add_stability = -0.15
@@ -3833,6 +3854,8 @@ country_event = {
 	
 	is_triggered_only = yes
 	
+	trigger = { NOT = { has_country_flag = Ivan_Mikhailov_dead } }
+	
 	immediate = {
 		hidden_effect = {
 			set_country_flag = Alexander_Novosyolov_dead
@@ -3844,6 +3867,15 @@ country_event = {
 		add_popularity = { ideology = social_liberalism popularity = 0.1 }
 		add_popularity = { ideology = social_democracy popularity = 0.05 }
 		add_stability = -0.1
+		if = {
+			limit = { has_country_leader = { name = "Ivan Mikhailov" ruling_only = yes } }
+			retire_country_leader = yes
+			set_party_name = {
+				ideology = social_conservatism
+				long_name = SIB_despotism_party_long
+				name = SIB_despotism_party
+			}
+		}
 	}
 	
 	option = {
@@ -3920,6 +3952,7 @@ country_event = {
 				has_country_leader = { name = "Alexey Grishin-Almazov" ruling_only = yes }
 				has_country_leader = { name = "Ivan Mikhailov" ruling_only = yes }
 				has_country_leader = { name = "Viktor Pepelyaev" ruling_only = yes }
+				has_country_leader = { name = "Anatoly Pepelyaev" ruling_only = yes }
 				has_country_leader = { name = "Konstantin Sakharov" ruling_only = yes }
 				has_country_leader = { name = "Mikhail Diterihs" ruling_only = yes }
 				has_country_leader = { name = "Vyacheslav Volkov" ruling_only = yes }
@@ -3942,7 +3975,10 @@ country_event = {
 	title = {
 		text = rcw_usfev.58.t_3 #Речь Пепеляева
 		trigger = {
-			has_country_leader = { name = "Viktor Pepelyaev" ruling_only = yes }
+			OR = {
+				has_country_leader = { name = "Viktor Pepelyaev" ruling_only = yes }
+				has_country_leader = { name = "Anatoly Pepelyaev" ruling_only = yes }
+			}
 		}
 	}
 	title = {
@@ -3976,6 +4012,7 @@ country_event = {
 				has_country_leader = { name = "Alexey Grishin-Almazov" ruling_only = yes }
 				has_country_leader = { name = "Ivan Mikhailov" ruling_only = yes }
 				has_country_leader = { name = "Viktor Pepelyaev" ruling_only = yes }
+				has_country_leader = { name = "Anatoly Pepelyaev" ruling_only = yes }
 				has_country_leader = { name = "Konstantin Sakharov" ruling_only = yes }
 				has_country_leader = { name = "Mikhail Diterihs" ruling_only = yes }
 				has_country_leader = { name = "Vyacheslav Volkov" ruling_only = yes }
@@ -3998,7 +4035,10 @@ country_event = {
 	desc = {
 		text = rcw_usfev.58.desc_3 #Речь Пепеляева
 		trigger = {
-			has_country_leader = { name = "Viktor Pepelyaev" ruling_only = yes }
+			OR = {
+				has_country_leader = { name = "Viktor Pepelyaev" ruling_only = yes }
+				has_country_leader = { name = "Anatoly Pepelyaev" ruling_only = yes }
+			}
 		}
 	}
 	desc = {
@@ -4078,7 +4118,10 @@ country_event = {
 	
 	option = {
 		trigger = {
-			has_country_leader = { name = "Viktor Pepelyaev" ruling_only = yes }
+			OR = {
+				has_country_leader = { name = "Viktor Pepelyaev" ruling_only = yes }
+				has_country_leader = { name = "Anatoly Pepelyaev" ruling_only = yes }
+			}
 		}
 		name = rcw_usfev.58.c
 		add_political_power = -40
@@ -4087,7 +4130,10 @@ country_event = {
 	}
 	option = {
 		trigger = {
-			has_country_leader = { name = "Viktor Pepelyaev" ruling_only = yes }
+			OR = {
+				has_country_leader = { name = "Viktor Pepelyaev" ruling_only = yes }
+				has_country_leader = { name = "Anatoly Pepelyaev" ruling_only = yes }
+			}
 		}
 		name = rcw_usfev.58.c_1
 		add_political_power = -60
@@ -5914,7 +5960,11 @@ country_event = {
 		}
 		every_state = {
 			limit = {
-				is_owned_by = RUS
+				OR = {
+					is_owned_by = RUS
+					is_owned_by = FER
+					is_owned_by = HRB
+				}
 				OR = {
 					state = 717
 					state = 560
@@ -6004,7 +6054,11 @@ country_event = {
 		}
 		every_state = {
 			limit = {
-				is_owned_by = RUS
+				OR = {
+					is_owned_by = RUS
+					is_owned_by = FER
+					is_owned_by = HRB
+				}
 				OR = {
 					state = 717
 					state = 560
@@ -6154,7 +6208,7 @@ country_event = {
 	}
 }
 
-###Опасный Гайда в Приморье###
+###Опасный Гайда в Приморье### Требования ген. Гайды
 country_event = {
 	id = rcw_usfev.98
 	title = rcw_usfev.98.t
@@ -6190,6 +6244,7 @@ country_event = {
 		}
 		every_unit_leader = { limit = { OR = { has_id = 92354 } } promote_leader = yes }
 		add_popularity = { ideology = social_liberalism popularity = 0.05 }
+		add_ideas = Radola_Gaida_army_chief
 	}
 	option = {
 		name = rcw_usfev.98.b
@@ -8668,8 +8723,13 @@ country_event = {
 		NOT = { has_global_flag = RUS_civil_war_over }
 		OR = {
 			tag = BKL
+			tag = BRY
 			tag = SIB
 			is_main_former_russian_empire_country = yes
+		}
+		OR = {
+			has_completed_focus = BKL_government_of_the_REO
+			NOT = { has_focus_tree = Transbaikal_white_cossaks_focus has_focus_tree = Transbaikal_white_cossaks_late_focus }
 		}
 		MON = { exists = yes has_government = despotism any_neighbor_country = { any_other_country = { has_war_with = PREV has_government = communism } } }
 		any_unit_leader = { has_id = 77402 }
@@ -8791,8 +8851,32 @@ country_event = {
 ###Напряжение на линии соприкосновения Сибири и КОМУЧ###
 country_event = {
 	id = rcw_usfev.158
-	title = rcw_usfev.158.t
-	desc = rcw_usfev.158.desc
+	
+	title = {
+		text = rcw_usfev.158.t_1
+		trigger = {
+			tag = SIB
+		}
+	}
+	title = {
+		text = rcw_usfev.158.t_2
+		trigger = {
+			tag = CCA
+		}
+	}
+	
+	desc = {
+		text = rcw_usfev.158.desc_1
+		trigger = {
+			tag = SIB
+		}
+	}
+	desc = {
+		text = rcw_usfev.58.desc_1_2
+		trigger = {
+			tag = CCA
+		}
+	}
 
 	picture = GFX_report_event_sib_czechoslovakians
 	
@@ -8974,7 +9058,7 @@ country_event = {
 			delete_unit_template_and_units = {
 				division_template = "Brigada Chekhoslovatskogo legiona Povolzh'e"
 			}
-			every_unit_leader = { limit = { OR = { } } set_nationality = CZE }
+			every_unit_leader = { limit = { OR = { has_id = 92354 } } set_nationality = CZE }
 			every_unit_leader = { limit = { OR = { has_id = 88153 } } set_nationality = CZE }
 			every_unit_leader = { limit = { OR = { has_id = 92355 } } set_nationality = CZE }
 		}
@@ -9935,6 +10019,7 @@ country_event = {
 			CCA = { has_country_flag = Nikolay_Alexandrovich_Romanov_rescue }
 			SIB = { has_country_flag = Nikolay_Alexandrovich_Romanov_rescue }
 			RVA = { has_country_flag = Nikolay_Alexandrovich_Romanov_rescue }
+			MCW = { has_country_flag = Nikolay_Alexandrovich_Romanov_rescue }
 		}
 	}
 	
@@ -11268,6 +11353,12 @@ country_event = {
 	
 	is_triggered_only = yes
 	
+	immediate = {
+		hidden_effect = {
+			set_country_flag = Dmitriy_Pavlovich_Romanov_is_here
+		}
+	}
+	
 	option = {
 		name = rcw_usfev.261.a
 		ai_chance = {
@@ -11277,11 +11368,10 @@ country_event = {
 		set_politics = { ruling_party = authoritarism elections_allowed = no }
 		if = {
 			limit = { NOT = { has_country_leader = { name = "Dmitriy II Romanov" ruling_only = yes } } }
-			create_country_leader = { name = "Dmitriy II Romanov" desc = "" picture = "gfx/leaders/RUS/Dmitriy_Pavlovich_Romanov.dds" expire = "1941.3.5" ideology = authoritarism_ideology traits = { inexperienced_monarch anti_democrat warmonger political_dancer } }
+			create_country_leader = { name = "Dmitriy II Romanov" desc = "RUS_Dmitriy_Pavlovich_Romanov_DESC" picture = "gfx/leaders/RUS/Dmitriy_Pavlovich_Romanov.dds" expire = "1941.3.5" ideology = authoritarism_ideology traits = { inexperienced_monarch anti_democrat warmonger political_dancer } }
 		}
 		add_ideas = limited_monarchy_gov_form
 		add_ideas = decrees_of_ruler_b_law
-		set_country_flag = Dmitriy_Pavlovich_Romanov_is_here
 	}
 	
 	option = {
@@ -11292,21 +11382,54 @@ country_event = {
 		set_cosmetic_tag = SIB_MONARCHY
 		add_ideas = RUS_Dmitriy_II_idea
 		add_ideas = limited_monarchy_gov_form
-		set_country_flag = Dmitriy_Pavlovich_Romanov_is_here
 	}
 	
 	option = {
 		name = rcw_usfev.261.c
-		trigger = { has_country_flag = Nikolay_Alexandrovich_Romanov_rescue }
+		trigger = { has_country_flag = Nikolay_Alexandrovich_Romanov_is_here }
 		ai_chance = {
 			factor = 4
 		}
-		create_country_leader = { name = "Nikolay II Romanov" desc = RUS_Nikolay_II_DESC picture = "gfx/leaders/RUS/Nikolay_II_ALT2.dds" expire = "1935.1.1" ideology = authoritarism_ideology traits = { inexperienced_imperialist weak_character} }
 		set_cosmetic_tag = RUS_MONARCHY
 		set_politics = { ruling_party = authoritarism elections_allowed = no }
+		if = {
+			limit = { NOT = { has_country_leader = { name = "Nikolay II Romanov" ruling_only = yes } } }
+			create_country_leader = { name = "Nikolay II Romanov" desc = RUS_Nikolay_II_DESC picture = "gfx/leaders/RUS/Nikolay_II_ALT2.dds" expire = "1935.1.1" ideology = authoritarism_ideology traits = { inexperienced_imperialist weak_character } }
+		}
 		add_ideas = limited_monarchy_gov_form
 		add_ideas = decrees_of_ruler_b_law
-		set_country_flag = Dmitriy_Pavlovich_Romanov_is_here
+	}
+	
+	option = {
+		name = rcw_usfev.261.d
+		trigger = { has_country_flag = Mikhail_Alexandrovich_Romanov_is_here }
+		ai_chance = {
+			factor = 1
+		}
+		set_cosmetic_tag = SIB_MONARCHY
+		set_politics = { ruling_party = authoritarism elections_allowed = no }
+		if = {
+			limit = { NOT = { has_country_leader = { name = "Mikhail II Romanov" ruling_only = yes } has_country_leader = { name = "Mikhail Alexandrovich Romanov" ruling_only = yes } } }
+			create_country_leader = { name = "Mikhail II Romanov" desc = RUS_Mikhail_Romanov_DESC picture = "gfx/leaders/RUS/Mikhail_Romanov.dds" ideology = authoritarism_ideology traits = { inexperienced_imperialist } }
+		}
+		add_ideas = limited_monarchy_gov_form
+		add_ideas = decrees_of_ruler_b_law
+	}
+	
+	option = {
+		name = rcw_usfev.261.e
+		trigger = { has_country_flag = Kirill_Vladimirovich_Romanov_is_here }
+		ai_chance = {
+			factor = 1
+		}
+		set_cosmetic_tag = SIB_MONARCHY
+		set_politics = { ruling_party = authoritarism elections_allowed = no }
+		if = {
+			limit = { NOT = { has_country_leader = { name = "Kirill I Romanov" ruling_only = yes } has_country_leader = { name = "Kirill Vladimirovich Romanov" ruling_only = yes } } }
+			create_country_leader = { name = "Kirill I Romanov" desc = RUS_Kirill_Vladimirovich_Romanov_DESC picture = "gfx/leaders/RUS/Kirill_Vladimirovich.dds" ideology = authoritarism_ideology traits = { inexperienced_imperialist } }
+		}
+		add_ideas = limited_monarchy_gov_form
+		add_ideas = decrees_of_ruler_b_law
 	}
 }
 
@@ -11404,7 +11527,7 @@ country_event = {
 	
 	trigger = {
 		owns_state = 952
-		NOT = { owns_state = 798 }
+		NOT = { owns_state = 1209 }
 		OR = {
 			tag = QIN
 			tag = JAP
@@ -11428,11 +11551,11 @@ country_event = {
 		}
 		NOT = {
 			JAP = {
-				owns_state = 798
+				owns_state = 1209
 				owns_state = 800
 			}
 			PRM = {
-				owns_state = 798
+				owns_state = 1209
 				owns_state = 800
 			}
 		}
@@ -11468,7 +11591,7 @@ country_event = {
 	#		if = { limit = { RUS = { owns_state = 761 } } transfer_state = 761 }
 	#		if = { limit = { RUS = { owns_state = 714 } } transfer_state = 714 }
 	#		if = { limit = { RUS = { owns_state = 717 } } transfer_state = 717 }
-	#		if = { limit = { RUS = { owns_state = 798 } } transfer_state = 798 }
+	#		if = { limit = { RUS = { owns_state = 1209 } } transfer_state = 1209 }
 	#		if = { limit = { RUS = { owns_state = 950 } } transfer_state = 950 }
 	#		if = { limit = { RUS = { owns_state = 951 } } transfer_state = 951 }
 	#		if = { limit = { RUS = { owns_state = 952 } } transfer_state = 952 }
@@ -11488,7 +11611,7 @@ country_event = {
 			}
 			
 			defender = {
-				state = 798
+				state = 1209
 				num_provinces = 3
 				on_win = rcw_usfev.303
 				on_lose = rcw_usfev.302
@@ -11496,7 +11619,7 @@ country_event = {
 			}
 		}
 		every_country = {
-			limit = { owns_state = 798 }
+			limit = { owns_state = 1209 }
 			country_event = rcw_usfev.305
 		}
 		ai_chance = {
@@ -11524,9 +11647,9 @@ country_event = {
 	option = {
 		name = rcw_usfev.302.a
 		trigger = {
-			NOT = { owns_state = 798 }
+			NOT = { owns_state = 1209 }
 		}
-		transfer_state = 798
+		transfer_state = 1209
 		transfer_state = 950
 		transfer_state = 951
 		transfer_state = 952
@@ -11539,7 +11662,7 @@ country_event = {
 	option = {
 		name = rcw_usfev.302.b
 		trigger = {
-			owns_state = 798
+			owns_state = 1209
 		}
 		army_experience = 25
 	}
@@ -11556,7 +11679,7 @@ country_event = {
 	option = {
 		name = rcw_usfev.303.a
 		trigger = {
-			NOT = { owns_state = 798 }
+			NOT = { owns_state = 1209 }
 		}
 		army_experience = 25
 		add_political_power = -20
@@ -11564,7 +11687,7 @@ country_event = {
 	option = {
 		name = rcw_usfev.303.b
 		trigger = {
-			owns_state = 798
+			owns_state = 1209
 		}
 	}
 }
@@ -11651,6 +11774,7 @@ country_event = {
 			popularity = 0.3
 		}
 		transfer_state = 563
+		drop_cosmetic_tag = yes
 		load_focus_tree = Transbaikal_Chita_eser_focus
 		set_country_flag = BKL_not_white_cossaks_focus
 	}
@@ -11785,6 +11909,8 @@ country_event = {
 		create_country_leader = { name = "Nikolay Komarovskiy" picture = "gfx/leaders/BKL/Nikolay_Komarovskiy.dds" expire = "1935.1.1" ideology = social_liberalism_ideology traits = {  } }
 		set_politics = { ruling_party = social_liberalism }
 		add_stability = -0.1
+		load_focus_tree = Transbaikal_Chita_eser_focus
+		set_country_flag = BKL_not_white_cossaks_focus
 	}
 	option = {
 		name = rcw_usfev.327.c
@@ -12319,17 +12445,30 @@ country_event = {
 	option = {
 		name = rcw_usfev.342.a
 		create_country_leader = { name = "Ivan Tolstikhin" desc = "" picture = "gfx/leaders/BKL/Ivan_Tolstikhin.dds" expire = "1935.1.1" ideology = social_liberalism_ideology traits = { } }
-		start_civil_war = {
-			ideology = social_liberalism
-			size = 0.2
-			keep_unit_leaders_trigger  = {
-				always = yes
+		if = {
+			limit = { controls_state = 1208 owns_state = 1208 }
+			start_civil_war = {
+				ideology = social_liberalism
+				size = 0.2
+				states = { 1208 }
+				keep_unit_leaders_trigger  = {
+					NOT = { has_id = 28158 has_id = 28159 has_id = 28160 }
+				}
+			}
+			else = {
+				start_civil_war = {
+					ideology = social_liberalism
+					size = 0.2
+					keep_unit_leaders_trigger  = {
+						NOT = { has_id = 28158 has_id = 28159 has_id = 28160 }
+					}
+				}
 			}
 		}
 		every_country = {
-			limit = { NOT = { original_tag = BKL  tag = SIB tag = RSS} has_war_with = BKL }
+			limit = { NOT = { original_tag = BKL tag = SIB tag = RSS} has_war_with = BKL }
 			random_other_country = {
-				limit = { tag = BKL has_government = social_liberalism }
+				limit = { original_tag = BKL has_government = social_liberalism }
 				declare_war_on = {
 					target = PREV
 					type = annex_everything
@@ -12341,11 +12480,28 @@ country_event = {
 			random_other_country = {
 				limit = { OR = { tag = RSS tag = SIB } has_war_with = RUS NOT = { has_government = radical_socialism has_government = communism } }
 				random_other_country = {
-					limit = { tag = BKL has_government = social_liberalism }
+					limit = { original_tag = BKL has_government = social_liberalism }
 					subjecting_script_with_transfer_parties_semi_independent = yes
 				}
 			}
 		}
+		random_other_country = {
+			limit = { original_tag = BKL has_government = social_liberalism }
+			load_focus_tree = Transbaikal_Chita_eser_focus
+			set_country_flag = BKL_not_white_cossaks_focus
+			save_global_event_target_as = BKL_CW
+		}
+		every_unit_leader = {
+			limit = { OR = { has_id = 28158 has_id = 28159 has_id = 28160 } }
+			set_nationality = event_target:BKL_CW
+		}
+		event_target:BKL_CW = {
+			every_unit_leader = {
+				limit = { NOT = { has_id = 28158 has_id = 28159 has_id = 28160 } }
+				set_nationality = ROOT
+			}
+		}
+		clear_global_event_target = BKL_CW
 		ai_chance = {
 			factor = 1
 		}
@@ -12353,17 +12509,30 @@ country_event = {
 	option = {
 		name = rcw_usfev.342.b
 		create_country_leader = { name = "Ivan Tolstikhin" desc = "" picture = "gfx/leaders/BKL/Ivan_Tolstikhin.dds" expire = "1935.1.1" ideology = social_liberalism_ideology traits = { } }
-		start_civil_war = {
-			ideology = social_liberalism
-			size = 0.2
-			keep_unit_leaders_trigger  = {
-				always = yes
+		if = {
+			limit = { controls_state = 1208 owns_state = 1208 }
+			start_civil_war = {
+				ideology = social_liberalism
+				size = 0.2
+				states = { 1208 }
+				keep_unit_leaders_trigger  = {
+					NOT = { has_id = 28158 has_id = 28159 has_id = 28160 }
+				}
+			}
+			else = {
+				start_civil_war = {
+					ideology = social_liberalism
+					size = 0.2
+					keep_unit_leaders_trigger  = {
+						NOT = { has_id = 28158 has_id = 28159 has_id = 28160 }
+					}
+				}
 			}
 		}
 		every_country = {
-			limit = { NOT = { original_tag = BKL  tag = SIB tag = RSS } has_war_with = BKL }
+			limit = { NOT = { original_tag = BKL tag = SIB tag = RSS } has_war_with = BKL }
 			random_other_country = {
-				limit = { tag = BKL has_government = social_liberalism }
+				limit = { original_tag = BKL has_government = social_liberalism }
 				declare_war_on = {
 					target = PREV
 					type = annex_everything
@@ -12375,13 +12544,31 @@ country_event = {
 			random_other_country = {
 				limit = { OR = { tag = RSS tag = SIB } has_war_with = RUS NOT = { has_government = radical_socialism has_government = communism } }
 				random_other_country = {
-					limit = { tag = BKL has_government = social_liberalism }
+					limit = { original_tag = BKL has_government = social_liberalism }
 					subjecting_script_with_transfer_parties_semi_independent = yes
 				}
 			}
 		}
 		random_other_country = {
-			limit = { tag = BKL has_government = social_liberalism }
+			limit = { original_tag = BKL has_government = social_liberalism }
+			load_focus_tree = Transbaikal_Chita_eser_focus
+			set_country_flag = BKL_not_white_cossaks_focus
+			save_global_event_target_as = BKL_CW
+		}
+		every_unit_leader = {
+			limit = { OR = { has_id = 28158 has_id = 28159 has_id = 28160 } }
+			set_nationality = event_target:BKL_CW
+		}
+		event_target:BKL_CW = {
+			every_unit_leader = {
+				limit = { NOT = { has_id = 28158 has_id = 28159 has_id = 28160 } }
+				set_nationality = ROOT
+			}
+			change_tag_from = ROOT
+		}
+		clear_global_event_target = BKL_CW
+		random_other_country = {
+			limit = { original_tag = BKL has_government = social_liberalism }
 			change_tag_from = ROOT
 		}
 		ai_chance = {
@@ -12691,118 +12878,97 @@ country_event = {
 	}
 }
 
-# Бег Толстихина
+# Военный переворот в Приморье
 country_event = {
-	id = rcw_usfev.351
-	title = rcw_usfev.351.t
-	desc = rcw_usfev.351.desc
+	id = rcw_usfev.352
+	title = rcw_usfev.352.t
+	desc = rcw_usfev.352.desc
 
 	picture = GFX_report_event_bkl_hambo-lama
 	
-	trigger = {
-		NOT = { has_global_flag = RUS_civil_war_over }
-		original_tag = BKL
-		has_government = social_liberalism
-		has_country_leader = { name = "Ivan Tolstikhin" ruling_only = yes }
-		has_civil_war = yes
-		surrender_progress > 0.7
-		
-		any_other_country = {
-			OR = {
-				ROOT = { is_subject_of = PREV }
-				AND = {
-					OR = {
-						tag = RSS
-						tag = SIB
-					}
-					NOT = {
-						has_government = radical_socialism
-						has_government = communism
-						NOT = { has_war_with = ROOT }
-					}
-				}
-			}
-		}
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	fire_only_once = yes
+	is_triggered_only = yes
 	
 	option = {
-		name = rcw_usfev.351.a
-		
-		random_other_country = {
-			limit = {
-				OR = {
-					ROOT = { is_subject_of = PREV }
-					AND = {
-						OR = {
-							tag = RSS
-							tag = SIB
-						}
-						NOT = {
-							has_government = radical_socialism
-							has_government = communism
-							NOT = { has_war_with = ROOT }
-						}
-					}
-				}
-			}
-			ROOT = {
-				transfer_units_fraction= {
-					target = PREV
-					size = 1
-					stockpile_ratio = 1
-					army_ratio = 1
-					navy_ratio = 1
-					air_ratio = 1
-					keep_unit_leaders_trigger = {
-						always = no
-					}
-				}
-			}
-		}
-		
-		if = {
-			limit = {
-				is_subject = yes
-			}
-			OVERLORD = {
-				end_puppet = ROOT
-				if = {
-					limit = { OR = { is_in_faction = no is_faction_leader = yes } }
-					white_peace = BKL
-					else = {
-						random_other_country = {
-							limit = { is_faction_leader = yes is_in_faction_with = PREV }
-							white_peace = BKL
-						}
-					}
-				}
-			}
-		}
-		
-		random_other_country = {
-			limit = { original_tag = BKL }
-			annex_country = {
-				target = ROOT
-				transfer_troops = yes
-			}
-		}
-		
+		name = rcw_usfev.352.a
+		OVERLORD = { end_puppet = ROOT }
+		FROM = { puppet = ROOT }
 		ai_chance = {
 			factor = 1
 		}
 	}
 	option = {
-		name = rcw_usfev.351.b
+		name = rcw_usfev.352.b
 		
-		ai_chance = {
-			factor = 0
+		declare_war_on = {
+			target = FROM
+			type = annex_everything
 		}
+		add_manpower = -500
+		add_stability = -0.1
+		ai_chance = {
+			factor = 1
+		}
+	}
+}
+
+# Читинский эндшпиль
+country_event = {
+	id = rcw_usfev.353
+	title = rcw_usfev.353.t
+	desc = rcw_usfev.353.desc
+
+	picture = GFX_report_event_sov_redarm
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = rcw_usfev.353.a
+		FROM = {
+			every_unit_leader = {
+				set_nationality = ROOT
+			}
+		}
+		every_state = {
+			limit = { is_core_of = FROM }
+			add_core_of = ROOT
+		}
+		if = {
+			limit = { is_ai = yes FROM = { is_ai = no } }
+			annex_country = {
+				target = FROM
+				transfer_troops = yes
+			}
+			change_tag_from = FROM
+			else = {
+				annex_country = {
+					target = FROM
+					transfer_troops = yes
+				}
+			}
+		}
+	}
+}
+
+# Отмена японских кредитов
+country_event = {
+	id = rcw_usfev.354
+	
+	trigger = {
+		tag = BKL
+		has_country_flag = BKL_japanese_loans_idea_f
+		NOT = { has_idea = BKL_japanese_loans_idea }
+	}
+	
+	hidden = yes
+	
+	mean_time_to_happen = {
+		days = 3
+	}
+	
+	option = {
+		clr_country_flag = BKL_japanese_loans_idea_f
+		add_offsite_building = { type = arms_factory level = -1 }
+		add_offsite_building = { type = industrial_complex level = -1 }
 	}
 }
 

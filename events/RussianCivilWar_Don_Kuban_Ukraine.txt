@@ -1520,7 +1520,7 @@ country_event = {
 			size = 0
 			capital = 233
 			states = {
-				233 1173 902 803 907
+				233 1173 902 1211 907
 			}
 			keep_unit_leaders_trigger = { NOT = { has_id = 19199 has_id = 19200 } }
 		}
@@ -1657,7 +1657,7 @@ country_event = {
 			size = 0
 			capital = 233
 			states = {
-				233 1173 902 803 907
+				233 1173 902 1211 907
 			}
 			keep_unit_leaders_trigger = { NOT = { has_id = 19199 has_id = 19200 } }
 		}
@@ -2088,7 +2088,7 @@ country_event = {
 	option = {
 		name = cw_dkutc.25.a
 		ABK = {
-			transfer_state = 803
+			transfer_state = 1211
 			if = {
 				limit = { OR = { has_government = radical_socialism has_government = communism } }
 				set_politics = { ruling_party = social_democracy }
@@ -2102,7 +2102,7 @@ country_event = {
 					militia = { x = 1 y = 1 }
 				}
 			}
-			803 = {
+			1211 = {
 				create_unit = {
 					division = "name = \"Abhazskoye opolcheniye\" division_template = \"Abhazskoye opolcheniye\" start_experience_factor = 0.3 start_equipment_factor = 1"
 					owner = ABK
@@ -3263,229 +3263,43 @@ country_event = {
 	}
 }
 
-# Победа советской власти на Украине
+# Опасная близость
 country_event = {
-	id = rcw_dku.120
-	title = rcw_dku.120.t
-	desc = rcw_dku.120.desc
-	picture = GFX_report_event_rcw_rva
+	id = rcw_dku.103
+	title = rcw_dku.103.t
+	desc = rcw_dku.103.desc
+	picture = GFX_report_event_rcw_kornilov_rva
 	
 	trigger = {
 		NOT = { has_global_flag = RUS_civil_war_over }
-		OR = {
-			AND = {
-				tag = USR
-				OR = { has_government = radical_socialism has_government = communism }
-			}
-			AND = {
-				tag = ODS
-				OR = { has_government = radical_socialism has_government = communism }
-				USR = { exists = no }
-			}
-			AND = {
-				tag = FRT
-				has_government = communism
-				ODS = { exists = no }
-				USR = { exists = no }
-			}
-			AND = {
-				tag = RUS
-				has_country_flag = RUS_Oktober_revolution_fired
-				FRT = { exists = no }
-				ODS = { exists = no }
-				USR = { exists = no }
-			}
-		}
-		UKR = { NOT = { has_war_with = ROOT } OR = { exists = no has_government = radical_socialism has_government = communism } }
-		ODS = { NOT = { has_war_with = ROOT } OR = { exists = no has_government = radical_socialism has_government = communism } }
-		FRT = { NOT = { has_war_with = ROOT } OR = { exists = no has_government = communism } }
-		868 = { CONTROLLER = { OR = { has_government = radical_socialism has_government = communism } } }
-		202 = { CONTROLLER = { OR = { has_government = radical_socialism has_government = communism } } }
-		203 = { CONTROLLER = { OR = { has_government = radical_socialism has_government = communism } } }
-		959 = { CONTROLLER = { OR = { has_government = radical_socialism has_government = communism } } }
-		193 = { CONTROLLER = { OR = { has_government = radical_socialism has_government = communism } } }
-		259 = { CONTROLLER = { OR = { has_government = radical_socialism has_government = communism } } }
-		1063 = { CONTROLLER = { OR = { has_government = radical_socialism has_government = communism } } }
-		221 = { CONTROLLER = { OR = { has_government = radical_socialism has_government = communism } } }
-		197 = { CONTROLLER = { OR = { has_government = radical_socialism has_government = communism } } }
-		196 = { CONTROLLER = { OR = { has_government = radical_socialism has_government = communism } } }
-		200 = { CONTROLLER = { OR = { has_government = radical_socialism has_government = communism } } }
-		201 = { CONTROLLER = { OR = { has_government = radical_socialism has_government = communism } } }
-	}
-	
-	mean_time_to_happen = {
-		days = 1
-	}
-	
-	fire_only_once = yes
-	
-	option = {
-		name = rcw_dku.120.a
-		if = {
-			limit = { 202 = { NOT = { is_core_of = USR } } }
-			every_state = {
-				limit = { is_core_of = UKR }
-				add_core_of = USR
-			}
-		}
-		if = {
-			limit = { USR = { exists = no } UKR = { exists = no } }
-			USR = { transfer_state = 202 }
-			every_country = {
-				limit = { has_war_with = RUS is_any_former_russian_empire_country = yes is_subject = no }
-				USR = {
-					declare_war_on = {
-						target = PREV
-						type = annex_everything
-					}
-				}
-			}
-		}
-		if = {
-			limit = {
-				ODS = {
-					exists = yes
-					OR = { has_government = communism has_government = radical_socialism }
-				}
-			}
-			USR = {
-				if = {
-					limit = { ODS = { is_ai = no } }
-					change_tag_from = ODS
-				}
-				annex_country = {
-					target = ODS
-					transfer_troops = yes 
-				}
-			}
-			every_state = {
-				limit = { is_core_of = ODS }
-				remove_core_of = ODS
-			}
-		}
-		if = {
-			limit = {
-				UKR = {
-					exists = yes
-					OR = { has_government = communism has_government = radical_socialism }
-				}
-			}
-			hidden_effect = {
-				random_state = {
-					limit = { is_owned_by = UKR is_core_of = UKR }
-					USR = { transfer_state = PREV }
-				}
-			}
-			USR = {
-				if = {
-					limit = { UKR = { is_ai = no } }
-					change_tag_from = UKR
-				}
-				annex_country = {
-					target = UKR
-					transfer_troops = yes
-				}
-			}
-		}
-		if = {
-		limit = {UKR = {exists = no}}
-		every_state = {
-			limit = { is_core_of = UKR }
-			remove_core_of = UKR
-		}
-		}
-		every_state = {
-			limit = { is_core_of = USR }
-			remove_core_of = RUS
-			remove_core_of = RSS
-			remove_core_of = CCA
-		}
-		every_state = {
-			limit = { is_core_of = USR is_owned_by = RUS }
-			USR = { transfer_state = PREV }
-		}
-		USR = {
-			if = {
-				limit = { has_idea = neutral_foreign_policy_law }
-				add_ideas = realpolitic_policy_law
-			}
-			if = {
-				limit = { controls_state = 202 }
-				set_capital = 202
-			}
-		}
-		if = {
-			limit = { RUS = { has_country_flag = RUS_Oktober_revolution_fired is_faction_leader = yes } }
-			RUS = { add_to_faction = USR }
-		}
-	}
-}
-
-# Победа советской власти на Кубани
-country_event = {
-	id = rcw_dku.122
-	title = rcw_dku.122.t
-	desc = rcw_dku.122.desc
-	picture = GFX_report_event_rcw_rva
-	
-	trigger = {
-		original_tag = KUB
-		has_civil_war = no
-		OR = { has_government = communism has_government = radical_socialism }
+		tag = RVA
+		has_war_with = RUS
 		RUS = { has_country_flag = RUS_Oktober_revolution_fired }
-		RUS = { OR = { has_government = communism has_government = radical_socialism } }
-	}
-	
-	mean_time_to_happen = {
-		days = 0
+		has_government = despotism
+		has_country_leader = { name = "Lavr Kornilov" ruling_only = yes }
 	}
 	
 	fire_only_once = yes
 	
+	mean_time_to_happen = {
+		days = 50
+	}
+	
 	option = {
-		name = rcw_dku.120.a
-		if = {
-		limit = { NOT = { is_neighbor_of = RUS } }
-		every_state = {
-			limit = { is_core_of = KUB }
-			remove_core_of = RUS
-			remove_core_of = RSS
-			remove_core_of = CCA
+		name = rcw_dku.103.a
+		hidden_effect = { country_event = { days = 2 id = rcw_dku.104 } }
+		ai_chance = {
+			factor = 1
 		}
-		every_state = {
-			limit = { is_core_of = ROOT is_owned_by = RUS }
-			ROOT = { transfer_state = PREV }
-		}
-		KUB = {
-			if = {
-				limit = { has_idea = neutral_foreign_policy_law }
-				add_ideas = realpolitic_policy_law
+	}
+	option = {
+		name = rcw_dku.103.b
+		ai_chance = {
+			factor = 3
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
 			}
-			if = {
-				limit = { controls_state = 234 }
-				set_capital = 234
-			}
-		}
-		if = {
-			limit = { RUS = { has_country_flag = RUS_Oktober_revolution_fired is_faction_leader = yes } }
-			RUS = { add_to_faction = KUB }
-		}
-		every_country = {
-				limit = { has_war_with = RUS is_any_former_russian_empire_country = yes is_subject = no NOT = { has_war_with = KUB } }
-				KUB = {
-					declare_war_on = {
-						target = PREV
-						type = annex_everything
-					}
-				}
-			}
-		else = {
-			RUS = { annex_country = { target = KUB transfer_troops = yes } }
-			#every_state = {
-				#limit = { is_core_of = KUB }
-				#remove_core_of = KUB
-			#}
-		}
 		}
 	}
 }
@@ -3495,7 +3309,7 @@ country_event = {
 	id = rcw_dku.104
 	title = rcw_dku.104.t
 	desc = rcw_dku.104.desc
-	picture = GFX_report_event_rcw_rva
+	picture = GFX_report_event_rcw_kornilov_rva
 	
 	is_triggered_only = yes
 	
@@ -3530,7 +3344,7 @@ country_event = {
 			}
 			else_if = {
 				limit = { any_unit_leader = { has_id = 76428 } NOT = { has_country_leader = { name = "Mikhail Alexeev" ruling_only = no } has_country_leader = { name = "Anton Denikin" ruling_only = yes } } }
-				create_country_leader = { name = "Anton Denikin" desc = RUS_Anton_Denikin_DESC picture = "gfx/leaders/RUS/Anton_Denikin.dds" expire = "1935.1.1" ideology = despotism_ideology traits = { warmonger great_war_hero min_1_old_general silent_workhorse dislikes_germany } }
+				create_country_leader = { name = "Anton Denikin" desc = RUS_Anton_Denikin_DESC picture = "gfx/leaders/RUS/Anton_Denikin.dds" expire = "1935.1.1" ideology = despotism_ideology traits = { great_war_hero warmonger_old_general silent_workhorse dislikes_germany } }
 			}
 		}
 	}
@@ -3603,7 +3417,7 @@ country_event = {
 			}
 			if = {
 				limit = { has_country_flag = Lavr_Kornilov_dead any_unit_leader = { has_id = 76428 } NOT = { has_country_leader = { name = "Lavr Kornilov" ruling_only = no } has_country_leader = { name = "Anton Denikin" ruling_only = no } } }
-				create_country_leader = { name = "Anton Denikin" desc = RUS_Anton_Denikin_DESC picture = "gfx/leaders/RUS/Anton_Denikin.dds" expire = "1935.1.1" ideology = despotism_ideology traits = { warmonger great_war_hero min_1_old_general silent_workhorse dislikes_germany } }
+				create_country_leader = { name = "Anton Denikin" desc = RUS_Anton_Denikin_DESC picture = "gfx/leaders/RUS/Anton_Denikin.dds" expire = "1935.1.1" ideology = despotism_ideology traits = { great_war_hero warmonger_old_general silent_workhorse dislikes_germany } }
 			}
 		}
 	}
@@ -3653,7 +3467,7 @@ country_event = {
 		drop_cosmetic_tag = yes
 		set_cosmetic_tag = RVA_rus_army
 		set_politics = { ruling_party = authoritarism }
-		create_country_leader = { name = "Pyotr Wrangel" desc = RUS_Pyotr_Wrangel_DESC picture = "gfx/leaders/RUS/Pyotr_Wrangel.dds" ideology = authoritarism_ideology traits = { warmonger min_1_the_black_baron min_1_old_general political_dancer min_1_power_hungry_demagogue } }
+		create_country_leader = { name = "Pyotr Wrangel" desc = RUS_Pyotr_Wrangel_DESC picture = "gfx/leaders/RUS/Pyotr_Wrangel.dds" ideology = authoritarism_ideology traits = { min_1_the_black_baron warmonger_old_general political_dancer min_1_power_hungry_demagogue } }
 	}
 	
 	option = {
@@ -3685,7 +3499,7 @@ country_event = {
 		#news_event
 		every_unit_leader = { limit = { OR = { has_id = 76428 has_id = 77455 } } set_nationality = REB }
 		remove_despotism_leader = yes
-		create_country_leader = { name = "Victor Pokrovsky" desc = KUB_Victor_Pokrovsky_DESC picture = "gfx/leaders/KUB/Victor_Pokrovsky.dds" expire = "1935.1.1" ideology = despotism_ideology traits = { warmonger min_1_old_general political_dancer min_4_prince_of_terror } }
+		create_country_leader = { name = "Victor Pokrovsky" desc = KUB_Victor_Pokrovsky_DESC picture = "gfx/leaders/KUB/Victor_Pokrovsky.dds" expire = "1935.1.1" ideology = despotism_ideology traits = { warmonger_old_general political_dancer min_4_prince_of_terror } }
 		drop_cosmetic_tag = yes
 		set_cosmetic_tag = RVA_rus_army
 	}
@@ -3697,7 +3511,7 @@ country_event = {
 		every_unit_leader = { limit = { OR = { has_id = 76428 has_id = 77455 } } set_nationality = REB }
 		remove_despotism_leader = yes
 		create_country_leader = { name = "Alexander Lukomsky" desc = RUS_Alexander_Lukomsky_DESC picture = "gfx/leaders/RUS/Alexander_Lukomsky.dds" ideology = despotism_ideology traits = { warmonger } }
-		create_country_leader = { name = "Pyotr Krasnov" desc = DON_Pyotr_Krasnov_DESC picture = "gfx/leaders/DON/Pyotr_Krasnov.dds" expire = "1935.1.1" ideology = fascism_ideology traits = { warmonger like_GER min_1_old_general fascist_sympathies min_1_traditionalist } }
+		create_country_leader = { name = "Pyotr Krasnov" desc = DON_Pyotr_Krasnov_DESC picture = "gfx/leaders/DON/Pyotr_Krasnov.dds" expire = "1935.1.1" ideology = fascism_ideology traits = { like_GER warmonger_old_general fascist_sympathies min_1_traditionalist } }
 		drop_cosmetic_tag = yes
 		set_cosmetic_tag = RVA_rus_army
 		set_politics = { ruling_party = fascism }
@@ -3723,6 +3537,252 @@ country_event = {
 	
 }
 
+# Прорыв Киевского ВО
+country_event = {
+	id = rcw_dku.107
+	title = rcw_dku.107.t
+	desc = rcw_dku.107.desc
+	picture = GFX_report_event_rcw_rva
+	
+	trigger = {
+		NOT = { has_global_flag = RUS_civil_war_over }
+		NOT = { has_government = radical_socialism has_government = communism }
+		OR = {
+			NOT = { tag = DON }
+			NOT = { has_government = national_syndicalism }
+		}
+		OR = {
+			tag = RVA
+			tag = NWA
+			has_idea = DON_Volunteer_army_presence_idea
+		}
+		NOT = { has_country_flag = Kvetsinskiy_troops }
+		NOT = { NWA = { has_country_flag = Kvetsinskiy_troops } KUB = { has_country_flag = Kvetsinskiy_troops } DON = { has_country_flag = Kvetsinskiy_troops } RVA = { has_country_flag = Kvetsinskiy_troops } }
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = { set_country_flag = Kvetsinskiy_troops }
+	
+	option = {
+		name = rcw_dku.107.a
+		create_corps_commander = { name = "Mikhail Kvetsinskiy" id = 77472 portrait_path = "gfx/leaders/RUS/Mikhail_Kvetsinskiy.dds" traits = { trickster } skill = 2 attack_skill = 5 defense_skill = 4 planning_skill = 4 logistics_skill = 5 }
+		
+		add_war_support = 0.05
+		add_equipment_to_stockpile = { type = infantry_equipment_great_war amount = 1000 producer = RUS }
+		
+		if = {
+			limit = { has_idea = DON_Volunteer_army_presence_idea }
+			division_template = {
+				name = "Udarniy polk"		# Elite
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+				}
+				support = {
+					recon = { x = 0 y = 0 }
+					engineer = { x = 0 y = 1 }
+				}
+				priority = 2
+				is_locked = yes
+			}
+			division_template = {
+				name = "Konnyy division"		# Cavalry
+				regiments = {
+					cavalry = { x = 0 y = 0 }
+				}
+				support = {
+					recon = { x = 0 y = 0 }
+					engineer = { x = 0 y = 1 }
+				}
+				priority = 2
+				is_locked = yes
+			}
+			else = {
+				division_template = {
+					name = "Udarniy polk"		# Elite
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+					}
+					priority = 2
+				}
+				division_template = {
+					name = "Konnyy division"		# Cavalry
+					regiments = {
+						cavalry = { x = 0 y = 0 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+					}
+					priority = 2
+				}
+			}
+		}
+		capital_scope = {
+				create_unit = {
+					division = "name = \"Otryad Kvetsinskogo\" division_template = \"Udarniy polk\" start_experience_factor = 0.7 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Otryad Kvetsinskogo\" division_template = \"Konnyy division\" start_experience_factor = 0.7 start_equipment_factor = 1"
+					owner = ROOT
+				}
+		}
+	}
+}
+
+# Екатеринославский поход
+country_event = {
+	id = rcw_dku.108
+	title = rcw_dku.108.t
+	desc = {
+		text = rcw_dku.108.desc
+		trigger = {
+			UKR = { NOT = { has_country_flag = UKR_nominal_uprising } }
+		}
+	}
+	desc = {
+		text = rcw_dku.108.desc_1
+		trigger = {
+			UKR = { has_country_flag = UKR_nominal_uprising }
+		}
+	}
+	picture = GFX_report_event_rcw_rva
+	
+	trigger = {
+		NOT = { has_global_flag = RUS_civil_war_over }
+		NOT = { has_government = radical_socialism has_government = communism }
+		OR = {
+			NOT = { tag = DON }
+			NOT = { has_government = national_syndicalism }
+		}
+		OR = {
+			tag = RVA
+			tag = NWA
+			has_idea = DON_Volunteer_army_presence_idea
+		}
+		NOT = { has_country_flag = Yekaterinoslavskiye_troops }
+		NOT = { NWA = { has_country_flag = Yekaterinoslavskiye_troops } KUB = { has_country_flag = Yekaterinoslavskiye_troops } DON = { has_country_flag = Yekaterinoslavskiye_troops } RVA = { has_country_flag = Yekaterinoslavskiye_troops } }
+	}
+	
+	is_triggered_only = yes
+	
+	immediate = { set_country_flag = Yekaterinoslavskiye_troops }
+	
+	option = {
+		name = rcw_dku.108.a
+		if = {
+			limit = { UKR = { NOT = { has_country_flag = UKR_nominal_uprising } } }
+			if = {
+				limit = { REB = { has_unit_leader = 77473 } }
+				REB = { every_unit_leader = { limit = { OR = { has_id = 77473 } } set_nationality = ROOT } }
+			}
+			else = { create_corps_commander = { name = "Ignatiy Vasilchenko" id = 77473 portrait_path = "gfx/leaders/RUS/Ignatiy_Vasilchenko.dds" traits = { guerilla_fighter trait_reckless } skill = 1 attack_skill = 3 defense_skill = 3 planning_skill = 3 logistics_skill = 3 } }
+		}
+		else = {
+			REB = {
+				every_unit_leader = {
+					limit = {
+						OR = {
+							has_id = 77653
+							has_id = 77473
+							has_id = 77475
+							has_id = 77476
+							has_id = 77477
+							has_id = 77478
+							has_id = 77479
+							has_id = 77480
+							has_id = 77481
+							has_id = 77482
+						}
+					}
+					set_nationality = ROOT
+				}
+			}
+		}
+		
+		add_war_support = 0.05
+		add_equipment_to_stockpile = { type = infantry_equipment_great_war amount = 1000 producer = RUS }
+		
+		if = {
+			limit = { has_idea = DON_Volunteer_army_presence_idea }
+			division_template = {
+				name = "Udarniy polk"		# Elite
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+				}
+				support = {
+					recon = { x = 0 y = 0 }
+					engineer = { x = 0 y = 1 }
+				}
+				priority = 2
+				is_locked = yes
+			}
+			division_template = {
+				name = "Konnyy division"		# Cavalry
+				regiments = {
+					cavalry = { x = 0 y = 0 }
+				}
+				support = {
+					recon = { x = 0 y = 0 }
+					engineer = { x = 0 y = 1 }
+				}
+				priority = 2
+				is_locked = yes
+			}
+			else = {
+				division_template = {
+					name = "Udarniy polk"		# Elite
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+					}
+					priority = 2
+				}
+				division_template = {
+					name = "Konnyy division"		# Cavalry
+					regiments = {
+						cavalry = { x = 0 y = 0 }
+					}
+					support = {
+						recon = { x = 0 y = 0 }
+						engineer = { x = 0 y = 1 }
+					}
+					priority = 2
+				}
+			}
+		}
+		capital_scope = {
+				create_unit = {
+					division = "name = \"Yekaterinoslavskiy otryad\" division_template = \"Udarniy polk\" start_experience_factor = 0.7 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Yekaterinoslavskiy otryad\" division_template = \"Udarniy polk\" start_experience_factor = 0.7 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Yekaterinoslavskiy otryad\" division_template = \"Udarniy polk\" start_experience_factor = 0.7 start_equipment_factor = 1"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"Yekaterinoslavskiy otryad\" division_template = \"Konnyy division\" start_experience_factor = 0.7 start_equipment_factor = 1"
+					owner = ROOT
+				}
+		}
+	}
+}
 # Дроздовский (Из Румынии походом)
 country_event = {
 	id = rcw_dku.109
@@ -4282,6 +4342,234 @@ country_event = {
 				DON = { every_unit_leader = { limit = { OR = { has_id = 76428 has_id = 76547 has_id = 76321 has_id = 77652 has_id = 77654 has_id = 77659 has_id = 77649 has_id = 78649 } } set_nationality = PREV.PREV } }
 				KUB = { every_unit_leader = { limit = { OR = { has_id = 76428 has_id = 76547 has_id = 76321 has_id = 77652 has_id = 77654 has_id = 77659 has_id = 77649 has_id = 78649 } } set_nationality = PREV.PREV } }
 			}
+		}
+	}
+}
+
+
+# Победа советской власти на Украине
+country_event = {
+	id = rcw_dku.120
+	title = rcw_dku.120.t
+	desc = rcw_dku.120.desc
+	picture = GFX_report_event_rcw_rva
+	
+	trigger = {
+		NOT = { has_global_flag = RUS_civil_war_over }
+		OR = {
+			AND = {
+				tag = USR
+				OR = { has_government = radical_socialism has_government = communism }
+			}
+			AND = {
+				tag = ODS
+				OR = { has_government = radical_socialism has_government = communism }
+				USR = { exists = no }
+			}
+			AND = {
+				tag = FRT
+				has_government = communism
+				ODS = { exists = no }
+				USR = { exists = no }
+			}
+			AND = {
+				tag = RUS
+				has_country_flag = RUS_Oktober_revolution_fired
+				FRT = { exists = no }
+				ODS = { exists = no }
+				USR = { exists = no }
+			}
+		}
+		UKR = { NOT = { has_war_with = ROOT } OR = { exists = no has_government = radical_socialism has_government = communism } }
+		ODS = { NOT = { has_war_with = ROOT } OR = { exists = no has_government = radical_socialism has_government = communism } }
+		FRT = { NOT = { has_war_with = ROOT } OR = { exists = no has_government = communism } }
+		868 = { CONTROLLER = { OR = { has_government = radical_socialism has_government = communism } } }
+		202 = { CONTROLLER = { OR = { has_government = radical_socialism has_government = communism } } }
+		203 = { CONTROLLER = { OR = { has_government = radical_socialism has_government = communism } } }
+		959 = { CONTROLLER = { OR = { has_government = radical_socialism has_government = communism } } }
+		193 = { CONTROLLER = { OR = { has_government = radical_socialism has_government = communism } } }
+		259 = { CONTROLLER = { OR = { has_government = radical_socialism has_government = communism } } }
+		1063 = { CONTROLLER = { OR = { has_government = radical_socialism has_government = communism } } }
+		221 = { CONTROLLER = { OR = { has_government = radical_socialism has_government = communism } } }
+		197 = { CONTROLLER = { OR = { has_government = radical_socialism has_government = communism } } }
+		196 = { CONTROLLER = { OR = { has_government = radical_socialism has_government = communism } } }
+		200 = { CONTROLLER = { OR = { has_government = radical_socialism has_government = communism } } }
+		201 = { CONTROLLER = { OR = { has_government = radical_socialism has_government = communism } } }
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = rcw_dku.120.a
+		if = {
+			limit = { 202 = { NOT = { is_core_of = USR } } }
+			every_state = {
+				limit = { is_core_of = UKR }
+				add_core_of = USR
+			}
+		}
+		if = {
+			limit = { USR = { exists = no } UKR = { exists = no } }
+			USR = { transfer_state = 202 }
+			every_country = {
+				limit = { has_war_with = RUS is_any_former_russian_empire_country = yes is_subject = no }
+				USR = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				ODS = {
+					exists = yes
+					OR = { has_government = communism has_government = radical_socialism }
+				}
+			}
+			USR = {
+				if = {
+					limit = { ODS = { is_ai = no } }
+					change_tag_from = ODS
+				}
+				annex_country = {
+					target = ODS
+					transfer_troops = yes 
+				}
+			}
+			every_state = {
+				limit = { is_core_of = ODS }
+				remove_core_of = ODS
+			}
+		}
+		if = {
+			limit = {
+				UKR = {
+					exists = yes
+					OR = { has_government = communism has_government = radical_socialism }
+				}
+			}
+			hidden_effect = {
+				random_state = {
+					limit = { is_owned_by = UKR is_core_of = UKR }
+					USR = { transfer_state = PREV }
+				}
+			}
+			USR = {
+				if = {
+					limit = { UKR = { is_ai = no } }
+					change_tag_from = UKR
+				}
+				annex_country = {
+					target = UKR
+					transfer_troops = yes
+				}
+			}
+		}
+		if = {
+		limit = {UKR = {exists = no}}
+		every_state = {
+			limit = { is_core_of = UKR }
+			remove_core_of = UKR
+		}
+		}
+		every_state = {
+			limit = { is_core_of = USR }
+			remove_core_of = RUS
+			remove_core_of = RSS
+			remove_core_of = CCA
+		}
+		every_state = {
+			limit = { is_core_of = USR is_owned_by = RUS }
+			USR = { transfer_state = PREV }
+		}
+		USR = {
+			if = {
+				limit = { has_idea = neutral_foreign_policy_law }
+				add_ideas = realpolitic_policy_law
+			}
+			if = {
+				limit = { controls_state = 202 }
+				set_capital = 202
+			}
+		}
+		if = {
+			limit = { RUS = { has_country_flag = RUS_Oktober_revolution_fired is_faction_leader = yes } }
+			RUS = { add_to_faction = USR }
+		}
+	}
+}
+
+# Победа советской власти на Кубани
+country_event = {
+	id = rcw_dku.122
+	title = rcw_dku.122.t
+	desc = rcw_dku.122.desc
+	picture = GFX_report_event_rcw_rva
+	
+	trigger = {
+		original_tag = KUB
+		has_civil_war = no
+		OR = { has_government = communism has_government = radical_socialism }
+		RUS = { has_country_flag = RUS_Oktober_revolution_fired }
+		RUS = { OR = { has_government = communism has_government = radical_socialism } }
+	}
+	
+	mean_time_to_happen = {
+		days = 0
+	}
+	
+	fire_only_once = yes
+	
+	option = {
+		name = rcw_dku.120.a
+		if = {
+		limit = { NOT = { is_neighbor_of = RUS } }
+		every_state = {
+			limit = { is_core_of = KUB }
+			remove_core_of = RUS
+			remove_core_of = RSS
+			remove_core_of = CCA
+		}
+		every_state = {
+			limit = { is_core_of = ROOT is_owned_by = RUS }
+			ROOT = { transfer_state = PREV }
+		}
+		KUB = {
+			if = {
+				limit = { has_idea = neutral_foreign_policy_law }
+				add_ideas = realpolitic_policy_law
+			}
+			if = {
+				limit = { controls_state = 234 }
+				set_capital = 234
+			}
+		}
+		if = {
+			limit = { RUS = { has_country_flag = RUS_Oktober_revolution_fired is_faction_leader = yes } }
+			RUS = { add_to_faction = KUB }
+		}
+		every_country = {
+				limit = { has_war_with = RUS is_any_former_russian_empire_country = yes is_subject = no NOT = { has_war_with = KUB } }
+				KUB = {
+					declare_war_on = {
+						target = PREV
+						type = annex_everything
+					}
+				}
+			}
+		else = {
+			RUS = { annex_country = { target = KUB transfer_troops = yes } }
+			#every_state = {
+				#limit = { is_core_of = KUB }
+				#remove_core_of = KUB
+			#}
+		}
 		}
 	}
 }
@@ -5289,6 +5577,12 @@ country_event = {
 	trigger = {
 		tag = RVA
 		NOT = { has_government = authoritarism }
+		NOT = {
+			OR = {
+				has_country_flag = RVA_authoritarism_coup_fired
+				has_country_flag = RVA_authoritarism_coup_suppose
+			}
+		}
 		OR = {
 			AND = {
 				has_completed_focus = RVA_democratic_constitution
@@ -5315,7 +5609,7 @@ country_event = {
 			limit = { has_country_leader = { name = "Anton Denikin" ruling_only = yes } }
 			retire_country_leader = yes
 			create_country_leader = { name = "Alexander Lukomsky" desc = RUS_Alexander_Lukomsky_DESC picture = "gfx/leaders/RUS/Alexander_Lukomsky.dds" ideology = despotism_ideology traits = { warmonger } }
-			every_unit_leader = { limit = { OR = { has_id = 76428 } } set_nationality = REB }
+			#every_unit_leader = { limit = { OR = { has_id = 76428 } } set_nationality = REB }
 		}
 		if = {
 			limit = { has_country_leader = { name = "Lavr Kornilov" ruling_only = yes } }
@@ -5326,13 +5620,13 @@ country_event = {
 			}
 			else_if = {
 				limit = { any_unit_leader = { has_id = 76428 } }
-				create_country_leader = { name = "Anton Denikin" desc = RUS_Anton_Denikin_DESC picture = "gfx/leaders/RUS/Anton_Denikin.dds" expire = "1935.1.1" ideology = despotism_ideology traits = { warmonger great_war_hero min_1_old_general silent_workhorse dislikes_germany } }
+				create_country_leader = { name = "Anton Denikin" desc = RUS_Anton_Denikin_DESC picture = "gfx/leaders/RUS/Anton_Denikin.dds" expire = "1935.1.1" ideology = despotism_ideology traits = { great_war_hero warmonger_old_general silent_workhorse dislikes_germany } }
 			}
 			else_if = {
 				limit = { any_unit_leader = { has_id = 77456 } }
 				create_country_leader = { name = "Alexander Lukomsky" desc = RUS_Alexander_Lukomsky_DESC picture = "gfx/leaders/RUS/Alexander_Lukomsky.dds" ideology = despotism_ideology traits = { warmonger } }
 			}
-			every_unit_leader = { limit = { OR = { has_id = 76547 } } set_nationality = REB }
+			#every_unit_leader = { limit = { OR = { has_id = 76547 } } set_nationality = REB }
 		}
 		hidden_effect = { remove_ideas = RVA_steel_discipline_idea }
 		set_country_flag = RVA_authoritarism_coup_fired
@@ -5347,9 +5641,10 @@ country_event = {
 		add_war_support = -0.05
 		add_manpower = -4000
 		set_country_flag = RVA_authoritarism_coup_suppose
-		every_unit_leader = { limit = { OR = { has_id = 77659 } } set_nationality = REB }
-		every_unit_leader = { limit = { OR = { has_id = 77649 } } set_nationality = REB }
-		every_unit_leader = { limit = { OR = { has_id = 76836 } } set_nationality = REB }
+		#every_unit_leader = { limit = { OR = { has_id = 77659 } } set_nationality = REB }
+		#every_unit_leader = { limit = { OR = { has_id = 77649 } } set_nationality = REB }
+		#every_unit_leader = { limit = { OR = { has_id = 76836 } } set_nationality = REB }
+		set_country_flag = RVA_monarchist_commanders_unhappy
 		if = {
 			limit = { has_country_leader = { name = "Nikolay II Romanov" ruling_only = no }  }
 			retire_ideology_leader = authoritarism
@@ -5821,6 +6116,77 @@ country_event = {
 		add_opinion_modifier = { target = RVA modifier = RVA_savinkov_mision_fail }
 		RVA = { add_opinion_modifier = { target = POL modifier = RVA_savinkov_mision_fail } }
 	}
+}
+
+# Монархические офицеры покидают RVA если расстроены
+country_event = {
+	id = rcw_dku.139
+	title = rcw_dku.139.t
+	desc = rcw_dku.139.desc
+	picture = GFX_report_event_rva_reaction_ultimatum
+	
+	trigger = {
+		tag = RVA
+		NOT = { has_government = authoritarism }
+		NOT = { has_government = fascism }
+		has_country_flag = RVA_monarchist_commanders_unhappy
+		NOT = { has_global_flag = RUS_civil_war_over }
+		any_unit_leader = {
+			OR = {
+				has_id = 77659
+				has_id = 77649
+				has_id = 76836
+			}
+		}
+		any_neighbor_country = {
+			OR = {
+				AND = {
+					tag = MCW
+					has_government = despotism
+				}
+				has_government = authoritarism
+				has_government = fascism
+			}
+			OR = {
+				is_main_former_russian_empire_country = yes
+				tag = WVA
+			}
+			NOT = { has_war_with = ROOT }
+			surrender_progress < 0.4
+		}
+	}
+	
+	fire_only_once = yes
+	
+	mean_time_to_happen = {
+		days = 0
+	}
+	
+	option = {
+		name = rcw_dku.139.a
+		every_neighbor_country = {
+			limit = {
+				OR = {
+					AND = {
+						tag = MCW
+						has_government = despotism
+					}
+					has_government = authoritarism
+					has_government = fascism
+				}
+				OR = {
+					is_main_former_russian_empire_country = yes
+					tag = WVA
+				}
+				NOT = { has_war_with = ROOT }
+				surrender_progress < 0.4
+			}
+			every_unit_leader = { limit = { OR = { has_id = 77659 } } set_nationality = PREV }
+			every_unit_leader = { limit = { OR = { has_id = 77649 } } set_nationality = PREV }
+			every_unit_leader = { limit = { OR = { has_id = 76836 } } set_nationality = PREV }
+		}
+		clr_country_flag = RVA_monarchist_commanders_unhappy
+	}	
 }
 
 # Предательство монархистов

@@ -96,6 +96,41 @@
 							has_war_with = ROOT
 							divisions_in_state = {
 								size > 0
+								state = 564
+							}
+						}
+					}
+					NOT = {
+						any_country = {
+							has_war_with = ROOT
+							divisions_in_state = {
+								size > 0
+								state = 1208
+							}
+						}
+					}
+				}
+				transfer_state = 1208
+				else = {
+					set_state_owner = 1208
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						any_country = {
+							has_war_with = ROOT
+							divisions_in_state = {
+								size > 0
+								state = 563
+							}
+						}
+					}
+					NOT = {
+						any_country = {
+							has_war_with = ROOT
+							divisions_in_state = {
+								size > 0
 								state = 1041
 							}
 						}
@@ -1085,7 +1120,7 @@
 	shared_focus = {
 		id = BKL_coup_in_vladivostok
 		icon = GFX_goal_RSS_atamanchina
-		cost = 1
+		cost = 5
 		available = {
 		}
 		ai_will_do = {
@@ -1120,7 +1155,25 @@
 		y = 1
 		relative_position_id = BKL_confrontation_to_the_siberian_government
 		completion_reward = {
-			
+			every_country = {
+				limit = {
+					OR = {
+						tag = JAP
+						is_subject_of = JAP
+					}
+				}
+				if = {
+					limit = {
+						is_in_array = {
+							array = unrecognized_states
+							value = ROOT.id
+						}
+					}
+					ROOT = {
+						THIS_country_will_be_recognized_by_PREV = yes
+					}
+				}
+			}
 		}
 	}
 	

@@ -25,8 +25,16 @@ monarchy_fall = {
 		set_cosmetic_tag = RUS_POST_MONARCHY
 	}
 	if = {
+		limit = { NOT = { has_country_flag = sobor_non_abs_mon } }
+		add_ideas = RUS_damage_to_police_and_special_services
+	}
+	if = {
 		limit = { NOT = { has_country_flag = RUS_petrograd_soviet has_country_flag = RUS_Order_N_1 } }
 		country_event = russian_ovrthrw_of_mon.9
+	}
+	if = {
+		limit = { NOT = { has_country_flag = sobor_non_abs_mon } UKR = { exists = no } controls_state = 202 owns_state = 202 }
+		country_event = { id = ukraine.1 days = 2 }
 	}
 	if = {
 		limit = { NOT = { has_country_flag = sobor_non_abs_mon } }
@@ -129,6 +137,7 @@ remove_tsar_regime_unit_leaders = {
 	
 	every_unit_leader = { limit = { has_id = 77298 is_field_marshal = no } promote_leader = yes }
 	every_unit_leader = { limit = { has_id = 77657 is_field_marshal = no } promote_leader = yes }
+	every_unit_leader = { limit = { has_id = 77407 is_field_marshal = no } promote_leader = yes }
 	
 	if = {
 		limit = { NOT = { any_unit_leader = { has_id = 77650 } } }
@@ -140,7 +149,8 @@ remove_tsar_regime_unit_leaders = {
 	}
 }
 remove_white_unit_leaders = {
-	every_unit_leader = { limit = { OR = { has_id = 76428 has_id = 76547 has_id = 76321 has_id = 77650 } } set_nationality = REB } #RVA
+	remove_tsar_regime_unit_leaders = yes
+	every_unit_leader = { limit = { OR = { has_id = 76428 has_id = 76547 has_id = 76321 has_id = 77650 has_id = 77474 } } set_nationality = REB } #RVA
 	every_unit_leader = { limit = { OR = { has_id = 18702 has_id = 18701 } } set_nationality = DON }
 	every_unit_leader = { limit = { has_id = 77400 } set_nationality = PRM }
 	every_unit_leader = { limit = { has_id = 88147 } set_nationality = CCA }
@@ -167,6 +177,7 @@ remove_white_unit_leaders = {
 	every_unit_leader = { limit = { has_id = 77652 } set_nationality = REB }
 	every_unit_leader = { limit = { has_id = 77417 } set_nationality = REB }
 	every_unit_leader = { limit = { has_id = 77648 } set_nationality = NRR }
+	every_unit_leader = { limit = { has_id = 77488 } set_nationality = UKR }
 	if = {
 		limit = { UKR = { exists = yes NOT = { has_government = radical_socialism has_government = communism } } }
 		every_unit_leader = { limit = { has_id = 77399 } set_nationality = UKR }
@@ -193,6 +204,31 @@ remove_white_unit_leaders = {
 	every_unit_leader = { limit = { OR = { has_id = 88161 has_id = 88162 has_id = 77405 } } set_nationality = PRM }
 }
 bolsheviks_victory = {
+			hidden_effect = {
+				every_country = {
+					limit = {
+						OR = {
+							tag = KHI
+							tag = BUK
+							tag = HRB
+							tag = TRK
+							tag = GEO
+							tag = ARM
+						}
+						is_subject_of = ROOT
+						NOT = { has_government = radical_socialism has_government = communism }
+					}
+					ROOT = { end_puppet = PREV }
+					leave_faction = yes
+					if = {
+						limit = { has_war = yes }
+						every_country = {
+							limit = { OR = { tag = GER tag = AUH tag = SNS tag = TRG is_in_faction_with = GER is_in_faction_with = AUH is_in_faction_with = SNS is_in_faction_with = TRG AND = { is_in_faction_with = TUR NOT = { is_in_faction_with = ENG } } AND = { is_in_faction_with = BUL NOT = { is_in_faction_with = ENG } } } OR = { is_faction_leader = yes is_in_faction = no } }
+							white_peace = PREV
+						}
+					}
+				}
+			}
 			if = {
 				limit = { has_country_flag = RUS_occupated_PER_WWI }
 				if = {
@@ -210,6 +246,9 @@ bolsheviks_victory = {
 				}
 				clr_country_flag = RUS_occupated_PER_WWI
 			}
+	delete_unit_template_and_units = {
+		division_template = "Kazach'ya brigada"
+	}
 	add_threat = -20
 	add_ideas = {
 		soviet_republic_gov_form
@@ -306,7 +345,7 @@ bolsheviks_victory = {
 	}
 	add_ideas = workers_control_law
 	set_country_flag = railway_self_government
-			set_country_flag = RUS_soviet_power_set_workers_control #—делать ивент на декрет о рабочем контроле
+	set_country_flag = RUS_soviet_power_set_workers_control #—делать ивент на декрет о рабочем контроле
 	add_ideas = limited_conscription
 	hidden_effect = {
 		ROOT = {
@@ -409,6 +448,36 @@ bolsheviks_victory = {
 	}
 	
 	set_country_flag = RUS_Bukharin_gen_red_of_Pravda
+	
+		if = {
+			limit = { has_country_flag = RUS_Central_Rada_early_dissolve UKR = { exists = no } controls_state = 202 owns_state = 202 }
+			clr_country_flag = RUS_Central_Rada_early_dissolve
+			country_event = { id = ukraine.-7 days = 2 }
+		}
+		if = {
+			limit = { UKR = { exists = yes is_subject_of = ROOT has_capitulated = no controls_state = 202 } }
+			end_puppet = UKR
+			remove_from_faction = UKR
+			UKR = {
+				load_focus_tree = Ukraine_after_october_focus
+				country_event = { id = ukraine.-13 days = 1 }
+				remove_ideas = UKR_samostiyniki_vs_autonomists
+				remove_ideas = UKR_free_cossaks
+				add_to_war = { targeted_alliance = RUS enemy = GER }
+				add_to_war = { targeted_alliance = RUS enemy = AUH }
+				add_ideas = neutral_foreign_policy_law
+				add_ideas = {
+					UKR_friction_with_polish_communities
+					UKR_lack_of_a_clear_social_program
+					UKR_weak_state_suppression_apparatus
+				}
+				if = {
+					limit = { NOT = { has_completed_focus = UKR_solve_interethnic_problems } }
+					add_ideas = UKR_friction_with_jewish_communities
+				}
+			}
+		}
+	
 	if = {
 		limit = { has_country_flag = RUS_July_crisis_gov_of_bolsheviks_n_others }
 		activate_soviet_power_right = yes
@@ -690,7 +759,7 @@ add_red_unit_leaders = {
 		id = 77426
 		portrait_path = "gfx/leaders/SOV/Mikhail_Muravyov.dds"
 		traits = { politically_connected media_personality infantry_officer infantry_leader trickster }
-		skill = 3 attack_skill = 2 defense_skill = 3 planning_skill = 3 logistics_skill = 3
+		skill = 2 attack_skill = 2 defense_skill = 3 planning_skill = 3 logistics_skill = 3
 		}
 		
 	if = {
@@ -716,7 +785,7 @@ add_red_unit_leaders = {
 		id = 19175
 		portrait_path = "gfx/leaders/SOV/Alexandr_Egorov.dds"
 		traits = { infantry_officer }
-		skill = 2 attack_skill = 3 defense_skill = 3 planning_skill = 3 logistics_skill = 4 }
+		skill = 2 attack_skill = 5 defense_skill = 4 planning_skill = 4 logistics_skill = 5 }
 	create_corps_commander = {
 		name = "Kliment Voroshilov"
 		id = 19176
@@ -802,7 +871,7 @@ add_red_unit_leaders = {
 		id = 19189
 		portrait_path = "gfx/leaders/SOV/Sergey_Lazo.dds"
 		traits = { trickster }
-		skill = 1 attack_skill = 3 defense_skill = 3 planning_skill = 3 logistics_skill = 2 }
+		skill = 1 attack_skill = 3 defense_skill = 3 planning_skill = 1 logistics_skill = 2 }
 	create_corps_commander = {
 		name = "Gai Dmitrievich Gai"
 		id = 19190
@@ -814,14 +883,14 @@ add_red_unit_leaders = {
 		id = 19191
 		portrait_path = "gfx/leaders/SOV/Vasiliy_Chapaev.dds"
 		traits = { trickster trait_reckless cavalry_officer }
-		skill = 1 attack_skill = 3 defense_skill = 3 planning_skill = 2 logistics_skill = 2 }
+		skill = 1 attack_skill = 3 defense_skill = 3 planning_skill = 1 logistics_skill = 2 }
 	
 	create_corps_commander = {
 		name = "Mikhail Levandovsky"
 		id = 19192
 		portrait_path = "gfx/leaders/SOV/Mikhail_Levandovsky.dds"
 		traits = { trickster brilliant_strategist infantry_officer }
-		skill = 2 attack_skill = 3 defense_skill = 3 planning_skill = 3 logistics_skill = 5 }
+		skill = 2 attack_skill = 3 defense_skill = 3 planning_skill = 2 logistics_skill = 5 }
 	create_corps_commander = {
 		name = "Pyotr Slaven"
 		id = 19193
@@ -899,32 +968,32 @@ add_red_unit_leaders = {
 		id = 19203
 		portrait_path = "gfx/leaders/SOV/Dmitri_Parsky.dds"
 		traits = { trickster bearer_of_artillery }
-		skill = 2 attack_skill = 2 defense_skill = 3 planning_skill = 4 logistics_skill = 4 }
+		skill = 2 attack_skill = 2 defense_skill = 3 planning_skill = 3 logistics_skill = 4 }
 	
 	create_corps_commander = {
 		name = "Vladimir Antonov-Ovseenko"
 		id = 19204
 		portrait_path = "gfx/leaders/SOV/Vladimir_Antonov-Ovseenko.dds"
 		traits = { trickster }
-		skill = 3 attack_skill = 4 defense_skill = 5 planning_skill = 4 logistics_skill = 4 }
+		skill = 2 attack_skill = 4 defense_skill = 4 planning_skill = 4 logistics_skill = 4 }
 	create_corps_commander = {
 		name = "Nikolay Chors"
 		id = 19205
 		portrait_path = "gfx/leaders/SOV/Nikolay_Chors.dds"
 		traits = { trickster trait_reckless }
-		skill = 1 attack_skill = 3 defense_skill = 2 planning_skill = 2 logistics_skill = 2 }
+		skill = 1 attack_skill = 3 defense_skill = 2 planning_skill = 1 logistics_skill = 2 }
 	create_corps_commander = {
 		name = "Grigoriy Kotovsky"
 		id = 19206
 		portrait_path = "gfx/leaders/SOV/Grigoriy_Kotovsky.dds"
 		traits = { }
-		skill = 1 attack_skill = 3 defense_skill = 3 planning_skill = 3 logistics_skill = 3 }
+		skill = 1 attack_skill = 4 defense_skill = 3 planning_skill = 2 logistics_skill = 3 }
 	create_corps_commander = {
 		name = "Boris Shaposhnikov"
 		id = 19207
 		portrait_path = "gfx/leaders/SOV/Boris_Shaposhnikov.dds"
 		traits = { }
-		skill = 1 attack_skill = 2 defense_skill = 2 planning_skill = 3 logistics_skill = 2 }
+		skill = 1 attack_skill = 2 defense_skill = 2 planning_skill = 4 logistics_skill = 3 }
 	
 	create_corps_commander = {
 		name = "Mikhail Frunze"
@@ -946,7 +1015,7 @@ add_red_unit_leaders = {
 		traits = { }
 		skill = 1 attack_skill = 3 defense_skill = 3 planning_skill = 3 logistics_skill = 3 }
 	
-	#19211 - это ƒзержинский
+	#19211 - это Дзержинский
 	
 	create_corps_commander = {
 		name = "Avgust Kork"
@@ -967,14 +1036,14 @@ add_red_unit_leaders = {
 		id = 77451
 		portrait_path = "gfx/leaders/SOV/Aleksandr_Sedyakin.dds"
 		traits = { }
-		skill = 1 attack_skill = 3 defense_skill = 3 planning_skill = 3 logistics_skill = 3 }
+		skill = 1 attack_skill = 2 defense_skill = 2 planning_skill = 2 logistics_skill = 2 }
 		
 	create_corps_commander = {
 		name = "Boris Feldman"
 		id = 77452
 		portrait_path = "gfx/leaders/SOV/Boris_Feldman.dds"
 		traits = { }
-		skill = 1 attack_skill = 3 defense_skill = 3 planning_skill = 3 logistics_skill = 3 }
+		skill = 1 attack_skill = 2 defense_skill = 2 planning_skill = 2 logistics_skill = 2 }
 		
 	create_corps_commander = {
 		name = "Iona Yakir"
@@ -996,7 +1065,7 @@ add_red_unit_leaders = {
 		id = 28001
 		portrait_path = "gfx/leaders/SOV/Filipp_Mironov.dds"
 		traits = { old_guard trickster cavalry_officer cavalry_leader commando }
-		skill = 3 attack_skill = 4 defense_skill = 1 planning_skill = 2 logistics_skill = 4 }
+		skill = 2 attack_skill = 3 defense_skill = 1 planning_skill = 2 logistics_skill = 3 }
 	create_corps_commander = { #Донской красный казак
 		name = "Grigoriy Kolpakov"
 		id = 28002
@@ -1008,19 +1077,19 @@ add_red_unit_leaders = {
 		id = 28003
 		portrait_path = "gfx/leaders/DON/Fyodor_Podtyolkov.dds"
 		traits = { cavalry_leader media_personality }
-		skill = 2 attack_skill = 4 defense_skill = 2 planning_skill = 3 logistics_skill = 3 }
+		skill = 1 attack_skill = 3 defense_skill = 1 planning_skill = 2 logistics_skill = 2 }
 	create_corps_commander = { #Донской красный казак
 		name = "Mikhail Krivoshlykov"
 		id = 28004
 		portrait_path = "gfx/leaders/SOV/Mikhail_Krivoshlykov.dds"
 		traits = { trait_cautious }
-		skill = 2 attack_skill = 3 defense_skill = 1 planning_skill = 3 logistics_skill = 2 }
+		skill = 1 attack_skill = 2 defense_skill = 1 planning_skill = 2 logistics_skill = 2 }
 	create_corps_commander = { #Донской красный казак
 		name = "Boris Dumenko"
 		id = 28005
 		portrait_path = "gfx/leaders/SOV/Boris_Dumenko.dds"
 		traits = { trickster cavalry_leader brilliant_strategist }
-		skill = 2 attack_skill = 4 defense_skill = 1 planning_skill = 3 logistics_skill = 2 }
+		skill = 1 attack_skill = 2 defense_skill = 1 planning_skill = 2 logistics_skill = 2 }
 
 	if = {
 		limit = { KRN = { any_unit_leader = { has_id = 29002 } } } every_unit_leader = { limit = { has_id = 29002 } set_nationality = ROOT }
@@ -2040,62 +2109,6 @@ initiate_verification_of_bread_regions_bolsheviks_control = {
 	divide_variable = {
 		var = global.bolsheviks_control_of_bread_regions
 		value = 11
-	}
-}
-
-kill_Lavr_Kornilov = {
-	RUS = {
-		set_country_flag = Lavr_Kornilov_dead
-	}
-	DON = {
-		set_country_flag = Lavr_Kornilov_dead
-	}
-	RVA = {
-		set_country_flag = Lavr_Kornilov_dead
-	}
-	every_country = {
-		limit = {
-			is_main_former_russian_empire_country = yes
-			has_country_leader = { name = "Lavr Kornilov" ruling_only = no }
-		}
-		kill_ideology_leader = despotism
-		remove_ideas = {
-			Lavr_Kornilov_army_chief
-		}
-	}
-}
-kill_Mikhail_Alexeev = {
-	RUS = {
-		set_country_flag = Mikhail_Alexeev_dead
-		remove_ideas = {
-			Mikhail_Alexeev_6
-			Mikhail_Alexeev_army_chief
-		}
-	}
-	DON = {
-		set_country_flag = Mikhail_Alexeev_dead
-		remove_ideas = {
-			Mikhail_Alexeev_6
-			Mikhail_Alexeev_army_chief
-		}
-	}
-	RVA = {
-		set_country_flag = Mikhail_Alexeev_dead
-		remove_ideas = {
-			Mikhail_Alexeev_6
-			Mikhail_Alexeev_army_chief
-		}
-	}
-	every_country = {
-		limit = {
-			is_main_former_russian_empire_country = yes
-			has_country_leader = { name = "Mikhail Alexeev" ruling_only = no }
-		}
-		kill_ideology_leader = authoritarism
-		remove_ideas = {
-			Mikhail_Alexeev_6
-			Mikhail_Alexeev_army_chief
-		}
 	}
 }
 

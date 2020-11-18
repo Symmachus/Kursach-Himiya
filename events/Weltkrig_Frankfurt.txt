@@ -865,6 +865,7 @@ country_event = {
 						state = 184
 						state = 993
 						state = 106
+						state = 803
 						state = 818
 						state = 817
 						state = 947
@@ -883,6 +884,7 @@ country_event = {
 					limit = {
 						OR = {
 							state = 44
+							state = 805
 							state = 848
 						}
 					}
@@ -895,6 +897,7 @@ country_event = {
 					limit = {
 						OR = {
 							state = 44
+							state = 805
 							state = 848
 						}
 					}
@@ -924,6 +927,7 @@ country_event = {
 					limit = {
 						OR = {
 							state = 44
+							state = 805
 							state = 848
 						}
 					}
@@ -951,6 +955,7 @@ country_event = {
 					limit = {
 						OR = {
 							state = 44
+							state = 805
 							state = 848
 						}
 					}
@@ -977,6 +982,7 @@ country_event = {
 			limit = {
 				OR = {
 					state = 44
+					state = 805
 					state = 848
 				}
 			}
@@ -1023,7 +1029,7 @@ country_event = {
 						state = 82
 						state = 83
 						state = 154
-						state = 804
+						state = 1212
 						state = 80
 					}
 				}
