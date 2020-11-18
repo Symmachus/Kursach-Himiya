@@ -143,3 +143,4 @@ set_popularities = {
 	social_conservatism = 20
 	authoritarism = 60
 }
+create_country_leader = { name = "Abd al Crim" desc = ALB_nicholas_DESC picture = "gfx/leaders/RIF/Abd_al_Crim.dds" expire = "1935.1.1" ideology = authoritarism_ideology   traits = {  } }

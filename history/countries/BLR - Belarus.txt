@@ -142,8 +142,10 @@ set_popularities = {
 	despotism = 10
 }
 
+create_country_leader = { name = "Alexandr Chervyacov" desc = "" picture = "gfx/leaders/BLR/Alexandr_Chervyacov.dds" expire = "1965.1.1" ideology = leninism traits = { } }
 create_country_leader = { name = "Jan Sereda" desc = "" picture = "gfx/leaders/BLR/Jan_Sereda.dds" expire = "1965.1.1" ideology = social_democracy_ideology traits = { } }
 create_country_leader = { name = "Jazep Liosik" desc = "" picture = "gfx/leaders/BLR/Jazep_Liosik.dds" expire = "1965.1.1" ideology = social_conservatism_ideology traits = { } }
+create_country_leader = { name = "Roman Skirmunt" desc = "" picture = "gfx/leaders/BLR/Roman_Skirmunt.dds" expire = "1965.1.1" ideology = national_syndicalism_ideology traits = { } }
 
 #create_field_marshal = {
 #	name = "Kyprian Kandratovich"

@@ -57,7 +57,7 @@
  labor_legislation:0 "Трудовое законодательство"
  no_legislation:0 "Регламентация отсутствует"
  minimum_legislation:0 "Минимальная регламентация"
- acceptable_legislation:0 "Приемлимые условия труда"
+ acceptable_legislation:0 "Приемлемые условия труда"
  good_legislation:0 "Хорошие условия труда"
  great_legislation:0 "Отличные условия труда"
  
@@ -83,7 +83,7 @@
  
  agriculture_property_law:0 "Земельная собственность"
  individual_homesteads:0 "Крестьяне-единоличники"
- landlordism:0 "Латифундсты и кулаки"
+ landlordism:0 "Латифунидсты и кулаки"
  small_farms:0 "Фермерские хозяйства"
  agrarian_corporations:0 "Аграрные корпорации"
  state_agricultural_property:0 "Государственная собственность"
