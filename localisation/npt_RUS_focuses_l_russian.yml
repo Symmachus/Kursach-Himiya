@@ -54,7 +54,7 @@
  RUS_mon_on_w_tank_factory:0 "Первый танковый завод"
  RUS_mon_on_w_tank_factory_desc:0 ""
  RUS_mon_on_w_moderate_land_reform:0 "Легализация передела земли"
- RUS_mon_on_w_moderate_land_reform_desc:0 "Ограниченные меры по смягчению социальной напряжённости в деревне"
+ RUS_mon_on_w_moderate_land_reform_desc:0 "Ограниченные меры по смягчению социальной напряжённости в деревне."
 
  
  RUS_main_economic_committee:0 "Главный экономический комитет"
@@ -150,7 +150,7 @@
  RUS_uchredilka_desc:0 ""
  
  RUS_general_kornilov:0 "Генерал Корнилов"
- RUS_general_kornilov_desc:0 "Структура этой ветки фокусов не нагло спёрта, а честно скопирована из кайзеррейха и является всего лишь отсылкой, ведь все же мы знаем какой мод на HoI4 самый проработанный (Economic Crisis)"
+ RUS_general_kornilov_desc:0 "Структура этой ветки фокусов не нагло спёрта, а честно скопирована из Кайзеррейха и является всего лишь отсылкой, ведь все же мы знаем, какой мод на HoI4 самый проработанный (Economic Crisis)."
  RUS_compromise_with_democrats:0 "Компромисс с бывшим правительством"
  RUS_compromise_with_democrats_desc:0 ""
  RUS_disperse_Petrograd_Soviet:0 "Решительные действия"
