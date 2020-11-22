@@ -828,25 +828,6 @@ add_red_unit_leaders = {
 		portrait_path = "gfx/leaders/SOV/Oka_Gorodovikov.dds"
 		traits = { cavalry_officer }
 		skill = 1 attack_skill = 3 defense_skill = 3 planning_skill = 3 logistics_skill = 3 }
-	create_corps_commander = {
-		name = "Alexandr Borchaninov"
-		id = 19182
-		portrait_path = "gfx/leaders/SOV/Alexandr_Borchaninov.dds"
-		traits = {  }
-		skill = 1 attack_skill = 2 defense_skill = 3 planning_skill = 3 logistics_skill = 3 }
-	
-	create_corps_commander = {
-		name = "Fridrihs Kalnins"
-		id = 19183
-		portrait_path = "gfx/leaders/SOV/Fridrihs_Kalnins.dds"
-		traits = { infantry_officer }
-		skill = 1 attack_skill = 1 defense_skill = 1 planning_skill = 1 logistics_skill = 1 }
-	create_corps_commander = {
-		name = "Jan Latsis"
-		id = 19184
-		portrait_path = "gfx/leaders/SOV/Jan_Latsis.dds"
-		traits = { old_guard  }
-		skill = 1 attack_skill = 2 defense_skill = 2 planning_skill = 2 logistics_skill = 2 }
 	
 	create_corps_commander = {
 		name = "Alexandr Samoylo"
@@ -854,12 +835,6 @@ add_red_unit_leaders = {
 		portrait_path = "gfx/leaders/SOV/Alexandr_Samoylo.dds"
 		traits = { old_guard }
 		skill = 1 attack_skill = 2 defense_skill = 2 planning_skill = 2 logistics_skill = 3 }
-	create_corps_commander = {
-		name = "Vladimir Olderogge"
-		id = 19187
-		portrait_path = "gfx/leaders/SOV/Vladimir_Olderogge.dds"
-		traits = { }
-		skill = 1 attack_skill = 2 defense_skill = 2 planning_skill = 2 logistics_skill = 2 }
 	create_corps_commander = {
 		name = "Mikhail Tukhachevsky"
 		id = 19188
@@ -873,12 +848,6 @@ add_red_unit_leaders = {
 		traits = { trickster }
 		skill = 1 attack_skill = 3 defense_skill = 3 planning_skill = 1 logistics_skill = 2 }
 	create_corps_commander = {
-		name = "Gai Dmitrievich Gai"
-		id = 19190
-		portrait_path = "gfx/leaders/SOV/Gai_Dmitrievich_Gai.dds"
-		traits = { }
-		skill = 1 attack_skill = 2 defense_skill = 1 planning_skill = 1 logistics_skill = 2 }
-	create_corps_commander = {
 		name = "Vasiliy Chapaev"
 		id = 19191
 		portrait_path = "gfx/leaders/SOV/Vasiliy_Chapaev.dds"
@@ -891,12 +860,6 @@ add_red_unit_leaders = {
 		portrait_path = "gfx/leaders/SOV/Mikhail_Levandovsky.dds"
 		traits = { trickster brilliant_strategist infantry_officer }
 		skill = 2 attack_skill = 3 defense_skill = 3 planning_skill = 2 logistics_skill = 5 }
-	create_corps_commander = {
-		name = "Pyotr Slaven"
-		id = 19193
-		portrait_path = "gfx/leaders/SOV/Pyotr_Slaven.dds"
-		traits = { old_guard }
-		skill = 1 attack_skill = 1 defense_skill = 1 planning_skill = 1 logistics_skill = 1 }
 	if = {
 		limit = { KRN = { any_unit_leader = { has_id = 19194 } } } every_unit_leader = { limit = { has_id = 19194 } set_nationality = ROOT }
 		else = {
@@ -922,7 +885,7 @@ add_red_unit_leaders = {
 	create_corps_commander = {
 		name = "Vladimir Azin"
 		id = 19196
-		portrait_path = "gfx/leaders/Europe/portrait_europe_generic_land_19.dds"
+		portrait_path = "gfx/leaders/SOV/Vladimir_Azin.dds"
 		traits = { trickster trait_reckless }
 		skill = 1 attack_skill = 3 defense_skill = 3 planning_skill = 2 logistics_skill = 2 }
 	create_corps_commander = {
@@ -931,12 +894,6 @@ add_red_unit_leaders = {
 		portrait_path = "gfx/leaders/SOV/Pavel_Sytin.dds"
 		traits = { inflexible_strategist }
 		skill = 1 attack_skill = 2 defense_skill = 3 planning_skill = 2 logistics_skill = 3 }
-	create_corps_commander = {
-		name = "Dmitry Zhloba"
-		id = 19198
-		portrait_path = "gfx/leaders/SOV/Dmitry_Zhloba.dds"
-		traits = { trait_reckless }
-		skill = 1 attack_skill = 3 defense_skill = 2 planning_skill = 1 logistics_skill = 3 }
 	
 	create_corps_commander = {
 		name = "Ivan Sorokin"
@@ -950,12 +907,6 @@ add_red_unit_leaders = {
 		portrait_path = "gfx/leaders/KUB/Alexey_Avtonomov.dds"
 		traits = { career_officer }
 		skill = 1 attack_skill = 2 defense_skill = 2 planning_skill = 1 logistics_skill = 2 }
-	create_corps_commander = {
-		name = "Anatoliy Gekker"
-		id = 19201
-		portrait_path = "gfx/leaders/SOV/Anatoliy_Gekker.dds"
-		traits = {  }
-		skill = 1 attack_skill = 2 defense_skill = 3 planning_skill = 3 logistics_skill = 3 }
 	
 	create_corps_commander = {
 		name = "Dmitry Nadyozhny"
@@ -1015,50 +966,7 @@ add_red_unit_leaders = {
 		traits = { }
 		skill = 1 attack_skill = 3 defense_skill = 3 planning_skill = 3 logistics_skill = 3 }
 	
-	#19211 - это Дзержинский
-	
-	create_corps_commander = {
-		name = "Avgust Kork"
-		id = 77445
-		portrait_path = "gfx/leaders/SOV/Avgust_Kork.dds"
-		traits = { }
-		skill = 1 attack_skill = 3 defense_skill = 3 planning_skill = 3 logistics_skill = 3 }
-		
-	create_corps_commander = {
-		name = "Iyeronim Uborevich"
-		id = 77450
-		portrait_path = "gfx/leaders/SOV/Iyeronim_Uborevich.dds"
-		traits = { }
-		skill = 1 attack_skill = 3 defense_skill = 3 planning_skill = 3 logistics_skill = 3 }
-		
-	create_corps_commander = {
-		name = "Aleksandr Sedyakin"
-		id = 77451
-		portrait_path = "gfx/leaders/SOV/Aleksandr_Sedyakin.dds"
-		traits = { }
-		skill = 1 attack_skill = 2 defense_skill = 2 planning_skill = 2 logistics_skill = 2 }
-		
-	create_corps_commander = {
-		name = "Boris Feldman"
-		id = 77452
-		portrait_path = "gfx/leaders/SOV/Boris_Feldman.dds"
-		traits = { }
-		skill = 1 attack_skill = 2 defense_skill = 2 planning_skill = 2 logistics_skill = 2 }
-		
-	create_corps_commander = {
-		name = "Iona Yakir"
-		id = 77453
-		portrait_path = "gfx/leaders/SOV/Iona_Yakir.dds"
-		traits = { }
-		skill = 1 attack_skill = 3 defense_skill = 3 planning_skill = 3 logistics_skill = 3 }
-		
-		create_corps_commander = {
-		name = "Nikolay Semonov"
-		id = 77454
-		portrait_path = "gfx/leaders/SOV/Nikolay_Semonov.dds"
-		traits = { }
-		skill = 1 attack_skill = 3 defense_skill = 3 planning_skill = 3 logistics_skill = 3 }
-		
+	#19211 - это Дзержинский	
 	
 	create_corps_commander = { #Донской красный казак
 		name = "Filipp Mironov"
@@ -1066,12 +974,6 @@ add_red_unit_leaders = {
 		portrait_path = "gfx/leaders/SOV/Filipp_Mironov.dds"
 		traits = { old_guard trickster cavalry_officer cavalry_leader commando }
 		skill = 2 attack_skill = 3 defense_skill = 1 planning_skill = 2 logistics_skill = 3 }
-	create_corps_commander = { #Донской красный казак
-		name = "Grigoriy Kolpakov"
-		id = 28002
-		portrait_path = "gfx/leaders/SOV/Grigoriy_Kolpakov.dds"
-		traits = { cavalry_officer }
-		skill = 1 attack_skill = 2 defense_skill = 1 planning_skill = 2 logistics_skill = 2 }
 	create_corps_commander = { #Донской красный казак
 		name = "Fyodor Podtyolkov"
 		id = 28003

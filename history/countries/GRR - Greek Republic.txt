@@ -182,9 +182,11 @@ set_popularities = {
 
 create_country_leader = { name = "Eleftherios Venizelos" desc = GRR_Eleftherios_Venizelos_DESC picture = "gfx/leaders/GRE/Eleftherios_Venizelos.dds" expire = "1935.1.1" ideology = market_liberalism_ideology traits = {  } }
 
-create_corps_commander = {  name = "Leonidas Paraskevopoulos" id = 35004 portrait_path = "gfx/generals/GRE_danglis.tga" traits = { trait_engineer  } skill = 3 }
-create_corps_commander = {  name = "Panagiotis Danglis" id = 35005 portrait_path = "gfx/generals/GRE_trikoupis.tga" traits = {   } skill = 3 }
-create_corps_commander = {  name = "Emmanuel Vimercati" id = 35010 portrait_path = "gfx/generals/GRE_dousmanis.tga" traits = {   } skill = 2 }
+create_field_marshal = {  name = "Panagiotis Danglis" id = 35000 portrait_path = "gfx/leaders/GRE/Panagiotis_Danglis.dds" traits = { war_hero career_officer politically_connected trait_mountaineer } skill = 3 attack_skill = 3 defense_skill = 2 planning_skill = 3 logistics_skill = 1 }
+create_corps_commander = {  name = "Emmanuel Zimvrakakis" id = 35001 portrait_path = "gfx/leaders/GRE/Emmanuel_Imbricates.dds" traits = { war_hero politically_connected guerilla_fighter commando } skill = 4 attack_skill = 4 defense_skill = 1 planning_skill = 3 logistics_skill = 1 }
+create_corps_commander = {  name = "Epaminondas Zimvrakakis" id = 35002 portrait_path = "gfx/leaders/GRE/Epaminondas_Imbricates.dds" traits = { war_hero politically_connected guerilla_fighter cavalry_officer } skill = 4 attack_skill = 3 defense_skill = 2 planning_skill = 2 logistics_skill = 2 }
+create_corps_commander = {  name = "Dimitrios Ioannu" id = 35003 portrait_path = "gfx/leaders/GRE/Dimitrios_Ioannou.dds" traits = { war_hero trait_reckless infantry_officer guerilla_fighter } skill = 2 attack_skill = 4 defense_skill = 1 planning_skill = 2 logistics_skill = 1 }
+create_corps_commander = {  name = "Konstantinos Nider" id = 35004 portrait_path = "gfx/leaders/GRE/Konstantinos_Nider.dds" traits = { organizer war_hero career_officer trait_cautious } skill = 5 attack_skill = 4 defense_skill = 3 planning_skill = 3 logistics_skill = 4 }
 
 add_ideas = {
 	free_trade
@@ -216,4 +218,7 @@ add_ideas = {
 	add_to_war = { targeted_alliance = FRA enemy = GER }
 	add_to_war = { targeted_alliance = FRA enemy = AUH }
 	add_to_war = { targeted_alliance = FRA enemy = BUL }
+}
+1917.11.7 = {
+	set_capital = 47
 }

@@ -6656,7 +6656,6 @@ country_event = {
 			PRM = {
 				every_unit_leader = { limit = { has_id = 88163 } set_nationality = PREV.PREV }
 				every_unit_leader = { limit = { has_id = 88165 } set_nationality = PREV.PREV }
-				every_unit_leader = { limit = { has_id = 19190 } set_nationality = PREV.PREV }
 			}
 		}
 	}
@@ -6951,14 +6950,6 @@ country_event = {
 		ai_chance = {
 			factor = 999
 		}
-		if = {
-			limit = { RUS = { exists = yes } }
-			every_unit_leader = { limit = { has_id = 19190 } set_nationality = RUS }
-		}
-		else_if = {
-			limit = { SOV = { exists = yes } }
-			every_unit_leader = { limit = { has_id = 19190 } set_nationality = SOV }
-		}
 		set_politics = { ruling_party = fascism }
 		every_country = {
 			every_unit_leader = { limit = { has_id = 88163 } set_nationality = REB }
@@ -6995,16 +6986,6 @@ country_event = {
 			every_unit_leader = { limit = { has_id = 77405 } set_nationality = PRM }
 		}
 		load_oob = PRM_contra_2.0
-		if = {
-			limit = { RUS = { exists = yes } }
-			every_unit_leader = { limit = { has_id = 19190 } set_nationality = RUS }
-			RUS = { change_tag_from = PRM }
-		}
-		else_if = {
-			limit = { SOV = { exists = yes } }
-			every_unit_leader = { limit = { has_id = 19190 } set_nationality = SOV }
-			SOV = { change_tag_from = PRM }
-		}
 	}
 	
 	option = {
@@ -7017,7 +6998,7 @@ country_event = {
 				408 714 657 655 1034 1035
 			}
 			keep_unit_leaders = {
-				88163 88164 88165 19190
+				88163 88164 88165
 			}
 		}
 		random_other_country = {

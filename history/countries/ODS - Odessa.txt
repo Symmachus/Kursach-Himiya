@@ -183,17 +183,17 @@ add_ideas = {
 	set_country_flag = ODS_RUMCHEROD
 	
 	set_politics = {
-		ruling_party = social_liberalism
+		ruling_party = communism
 		last_election = "1915.1.1"
 		election_frequency = 36
 		elections_allowed = no
 	}
 	set_popularities = {
 		radical_socialism = 19
-		communism = 24
-		social_democracy = 15
-		social_liberalism = 35
-		market_liberalism = 7
+		communism = 36.5
+		social_democracy = 15.5
+		social_liberalism = 20.4
+		market_liberalism = 8.6
 	}
 }
 

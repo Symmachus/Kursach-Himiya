@@ -1,7 +1,6 @@
 ﻿capital = 2
 
-#set_cosmetic_tag = ITA_MONARCHY
-set_cosmetic_tag = ITA_MONARCHY_not_crown
+set_cosmetic_tag = ITA_MONARCHY
 
 set_stability = 0.45
 set_war_support = 0.1
@@ -198,13 +197,11 @@ add_ideas = {
 	poliparty_system_law
 	territorial_expansion_law
 	
-	ITA_Vittorio_Emanuele_III_idea
-	
 	landlordism steel_agricultural_tools
 	cities_averange_literacy
 }
 set_politics = {
-	ruling_party = social_conservatism
+	ruling_party = authoritarism
 	last_election = "1913.11.1"
 	election_frequency = 48
 	elections_allowed = no
@@ -215,15 +212,14 @@ set_popularities = {
 	social_democracy = 11
 	social_liberalism = 13
 	market_liberalism = 13
-	social_conservatism = 9
-	authoritarism = 7
+	social_conservatism = 7
+	authoritarism = 9
 	despotism = 9
 	fascism = 5 
 	national_syndicalism = 2
 }
 
-create_country_leader = { name = "Giacinto Menotti Serrati" desc = ITA_Palmiro_Togliatti_DESC picture = "gfx/leaders/ITA/Palmiro_Togliatti.dds" expire = "1935.1.1" ideology = leninism traits = {  } }
-create_country_leader = { name = "Paolo Boselli" desc = ITA_Paolo_Boselli_DESC picture = "gfx/leaders/ITA/Paolo_Boselli.dds" expire = "1935.1.1" ideology = social_conservatism_ideology traits = { historian } }
+create_country_leader = { name = "Palmiro Togliatti" desc = ITA_Palmiro_Togliatti_DESC picture = "gfx/leaders/ITA/Palmiro_Togliatti.dds" expire = "1935.1.1" ideology = leninism traits = {  } }
 create_country_leader = { name = "Vittorio Emanuele III" desc = ITA_vittorio_emanuele_iii_DESC picture = "gfx/leaders/ITA/Vittorio_Emanuele_III.dds" expire = "1935.1.1" ideology = authoritarism_ideology traits = {  } }
 create_country_leader = { name = "Luigi Cadorna" desc = ITA_Luigi_Cadorna_DESC picture = "gfx/leaders/ITA/Luigi_Cadorna.dds" expire = "1935.1.1" ideology = despotism_ideology traits = {  } }
 create_country_leader = { name = "Benito Mussolini" desc = ITA_benito_mussolini_DESC picture = "gfx/leaders/ITA/benito_mussolini.dds" expire = "1935.1.1" ideology = nazism traits = {  } }
@@ -257,7 +253,7 @@ add_ideas = {
 	oob = "ITA_1914"
 
 	set_politics = {
-		ruling_party = social_conservatism last_election = "1913.11.1" 
+		ruling_party = authoritarism last_election = "1913.11.1" 
 		election_frequency = 48 elections_allowed = no 
 	}
 	set_popularities = {
@@ -266,8 +262,8 @@ add_ideas = {
 			social_democracy = 11
 			social_liberalism = 13
 			market_liberalism = 13
-			social_conservatism = 9
-			authoritarism = 7
+			social_conservatism = 7
+			authoritarism = 9
 			despotism = 9
 			fascism = 5 
 			national_syndicalism = 2

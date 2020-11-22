@@ -150,31 +150,11 @@ set_popularities = {
 }
 
 create_country_leader = {
-	name = "Habibullah-Khan"
+	name = "Habibullah Khan"
 	desc = ""
 	picture = "gfx/leaders/AFG/Habibullah_Khan.dds"
 	expire = "1965.1.1"
 	ideology = social_conservatism_ideology
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "High Council"
-	desc = ""
-	picture = ""
-	expire = "1965.1.1"
-	ideology = stalinism
-	traits = {
-		#
-	}
-}
-create_country_leader = {
-	name = "High Council"
-	desc = ""
-	picture = ""
-	expire = "1965.1.1"
-	ideology = social_democracy_ideology
 	traits = {
 		#
 	}

@@ -319,7 +319,7 @@ country_event = {
 			states = {
 				218 228 953 227
 			}
-			keep_unit_leaders_trigger = { NOT = { has_id = 28001 has_id = 28002 has_id = 28003 has_id = 28004 has_id = 28005 } }
+			keep_unit_leaders_trigger = { NOT = { has_id = 28001 has_id = 28003 has_id = 28004 has_id = 28005 } }
 		}
 		hidden_effect = {
 			save_global_event_target_as = DON_2_CW
@@ -395,7 +395,7 @@ country_event = {
 			states = {
 				218 228 953 227
 			}
-			keep_unit_leaders_trigger = { NOT = { has_id = 28001 has_id = 28002 has_id = 28003 has_id = 28004 has_id = 28005 } }
+			keep_unit_leaders_trigger = { NOT = { has_id = 28001 has_id = 28003 has_id = 28004 has_id = 28005 } }
 		}
 		hidden_effect = {
 			save_global_event_target_as = DON_2_CW
