@@ -1496,6 +1496,7 @@ country_event = {
 				picture = "gfx/leaders/RUS/Alexandra_Fyodorovna_Romanova.dds"
 				ideology = authoritarism_ideology
 				traits = { inexperienced_imperialist stout_defender unpopular_monarch }
+				female = yes
 			}
 		}
 		remove_ideas = RUS_Nikolay_II_idea
@@ -1803,6 +1804,7 @@ country_event = {
 					picture = "gfx/leaders/RUS/Alexandra_Fyodorovna_Romanova.dds"
 					ideology = authoritarism_ideology
 					traits = { inexperienced_imperialist stout_defender unpopular_monarch }
+					female = yes
 				}
 				else = { remove_ideas = RUS_Nikolay_II_idea }
 			}

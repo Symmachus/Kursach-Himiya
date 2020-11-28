@@ -234,9 +234,9 @@ add_ideas = {
 }
 
 1912.2.25 = {
-	create_country_leader = { name = "Marie-Adélaïde" desc = LUX_Marie_Adelaide_DESC picture = "gfx/leaders/LUX/Marie_Adelaide.dds" expire = "1935.1.1" ideology = social_democracy_ideology traits = {  } }
-	create_country_leader = { name = "Marie-Adélaïde" desc = LUX_Marie_Adelaide_DESC picture = "gfx/leaders/LUX/Marie_Adelaide.dds" expire = "1935.1.1" ideology = social_conservatism_ideology traits = {  } }
-	create_country_leader = { name = "Marie-Adélaïde" desc = LUX_Marie_Adelaide_DESC picture = "gfx/leaders/LUX/Marie_Adelaide.dds" expire = "1935.1.1" ideology = market_liberalism_ideology traits = {  } }
+	create_country_leader = { name = "Marie-Adélaïde" desc = LUX_Marie_Adelaide_DESC picture = "gfx/leaders/LUX/Marie_Adelaide.dds" expire = "1935.1.1" ideology = social_democracy_ideology traits = {  } female = yes }
+	create_country_leader = { name = "Marie-Adélaïde" desc = LUX_Marie_Adelaide_DESC picture = "gfx/leaders/LUX/Marie_Adelaide.dds" expire = "1935.1.1" ideology = social_conservatism_ideology traits = {  } female = yes }
+	create_country_leader = { name = "Marie-Adélaïde" desc = LUX_Marie_Adelaide_DESC picture = "gfx/leaders/LUX/Marie_Adelaide.dds" expire = "1935.1.1" ideology = market_liberalism_ideology traits = {  } female = yes }
 }
 
 1914.1.1 = {

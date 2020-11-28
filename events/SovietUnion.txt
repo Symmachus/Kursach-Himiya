@@ -101,7 +101,7 @@ country_event = {
 		hidden_effect = {
 			if = {
 				limit = { RUS = { NOT = { has_country_flag = Maria_Spiridonova_dead } } }
-				SOV = { create_country_leader = { name = "Maria Spiridonova" desc = RUS_Maria_Spiridonova_DESC picture = "gfx/leaders/SOV/Maria_Spiridonova.dds" expire = "1935.1.1" ideology = anarchist_communism traits = {  } } }
+				SOV = { create_country_leader = { name = "Maria Spiridonova" desc = RUS_Maria_Spiridonova_DESC picture = "gfx/leaders/SOV/Maria_Spiridonova.dds" expire = "1935.1.1" ideology = anarchist_communism traits = {  } female = yes } }
 			}
 			if = {
 				limit = { RUS = { NOT = { has_country_flag = Felix_Dzerjinsky_dead } } }

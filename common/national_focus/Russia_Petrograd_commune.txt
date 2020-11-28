@@ -402,7 +402,7 @@ focus_tree = {
 				SIB = {
 					inherit_technology = RUS
 					set_politics = { ruling_party = radical_socialism }
-					create_country_leader = { name = "Maria Spiridonova" desc = RUS_Maria_Spiridonova_DESC picture = "gfx/leaders/SOV/Maria_Spiridonova.dds" ideology = anarchist_communism traits = {  } }
+					create_country_leader = { name = "Maria Spiridonova" desc = RUS_Maria_Spiridonova_DESC picture = "gfx/leaders/SOV/Maria_Spiridonova.dds" ideology = anarchist_communism traits = {  } female = yes }
 					add_popularity = { ideology = radical_socialism popularity = 0.3 }
 					add_popularity = { ideology = communism popularity = 0.1 }
 					load_focus_tree = Siberia_radsoc_focus
