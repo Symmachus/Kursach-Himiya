@@ -203,7 +203,7 @@
  FRT_quest_for_peace:0 "Поиски мира"
  FRT_quest_for_peace_desc:0 "Нам не нужны колонии. Наша задача выйти из войны, сохранив за собой наши родные, украинские земли."
  FRT_building_anarcho-capitalism:0 "Построение анархо-капитализма"
- FRT_building_anarcho-capitalism:0 ""
+ FRT_building_anarcho-capitalism_desc:0 ""
  FRT_building_syndicalism:0 "Построение синдикализма"
  FRT_building_syndicalism_desc:0 "Практика показала, что концепция организации общества через рабочие самоуправления имеет право на жизнь"
  FRT_syndicates:0 "Организация синдикатов"
