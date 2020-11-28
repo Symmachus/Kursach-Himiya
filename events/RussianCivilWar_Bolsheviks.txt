@@ -694,7 +694,6 @@ country_event = {
 		create_corps_commander = { name = "Pavel Lazimir" id = 77439 portrait_path = "gfx/leaders/RGR/Military_Revolutionary_Committee.dds" traits = { guerilla_fighter trait_reckless } skill = 1 attack_skill = 1 defense_skill = 1 planning_skill = 1 logistics_skill = 1 } #Я (Д. Ю. Ладыгин) не уверен был ли он на момент восстания левым эсером
 		create_corps_commander = { name = "Vasiliy Likhobadin" id = 77442 portrait_path = "gfx/leaders/RGR/Military_Revolutionary_Committee.dds" traits = { guerilla_fighter trait_reckless } skill = 1 attack_skill = 1 defense_skill = 1 planning_skill = 1 logistics_skill = 1 }
 		create_corps_commander = { name = "Sergey Mstislavskiy" id = 77443 portrait_path = "gfx/leaders/RGR/Military_Revolutionary_Committee.dds" traits = { guerilla_fighter trait_reckless } skill = 1 attack_skill = 1 defense_skill = 1 planning_skill = 1 logistics_skill = 1 }
-		create_corps_commander = { name = "Sergey Mstislavskiy" id = 77446 portrait_path = "gfx/leaders/RGR/Military_Revolutionary_Committee.dds" traits = { guerilla_fighter trait_reckless } skill = 1 attack_skill = 1 defense_skill = 1 planning_skill = 1 logistics_skill = 1 }
 		FRT = { every_unit_leader = { limit = {	OR = { has_id = 77423 } } set_nationality = RUS } }
 		if = {
 			limit = { has_country_leader = { name = "Vladimir Lenin" ruling_only = no } }

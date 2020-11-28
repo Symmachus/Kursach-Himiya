@@ -181,7 +181,6 @@ set_popularities = {
 	authoritarism = 10
 }
 
-create_country_leader = { name = "Christian Rakovsky" desc = ROM_christian_rakovsky_DESC picture = "gfx/leaders/ROM_christian_rakovsky.dds" expire = "1935.1.1" ideology = stalinism traits = {  } }
 create_country_leader = { name = "Carol I" desc = ROM_carol_i_DESC picture = "gfx/leaders/ROM_carol_i.dds" expire = "1914.1.1" ideology = authoritarism_ideology traits = {  } }
 create_country_leader = { name = "Carol I" desc = ROM_carol_i_DESC picture = "gfx/leaders/ROM_carol_i.dds" expire = "1914.1.1" ideology = social_conservatism_ideology traits = {  } }
 create_country_leader = { name = "Carol I" desc = ROM_carol_i_DESC picture = "gfx/leaders/ROM_carol_i.dds" expire = "1914.1.1" ideology = market_liberalism_ideology traits = {  } }

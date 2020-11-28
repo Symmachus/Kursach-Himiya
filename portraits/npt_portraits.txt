@@ -1722,6 +1722,130 @@ RVA = {
 	}
 }
 
+URL = {
+	army = {
+		male = {
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
+			"gfx/leaders/generic_russia_1.dds"
+			"gfx/leaders/generic_russia_2.dds"
+			"gfx/leaders/generic_russia_4.dds"
+			"gfx/leaders/generic_russia_5.dds"
+			"gfx/leaders/generic_russia_6.dds"
+			"gfx/leaders/generic_russia_7.dds"
+			"gfx/leaders/generic_russia_8.dds"
+			"gfx/leaders/generic_russia_9.dds"
+		}
+	}
+	
+	navy = {
+		male = {
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_1.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
+		}
+	}
+	
+	political = {
+		social_democracy = {
+				male = { 
+					"gfx/leaders/SIB/Pyotr_Murashev.dds"
+			}
+		}
+		social_liberalism = {
+				male = { 
+					"gfx/leaders/SIB/Pyotr_Murashev.dds"
+			}
+		}
+		authoritarism = {
+				male = { 
+					"gfx/leaders/generic_russia_9.dds"
+			}
+		}
+		despotism = {
+				male = { 
+					"gfx/leaders/generic_russia_8.dds"
+			}
+		}
+		fascism = {
+				male = { 
+					"gfx/leaders/generic_russia_8.dds"
+			}
+		}
+		national_syndicalism = {
+				male = { 
+					"gfx/leaders/generic_russia_8.dds"
+			}
+		}
+	}
+}
+
+HRB = {
+	army = {
+		male = {
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_2.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_3.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+			"gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
+			"gfx/leaders/generic_russia_1.dds"
+			"gfx/leaders/generic_russia_2.dds"
+			"gfx/leaders/generic_russia_4.dds"
+			"gfx/leaders/generic_russia_5.dds"
+			"gfx/leaders/generic_russia_6.dds"
+			"gfx/leaders/generic_russia_7.dds"
+			"gfx/leaders/generic_russia_8.dds"
+			"gfx/leaders/generic_russia_9.dds"
+		}
+	}
+	
+	navy = {
+		male = {
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_1.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_2.dds"
+			"gfx/leaders/Europe/Portrait_Europe_Generic_navy_3.dds"
+		}
+	}
+	
+	political = {
+		social_democracy = {
+				male = { 
+					"gfx/leaders/SIB/Pyotr_Murashev.dds"
+			}
+		}
+		social_liberalism = {
+				male = { 
+					"gfx/leaders/SIB/Pyotr_Murashev.dds"
+			}
+		}
+		authoritarism = {
+				male = { 
+					"gfx/leaders/generic_russia_9.dds"
+			}
+		}
+		despotism = {
+				male = { 
+					"gfx/leaders/generic_russia_8.dds"
+			}
+		}
+		fascism = {
+				male = { 
+					"gfx/leaders/generic_russia_8.dds"
+			}
+		}
+		national_syndicalism = {
+				male = { 
+					"gfx/leaders/generic_russia_8.dds"
+			}
+		}
+	}
+}
+
 PNT = {
 	army = {
 		male = {

@@ -332,10 +332,6 @@ give_military_access = RAJ
 
 
 create_country_leader = { name = "Tom Mann" desc = ENG_tom_mann_DESC picture = "gfx/leaders/ENG/Tom_Mann.dds" expire = "1935.1.1" ideology = stalinism traits = {  } }
-create_country_leader = { name = "Gilbert Elliot-Murray-Kynynmound" desc = ENG_Gilbert_Elliot_Murray_Kynynmound_DESC picture = "gfx/leaders/ENG/gilbert_elliot_murray_kynynmound.dds" expire = "1935.1.1" ideology = social_conservatism_ideology traits = {  } }
-create_country_leader = { name = "Charles Hardinge" desc = ENG_charles_hardinge_DESC picture = "gfx/leaders/ENG/Charles_Hardinge.dds" expire = "1935.1.1" ideology = social_conservatism_ideology traits = {  } }
-create_country_leader = { name = "Frederic Thesiger" desc = ENG_frederic_thesiger_DESC picture = "gfx/leaders/ENG/Frederic_Thesiger.dds" expire = "1935.1.1" ideology = social_conservatism_ideology traits = {  } }
-create_country_leader = { name = "Rufus Isaacs" desc = ENG_rufus_isaacs_DESC picture = "gfx/leaders/ENG/Rufus_Isaacs.dds" expire = "1935.1.1" ideology = social_conservatism_ideology traits = {  } }
 create_country_leader = { name = "David Lloyd George" desc = ENG_walter_davidson_DESC picture = "gfx/leaders/ENG/David_Lloyd_George.dds" expire = "1935.1.1" ideology = market_liberalism_ideology traits = {  } }
 create_country_leader = { name = "Edward VII" desc = ENG_edward_vii_DESC picture = "gfx/leaders/ENG/Edward_VII.dds" expire = "1935.1.1" ideology = social_conservatism_ideology traits = {  } }
 
@@ -354,7 +350,9 @@ create_corps_commander = {  name = "Julian Byng" id = 28016 portrait_path = "gfx
 create_corps_commander = {  name = "William Birdwood" id = 28017 portrait_path = "gfx/leaders/ENG/William_Riddell_Birdwood.dds" traits = { infantry_leader organizer trait_engineer hill_fighter } skill = 3 attack_skill = 3 defense_skill = 4 planning_skill = 2 logistics_skill = 3 }
 create_corps_commander = {  name = "William Dobbie" id = 28014 portrait_path = "gfx/leaders/ENG/Uilyam_Dobbi.dds" traits = { infantry_leader trait_cautious } skill = 3 attack_skill = 2 defense_skill = 1 planning_skill = 2 logistics_skill = 3 }
 create_corps_commander = {  name = "Percy Lake" portrait_path = "gfx/leaders/ENG/Percy_Henry_Noel_Lake.dds" traits = { organizer } skill = 2 attack_skill = 2 defense_skill = 2 planning_skill = 2 logistics_skill = 4 }
-create_corps_commander = {  name = "Henry Rawlinson" id = 28075 portrait_path = "gfx/leaders/ENG/Henry_Rawlinson.dds" traits = { fortress_buster } skill = 3 attack_skill = 3 defense_skill = 3 planning_skill = 3 logistics_skill = 2 }
+create_corps_commander = {  name = "Horace Smith-Dorrien" id = 28049 portrait_path = "gfx/leaders/ENG/Horace_Smith-Dorrien.dds" traits = { infantry_leader ranger war_hero } skill = 4 attack_skill = 3 defense_skill = 4 planning_skill = 4 logistics_skill = 3 }
+create_corps_commander = {  name = "Frederick Poole" id = 28077 portrait_path = "gfx/leaders/ENG/Frederick_Poole.dds" traits = { trait_cautious bearer_of_artillery } skill = 3 attack_skill = 2 defense_skill = 3 planning_skill = 2 logistics_skill = 1 }
+create_corps_commander = {  name = "Henry Rawlinson" id = 28075 portrait_path = "gfx/leaders/ENG/Henry_Rawlinson.dds" traits = { fortress_buster inflexible_strategist } skill = 3 attack_skill = 2 defense_skill = 2 planning_skill = 3 logistics_skill = 2 }
 
 create_navy_leader = {  name = "Bridgeman" id = 28329 portrait_path = "gfx/admiral/ENG_bridgeman.tga" traits = { superior_tactician  } skill = 3 }
 create_navy_leader = {  name = "Beatty" id = 28374 portrait_path = "gfx/admiral/ENG_beatty.tga" traits = { spotter  } skill = 3 }

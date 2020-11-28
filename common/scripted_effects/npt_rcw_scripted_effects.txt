@@ -112,7 +112,6 @@ remove_tsar_regime_unit_leaders = {
 				has_id = 77655
 				has_id = 77238
 				has_id = 77651
-				has_id = 77461
 			}
 		}
 		retire = yes
@@ -150,7 +149,7 @@ remove_tsar_regime_unit_leaders = {
 }
 remove_white_unit_leaders = {
 	remove_tsar_regime_unit_leaders = yes
-	every_unit_leader = { limit = { OR = { has_id = 76428 has_id = 76547 has_id = 76321 has_id = 77650 has_id = 77474 } } set_nationality = REB } #RVA
+	every_unit_leader = { limit = { OR = { has_id = 76428 has_id = 76547 has_id = 76321 has_id = 77650 } } set_nationality = REB } #RVA
 	every_unit_leader = { limit = { OR = { has_id = 18702 has_id = 18701 } } set_nationality = DON }
 	every_unit_leader = { limit = { has_id = 77400 } set_nationality = PRM }
 	every_unit_leader = { limit = { has_id = 88147 } set_nationality = CCA }
@@ -177,7 +176,6 @@ remove_white_unit_leaders = {
 	every_unit_leader = { limit = { has_id = 77652 } set_nationality = REB }
 	every_unit_leader = { limit = { has_id = 77417 } set_nationality = REB }
 	every_unit_leader = { limit = { has_id = 77648 } set_nationality = NRR }
-	every_unit_leader = { limit = { has_id = 77488 } set_nationality = UKR }
 	if = {
 		limit = { UKR = { exists = yes NOT = { has_government = radical_socialism has_government = communism } } }
 		every_unit_leader = { limit = { has_id = 77399 } set_nationality = UKR }

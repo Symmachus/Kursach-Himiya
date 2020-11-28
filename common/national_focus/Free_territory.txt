@@ -577,7 +577,6 @@
 		y = 4
 		completion_reward = {
 			add_ideas = RGR_consolidation_of_units_idea
-			create_corps_commander = { name = "Leontiy Khristovoy" id = 77459 portrait_path = "gfx/leaders/FRT/Leontiy_Khristovoy.dds" traits = { skilled_staffer organizer } skill = 2 attack_skill = 3 defense_skill = 2 planning_skill = 3 logistics_skill = 3 }
 			add_popularity = { ideology = national_syndicalism popularity = 0.05 }
 			custom_effect_tooltip = wartime_officers_rise_1_tt
 			hidden_effect = {
