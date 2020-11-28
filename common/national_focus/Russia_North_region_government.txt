@@ -2,10 +2,10 @@ focus_tree = {
 	id = Russia_North_region_government_focus
 	country = {
 		factor = 0
-		modifier = {
-			add = 10
-			tag = NRR
-		}
+		#modifier = {
+			#add = 10
+			#tag = NRR
+		#}
 	}
 	default = no
 
