@@ -34,7 +34,7 @@ focus_tree = {
 
 	focus = {
 		id = MCW_restore_the_okhranka
-		icon = GFX_goal_RVA_white_light
+		icon = GFX_goal_CCA_police
 		cost = 5
 		x = 8
 		y = 0
@@ -51,7 +51,7 @@ focus_tree = {
 	
 	focus = {
 		id = MCW_save_the_emperor
-		icon = GFX_goal_RVA_white_light
+		icon = GFX_goal_RUS_mobilization_of_monarchical_forces
 		cost = 1
 		available = {
 			NOT = { has_global_flag = RUS_civil_war_over }
@@ -76,7 +76,7 @@ focus_tree = {
 	
 	focus = {
 		id = MCW_repression_against_the_Bolsheviks
-		icon = GFX_goal_RVA_white_light
+		icon = GFX_goal_generic_war_with_comintern
 		cost = 5
 		x = 8
 		y = 1
@@ -92,7 +92,7 @@ focus_tree = {
 	
 	focus = {
 		id = MCW_pacify_kronstadt
-		icon = GFX_goal_RVA_white_light
+		icon = GFX_goal_generic_national_unity
 		cost = 1
 		available = {
 			controls_state = 860
@@ -104,15 +104,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_stability = 0.05
-			860 = {
-				add_manpower = -1500
-			}
+			add_political_power = -15			
 		}
 	}
 	
 	focus = {
 		id = MCW_pacify_petrograd
-		icon = GFX_goal_RVA_white_light
+		icon = GFX_goal_generic_national_unity
 		cost = 1
 		available = {
 			controls_state = 195
@@ -124,15 +122,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_stability = 0.05
-			195 = {
-				add_manpower = -1500
-			}
+			add_political_power = -15			
 		}
 	}
 	
 	focus = {
 		id = MCW_pacify_nizhny_novgorod
-		icon = GFX_goal_RVA_white_light
+		icon = GFX_goal_generic_national_unity
 		cost = 1
 		available = {
 			controls_state = 252
@@ -144,15 +140,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_stability = 0.05
-			252 = {
-				add_manpower = -1500
-			}
+			add_political_power = -15
 		}
 	}
 	
 	focus = {
 		id = MCW_pacify_central_russia
-		icon = GFX_goal_RVA_white_light
+		icon = GFX_goal_generic_national_unity
 		cost = 1
 		available = {
 			controls_state = 253
@@ -166,21 +160,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_stability = 0.1
-			253 = {
-				add_manpower = -1500
-			}
-			247 = {
-				add_manpower = -1500
-			}
-			223 = {
-				add_manpower = -1500
-			}
+            add_political_power = -45
 		}
 	}
 	
 	focus = {
 		id = MCW_collection_of_volunteers
-		icon = GFX_goal_RVA_white_light
+		icon = GFX_goal_CCA_mobilisation
 		cost = 5
 		x = 8
 		y = 2
@@ -189,12 +175,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_war_support = 0.1
-			REB = {
-				every_unit_leader = { limit = { OR = { has_id = 76836 } } set_nationality = MCW }
-				every_unit_leader = { limit = { OR = { has_id = 77712 } } set_nationality = MCW }
-				every_unit_leader = { limit = { OR = { has_id = 76696 } } set_nationality = MCW }
-				every_unit_leader = { limit = { OR = { has_id = 76187 } } set_nationality = MCW }
-			}
 			if = {
 				limit = { NWA = { exists = no } }
 				set_global_flag = NWA_creature_in_MCW
@@ -269,7 +249,7 @@ focus_tree = {
 	
 	focus = {
 		id = MCW_decimation_of_factories
-		icon = GFX_goal_RVA_white_light
+		icon = GFX_goal_law_and_order
 		cost = 5
 		x = 8
 		y = 3
@@ -288,7 +268,7 @@ focus_tree = {
 	
 	focus = {
 		id = MCW_punitive_expeditions_to_villages
-		icon = GFX_goal_RVA_white_light
+		icon = GFX_goal_purge_dissenters
 		cost = 5
 		x = 8
 		y = 4
@@ -308,7 +288,7 @@ focus_tree = {
 	
 	focus = {
 		id = MCW_restoration_of_the_pre-february_regime
-		icon = GFX_goal_RVA_white_light
+		icon = GFX_focus_generic_monarchy_2
 		cost = 5
 		x = 9
 		y = 5
@@ -329,7 +309,7 @@ focus_tree = {
 	
 	focus = {
 		id = MCW_reconstruction_of_absolutism
-		icon = GFX_goal_RVA_white_light
+		icon = GFX_focus_generic_monarchy_1
 		cost = 5
 		x = 7
 		y = 5
@@ -354,7 +334,7 @@ focus_tree = {
 	
 	focus = {
 		id = MCW_new_zubatovshchina
-		icon = GFX_goal_RVA_white_light
+		icon = GFX_goal_CCA_zybatovchina
 		cost = 5
 		x = 4
 		y = 6
@@ -399,7 +379,7 @@ focus_tree = {
 	
 	focus = {
 		id = MCW_education_audit
-		icon = GFX_goal_CCA_dwor
+		icon = GFX_goal_book
 		prerequisite = {
 			focus = MCW_new_feudal_lord
 		}
@@ -485,7 +465,7 @@ focus_tree = {
 	
 	focus = {
 		id = MCW_betray_the_SRs
-		icon = GFX_goal_RVA_white_light
+		icon = GFX_focus_generic_strike_at_democracy2
 		cost = 5
 		x = 10
 		y = 6
@@ -516,7 +496,7 @@ focus_tree = {
 	
 	focus = {
 		id = MCW_cosmetic_reforms_economy
-		icon = GFX_goal_RVA_white_light
+		icon = GFX_goal_generic_trade_gov_regulation
 		cost = 5
 		x = 12
 		y = 6
@@ -531,7 +511,7 @@ focus_tree = {
 	
 	focus = {
 		id = MCW_cosmetic_reforms_religion
-		icon = GFX_goal_RVA_white_light
+		icon = GFX_goal_orthodoxy
 		cost = 5
 		x = 12
 		y = 7
@@ -546,7 +526,7 @@ focus_tree = {
 	
 	focus = {
 		id = MCW_cosmetic_reforms_labor
-		icon = GFX_goal_RVA_white_light
+		icon = GFX_goal_generic_consumer_goods
 		cost = 5
 		x = 12
 		y = 8
@@ -561,7 +541,7 @@ focus_tree = {
 	
 	focus = {
 		id = MCW_restore_the_work_of_officers_schools
-		icon = GFX_goal_RVA_white_light
+		icon = GFX_focus_generic_military_academy
 		cost = 5
 		x = 8
 		y = 6
@@ -581,7 +561,7 @@ focus_tree = {
 	
 	focus = {
 		id = MCW_open_arsenals
-		icon = GFX_goal_RVA_white_light
+		icon = GFX_goal_generic_small_arms
 		cost = 5
 		x = 8
 		y = 7
@@ -619,7 +599,7 @@ focus_tree = {
 	
 	focus = {
 		id = MCW_restoration_of_guards_units
-		icon = GFX_goal_RVA_white_light
+		icon = GFX_goal_CCA_strikers
 		cost = 5
 		x = 7
 		y = 8
@@ -676,7 +656,7 @@ focus_tree = {
 	
 	focus = {
 		id = MCW_third_peoples_militia
-		icon = GFX_goal_RVA_white_light
+		icon = GFX_goal_CCA_vosstanie
 		cost = 5
 		x = 9
 		y = 8
@@ -741,7 +721,7 @@ focus_tree = {
 	
 	focus = {
 		id = MCW_wartime_officers
-		icon = GFX_goal_RVA_white_light
+		icon = GFX_goal_officers_command
 		cost = 5
 		x = 7
 		y = 9
@@ -761,7 +741,7 @@ focus_tree = {
 	
 	focus = {
 		id = MCW_religious_and_ideological_commissioners
-		icon = GFX_goal_RVA_white_light
+		icon = GFX_goal_generic_propaganda
 		cost = 5
 		available = {
 			has_completed_focus = MCW_reconstruction_of_absolutism
@@ -784,7 +764,7 @@ focus_tree = {
 	
 	focus = {
 		id = MCW_declare_the_government_legal
-		icon = GFX_goal_RVA_white_light
+		icon = GFX_goal_CCA_imperia
 		cost = 5
 		x = 8
 		y = 10
@@ -802,7 +782,7 @@ focus_tree = {
 	
 	focus = {
 		id = MCW_trudovaya_povinnost
-		icon = GFX_goal_RVA_white_light
+		icon = GFX_goal_generic_construct_civilian
 		cost = 5
 		x = 8
 		y = 11
@@ -817,7 +797,7 @@ focus_tree = {
 	
 	focus = {
 		id = MCW_victory_at_any_cost
-		icon = GFX_goal_RVA_white_light
+		icon = GFX_goal_military_government
 		cost = 5
 		x = 6
 		y = 11
@@ -858,7 +838,7 @@ focus_tree = {
 	
 	focus = {
 		id = MCW_defensive_detachments
-		icon = GFX_goal_RVA_white_light
+		icon = GFX_goal_CCA_strikers
 		cost = 5
 		x = 10
 		y = 11
@@ -873,7 +853,7 @@ focus_tree = {
 	
 	focus = {
 		id = MCW_last_offensive
-		icon = GFX_goal_RVA_white_light
+		icon = GFX_goal_SIB_antibolshevik_crusade
 		cost = 5
 		x = 8
 		y = 12

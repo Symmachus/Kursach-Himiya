@@ -1009,9 +1009,6 @@ country_event = {
 				active = yes
 			}
 		}
-		AZR = {
-			load_oob = AZR_1918
-		}
 		ai_chance = {
 			factor = 1
 		}

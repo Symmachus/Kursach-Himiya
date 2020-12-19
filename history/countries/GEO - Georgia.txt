@@ -134,10 +134,3 @@ set_research_slots = 2
 		air_defense = 1
 	}
 set_convoys = 10
-
-create_corps_commander = {  name = "Mazniashvili" id = 33002 portrait_path = "gfx/generals/GEO_mazniashvili.tga" traits = {   } skill = 2 }
-create_corps_commander = {  name = "Andronikashvili" id = 33003 portrait_path = "gfx/generals/GEO_andronikashvili.tga" traits = {   } skill = 2 }
-create_corps_commander = {  name = "Tsulukidze" id = 33004 portrait_path = "gfx/generals/GEO_tsulukidze.tga" traits = {   } skill = 2 }
-create_corps_commander = {  name = "Chkheidze" id = 33005 portrait_path = "gfx/generals/GEO_chkheidze.tga" traits = {   } skill = 2 }
-create_corps_commander = {  name = "Gardapkhadze" id = 33006 portrait_path = "gfx/generals/GEO_gardapkhadze.tga" traits = {   } skill = 2 }
-create_corps_commander = {  name = "Bakradze" id = 33007 portrait_path = "gfx/generals/GEO_bakradze.tga" traits = {   } skill = 2 }

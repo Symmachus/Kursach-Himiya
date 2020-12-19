@@ -338,8 +338,9 @@ country_event = {
 						state = 912
 						state = 924
 						state = 922
-						state = 955
 						state = 927
+						state = 1168
+						state = 1167						
 					}
 				}
 				LIT = { transfer_state = PREV }
@@ -386,8 +387,7 @@ country_event = {
 				add_ideas = MCW_false_republic
 			}
 		}
-		MCW = { load_focus_tree = generic_focus }
-		#MCW = { load_focus_tree = Russia_Muscovy_focus }
+		MCW = { load_focus_tree = Russia_Muscovy_focus }
 		MCW = {
 			add_ideas = {
 				Nikolay_Markov_1
@@ -409,6 +409,12 @@ country_event = {
 			country_event = { id = rcw_muscovy.7 days = 3 }
 			country_event = { id = rcw_muscovy.8 days = 13 random = 47 }
 		}
+		REB = {
+			every_unit_leader = { limit = { OR = { has_id = 76836 } } set_nationality = MCW }
+			every_unit_leader = { limit = { OR = { has_id = 77712 } } set_nationality = MCW }
+			every_unit_leader = { limit = { OR = { has_id = 76696 } } set_nationality = MCW }
+			every_unit_leader = { limit = { OR = { has_id = 76187 } } set_nationality = MCW }
+		}		
 		#every_country = {
 			#limit = { has_war_with = MCW }
 			#white_peace = MCW
@@ -432,8 +438,9 @@ country_event = {
 						state = 912
 						state = 924
 						state = 922
-						state = 955
 						state = 927
+						state = 1168
+						state = 1167						
 					}
 				}
 				LIT = { transfer_state = PREV }
@@ -480,8 +487,7 @@ country_event = {
 				add_ideas = MCW_false_republic
 			}
 		}
-		MCW = { load_focus_tree = generic_focus }
-		#MCW = { load_focus_tree = Russia_Muscovy_focus }
+		MCW = { load_focus_tree = Russia_Muscovy_focus }
 		MCW = {
 			add_ideas = {
 				Nikolay_Markov_1
@@ -503,6 +509,12 @@ country_event = {
 			country_event = { id = rcw_muscovy.7 days = 3 }
 			country_event = { id = rcw_muscovy.8 days = 13 random = 47 }
 		}
+		REB = {
+			every_unit_leader = { limit = { OR = { has_id = 76836 } } set_nationality = MCW }
+			every_unit_leader = { limit = { OR = { has_id = 77712 } } set_nationality = MCW }
+			every_unit_leader = { limit = { OR = { has_id = 76696 } } set_nationality = MCW }
+			every_unit_leader = { limit = { OR = { has_id = 76187 } } set_nationality = MCW }
+		}	
 		#every_country = {
 			#limit = { has_war_with = MCW }
 			#white_peace = MCW

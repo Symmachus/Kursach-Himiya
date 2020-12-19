@@ -8,7 +8,7 @@ create_country_leader = { name = "Hovhannes Kajaznuni" desc = ARM_Hovhannes_Kaja
 create_country_leader = { name = "Aram Manukyan" desc = ARM_Aram_Manukyan_DESC picture = "gfx/leaders/ARM/Aram_Manukyan.dds" expire = "1935.1.1" ideology = social_democracy_ideology traits = {  } }
 
 set_politics = {
-	ruling_party = social_democracy last_election = ""
+	ruling_party = social_democracy
 	election_frequency = 12 elections_allowed = no
 }
 
@@ -133,17 +133,3 @@ set_research_slots = 2
 		air_defense = 1
 	}
 set_convoys = 10
-create_corps_commander = {  name = "Nazarpekian" id = 4002 portrait_path = "gfx/generals/ARM_nazarpekian.tga" traits = {   } skill = 3 }
-create_corps_commander = {  name = "Tro" id = 4003 portrait_path = "gfx/generals/ARM_tro.tga" traits = {   } skill = 3 }
-create_corps_commander = {  name = "Siligian" id = 4004 portrait_path = "gfx/generals/ARM_siligian.tga" traits = {   } skill = 2 }
-create_corps_commander = {  name = "Aligian" id = 4005 portrait_path = "gfx/generals/ARM_aligian.tga" traits = {   } skill = 2 }
-create_corps_commander = {  name = "Araradian" id = 4006 portrait_path = "gfx/generals/ARM_araradian.tga" traits = {   } skill = 2 }
-create_corps_commander = {  name = "Ghorganian" id = 4007 portrait_path = "gfx/generals/ARM_ghorganian.tga" traits = {   } skill = 2 }
-create_corps_commander = {  name = "Hamazasb" id = 4008 portrait_path = "gfx/generals/ARM_hamazasb.tga" traits = {   } skill = 2 }
-create_corps_commander = {  name = "Shant" id = 4009 portrait_path = "gfx/generals/ARM_shant.tga" traits = {   } skill = 2 }
-create_corps_commander = {  name = "Kachaznouni" id = 4010 portrait_path = "gfx/generals/ARM_kachaznouni.tga" traits = {   } skill = 2 }
-create_corps_commander = {  name = "Hakhverdian" id = 4011 portrait_path = "gfx/generals/ARM_hakhverdian.tga" traits = {   } skill = 2 }
-create_corps_commander = {  name = "Hovsepian" id = 4012 portrait_path = "gfx/generals/ARM_hovsepian.tga" traits = {   } skill = 2 }
-create_corps_commander = {  name = "Kamazian" id = 4013 portrait_path = "gfx/generals/ARM_kamazian.tga" traits = {   } skill = 2 }
-create_corps_commander = {  name = "Antranik" id = 4014 portrait_path = "gfx/generals/ARM_antranik.tga" traits = {   } skill = 2 }
-create_corps_commander = {  name = "Piroumian" id = 4015 portrait_path = "gfx/generals/ARM_piroumian.tga" traits = {   } skill = 2 }

@@ -794,7 +794,10 @@ country_event = {
 					add_idea = RUS_collapse_of_railway_system_2
 				}
 			}
-			release = TAN
+			if = {
+				limit = { owns_state = 329 TAN = { exists = no } }
+				release = TAN
+			}
 		}
 	}
 	
@@ -825,6 +828,9 @@ country_event = {
 					state = 565
 					state = 644
 					state = 574
+					state = 1207
+					state = 1206
+					state = 1208					
 					
 					state = 516
 					state = 1043
@@ -841,10 +847,19 @@ country_event = {
 					state = 652
 					state = 651
 					state = 1025
+					state = 1072
+					state = 398
+					state = 581
+					state = 911
+					state = 653
+					state = 403
+					state = 580
+					state = 579					
 					
 					state = 583
 					state = 588
 					state = 590
+					state = 1102					
 				}
 			}
 			add_core_of = SIB
@@ -928,6 +943,9 @@ country_event = {
 					state = 565
 					state = 644
 					state = 574
+					state = 1207
+					state = 1206
+					state = 1208					
 					
 					state = 516
 					state = 1043
@@ -944,10 +962,19 @@ country_event = {
 					state = 652
 					state = 651
 					state = 1025
+					state = 1072
+					state = 398
+					state = 581
+					state = 911
+					state = 653
+					state = 403
+					state = 580
+					state = 579					
 					
 					state = 583
 					state = 588
 					state = 590
+					state = 1102					
 				}
 			}
 			add_core_of = SIB
@@ -1213,6 +1240,11 @@ country_event = {
 						state = 562
 						state = 1185
 						state = 1186
+						state = 1039
+						state = 1041
+						state = 1187
+						state = 1184
+						state = 1040					
 					}
 				}
 				SIB = { add_state_claim = PREV }
@@ -1438,6 +1470,11 @@ country_event = {
 						state = 562
 						state = 1185
 						state = 1186
+						state = 1039
+						state = 1041
+						state = 1187
+						state = 1184
+						state = 1040						
 					}
 				}
 				SIB = { add_state_claim = PREV }
@@ -1667,6 +1704,9 @@ country_event = {
 						state = 565
 						state = 644
 						state = 574
+						state = 1207
+						state = 1206
+						state = 1208						
 						
 						state = 516
 						state = 1043
@@ -1682,6 +1722,15 @@ country_event = {
 						state = 582
 						state = 652
 						state = 651
+						state = 1025
+						state = 1072
+						state = 398
+						state = 581
+						state = 911
+						state = 653
+						state = 403
+						state = 580
+						state = 579						
 					
 					state = 583
 					state = 588
@@ -1791,6 +1840,11 @@ country_event = {
 					state = 562
 					state = 1185
 					state = 1186
+					state = 1039
+					state = 1041
+					state = 1187
+					state = 1184
+					state = 1040					
 				}
 			}
 			SIB = { add_state_claim = PREV }
@@ -1983,14 +2037,17 @@ country_event = {
 						state = 654
 						state = 654
 						state = 909
-						
+					
 						state = 566
 						state = 575
 						state = 564
 						state = 565
 						state = 644
 						state = 574
-						
+						state = 1207
+						state = 1206
+						state = 1208
+					
 						state = 516
 						state = 1043
 						state = 567
@@ -2005,10 +2062,20 @@ country_event = {
 						state = 582
 						state = 652
 						state = 651
+						state = 1025
+						state = 1072
+						state = 398
+						state = 581
+						state = 911
+						state = 653
+						state = 403
+						state = 580
+						state = 579
 					
-					state = 583
-					state = 588
-					state = 590
+						state = 583
+						state = 588
+						state = 590
+						state = 1102
 					}
 				}
 				add_core_of = SIB

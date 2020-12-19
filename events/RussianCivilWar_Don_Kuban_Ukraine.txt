@@ -589,6 +589,7 @@ country_event = {
 		name = rcw_dku.7.a
 		set_politics = { ruling_party = authoritarism elections_allowed = no }
 		add_stability = 0.05
+		remove_country_leader_trait = frustrated		
 	}
 	option = {
 		trigger = { has_country_leader = { name = "Pyotr Krasnov" ruling_only = no } }
@@ -3566,7 +3567,6 @@ country_event = {
 	
 	option = {
 		name = rcw_dku.107.a
-		create_corps_commander = { name = "Mikhail Kvetsinskiy" id = 77472 portrait_path = "gfx/leaders/RUS/Mikhail_Kvetsinskiy.dds" traits = { trickster } skill = 2 attack_skill = 5 defense_skill = 4 planning_skill = 4 logistics_skill = 5 }
 		
 		add_war_support = 0.05
 		add_equipment_to_stockpile = { type = infantry_equipment_great_war amount = 1000 producer = RUS }
@@ -3641,21 +3641,11 @@ country_event = {
 country_event = {
 	id = rcw_dku.108
 	title = rcw_dku.108.t
-	desc = {
-		text = rcw_dku.108.desc
-		trigger = {
-			UKR = { NOT = { has_country_flag = UKR_nominal_uprising } }
-		}
-	}
-	desc = {
-		text = rcw_dku.108.desc_1
-		trigger = {
-			UKR = { has_country_flag = UKR_nominal_uprising }
-		}
-	}
+	desc = rcw_dku.108.desc
 	picture = GFX_report_event_rcw_rva
 	
 	trigger = {
+		UKR = { has_country_flag = UKR_nominal_uprising }	
 		NOT = { has_global_flag = RUS_civil_war_over }
 		NOT = { has_government = radical_socialism has_government = communism }
 		OR = {
@@ -3677,33 +3667,17 @@ country_event = {
 	
 	option = {
 		name = rcw_dku.108.a
-		if = {
-			limit = { UKR = { NOT = { has_country_flag = UKR_nominal_uprising } } }
-			if = {
-				limit = { REB = { has_unit_leader = 77473 } }
-				REB = { every_unit_leader = { limit = { OR = { has_id = 77473 } } set_nationality = ROOT } }
-			}
-			else = { create_corps_commander = { name = "Ignatiy Vasilchenko" id = 77473 portrait_path = "gfx/leaders/RUS/Ignatiy_Vasilchenko.dds" traits = { guerilla_fighter trait_reckless } skill = 1 attack_skill = 3 defense_skill = 3 planning_skill = 3 logistics_skill = 3 } }
-		}
-		else = {
-			REB = {
-				every_unit_leader = {
-					limit = {
-						OR = {
-							has_id = 77653
-							has_id = 77473
-							has_id = 77475
-							has_id = 77476
-							has_id = 77477
-							has_id = 77478
-							has_id = 77479
-							has_id = 77480
-							has_id = 77481
-							has_id = 77482
-						}
+		REB = {
+			every_unit_leader = {
+				limit = {
+					OR = {
+						has_id = 77653
+						has_id = 77476
+						has_id = 77477
+						has_id = 77482
 					}
-					set_nationality = ROOT
 				}
+				set_nationality = ROOT
 			}
 		}
 		

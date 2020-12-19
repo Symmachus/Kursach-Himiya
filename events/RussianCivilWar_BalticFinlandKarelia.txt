@@ -838,6 +838,7 @@ country_event = {
 		tag = LAT
 		has_country_flag = LAT_civil
 		has_civil_war = no
+		NOT = { has_global_flag = WVA_creature_in_MCW }		
 	}
 	
 	fire_only_once = yes
@@ -1843,6 +1844,7 @@ country_event = {
 		RUS = { has_country_flag = RUS_brest_peace_fired }
 		NOT = { has_war_with = RUS }
 		NOT = { has_war_with = UBD }
+		NOT = { has_global_flag = NWA_creature_in_MCW }		
 	}
 	
 	mean_time_to_happen = {
@@ -3209,7 +3211,6 @@ country_event = {
 						owner = PREV
 					}
 				}
-				create_corps_commander = { name = "Nikolay Neklyudov" id = 77468 portrait_path = "gfx/leaders/RUS/Nikolay_Neklyudov.dds" traits = { guerilla_fighter trait_reckless } skill = 1 attack_skill = 3 defense_skill = 3 planning_skill = 3 logistics_skill = 3 }
 				country_event = rcw_bfk.126
 			}
 		}
@@ -3235,7 +3236,6 @@ country_event = {
 						owner = PREV
 					}
 				}
-				create_corps_commander = { name = "Nikolay Neklyudov" id = 77468 portrait_path = "gfx/leaders/RUS/Nikolay_Neklyudov.dds" traits = { guerilla_fighter trait_reckless } skill = 1 attack_skill = 3 defense_skill = 3 planning_skill = 3 logistics_skill = 3 }
 				country_event = rcw_bfk.126
 			}
 		}

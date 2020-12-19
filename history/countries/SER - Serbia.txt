@@ -155,26 +155,9 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Petar I Karađorđević"
-	desc = SER_Peter_I_Karadjordjevic_DESC
-	picture = "gfx/leaders/SER/Peter_I_Karadjordjevic.dds"
-	expire = "1935.1.1"
-	ideology = social_liberalism_ideology
-	traits = {  }
-}
-
-create_country_leader = {
 	name = "Ljubomir Davidović"
 	desc = SER_Ljubomir_Davidovic_DESC
 	picture = "gfx/leaders/SER/Ljubomir_Davidovic.dds"
-	expire = "1935.1.1"
-	ideology = market_liberalism_ideology
-	traits = {  }
-}
-create_country_leader = {
-	name = "Petar I Karađorđević"
-	desc = SER_Peter_I_Karadjordjevic_DESC
-	picture = "gfx/leaders/SER/Peter_I_Karadjordjevic.dds"
 	expire = "1935.1.1"
 	ideology = market_liberalism_ideology
 	traits = {  }
@@ -184,14 +167,6 @@ create_country_leader = {
 	name = "Nikola Pašić"
 	desc = SER_Nikola_Pasic_DESC
 	picture = "gfx/leaders/SER/Nikola_Pasic.dds"
-	expire = "1935.1.1"
-	ideology = social_conservatism_ideology
-	traits = {  }
-}
-create_country_leader = {
-	name = "Petar I Karađorđević"
-	desc = SER_Peter_I_Karadjordjevic_DESC
-	picture = "gfx/leaders/SER/Peter_I_Karadjordjevic.dds"
 	expire = "1935.1.1"
 	ideology = social_conservatism_ideology
 	traits = {  }
@@ -226,16 +201,16 @@ add_ideas = {
 	cities_low_literacy
 }
 set_politics = {
-	ruling_party = social_conservatism
+	ruling_party = authoritarism
 	last_election = "1908.5.31"
 	election_frequency = 36
 	elections_allowed = yes
 }
 set_popularities = {
-	social_conservatism = 78
+	social_conservatism = 12
 	fascism = 2
 	communism = 8
-	authoritarism = 12
+	authoritarism = 78
 }
 
 create_field_marshal = {
@@ -312,16 +287,16 @@ add_ideas = {
 
 1914.1.1 = {
 	set_politics = {
-		ruling_party = social_conservatism
+		ruling_party = authoritarism
 		last_election = "1911.5.31"
 		election_frequency = 36
 		elections_allowed = yes
 	}
 	set_popularities = {
-		social_conservatism = 78
+		social_conservatism = 12
 		fascism = 2
 		communism = 8
-		authoritarism = 12
+		authoritarism = 78
 	}
 }
 1914.8.1 = {
@@ -336,14 +311,14 @@ add_ideas = {
 	oob = "SER_1917"
 
 	set_politics = {
-		ruling_party = social_conservatism last_election = "1911.5.31"
+		ruling_party = authoritarism last_election = "1911.5.31"
 		election_frequency = 36 elections_allowed = yes
 	}
 	set_popularities = {
-		social_conservatism = 78
+		social_conservatism = 12
 		fascism = 2
 		communism = 8
-		authoritarism = 12
+		authoritarism = 78
 	}
 	add_ideas = nation_in_exile_idea
 	add_ideas = {
