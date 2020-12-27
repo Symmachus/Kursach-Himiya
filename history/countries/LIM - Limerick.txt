@@ -128,7 +128,7 @@ set_research_slots = 2
 	    cities_low_literacy
     }
 
-	set_politics = { ruling_party = communism last_election = "1918.12.14" election_frequency = 48 elections_allowed = no } set_popularities = { communism = 100 }
+	set_politics = { ruling_party = radical_socialism last_election = "1918.12.14" election_frequency = 48 elections_allowed = no } set_popularities = { radical_socialism = 100 }
 
 	add_ideas = {
 		limited_conscription
