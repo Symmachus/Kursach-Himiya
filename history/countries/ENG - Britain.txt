@@ -354,15 +354,6 @@ create_corps_commander = {  name = "Horace Smith-Dorrien" id = 28049 portrait_pa
 create_corps_commander = {  name = "Frederick Poole" id = 28077 portrait_path = "gfx/leaders/ENG/Frederick_Poole.dds" traits = { trait_cautious bearer_of_artillery } skill = 3 attack_skill = 2 defense_skill = 3 planning_skill = 2 logistics_skill = 1 }
 create_corps_commander = {  name = "Henry Rawlinson" id = 28075 portrait_path = "gfx/leaders/ENG/Henry_Rawlinson.dds" traits = { fortress_buster inflexible_strategist } skill = 3 attack_skill = 2 defense_skill = 2 planning_skill = 3 logistics_skill = 2 }
 
-create_navy_leader = {  name = "Bridgeman" id = 28329 portrait_path = "gfx/admiral/ENG_bridgeman.tga" traits = { superior_tactician  } skill = 3 }
-create_navy_leader = {  name = "Beatty" id = 28374 portrait_path = "gfx/admiral/ENG_beatty.tga" traits = { spotter  } skill = 3 }
-create_navy_leader = {  name = "Jellicoe" id = 28376 portrait_path = "gfx/admiral/ENG_jellicoe.tga" traits = { superior_tactician  } skill = 4 }
-create_navy_leader = {  name = "Egerton" id = 28384 portrait_path = "gfx/admiral/ENG_egerton.tga" traits = { old_guard  } skill = 3 }
-create_navy_leader = {  name = "Pakenham" id = 28394 portrait_path = "gfx/admiral/ENG_pakenham.tga" traits = { superior_tactician  } skill = 4 }
-create_navy_leader = {  name = "Goodenough" id = 28447 portrait_path = "gfx/admiral/ENG_goodenough.tga" traits = { spotter  } skill = 2 }
-create_navy_leader = {  name = "Keyes" id = 28461 portrait_path = "gfx/admiral/ENG_keyes.tga" traits = { spotter  } skill = 4 }
-create_navy_leader = {  name = "Tyrwhitt" id = 28485 portrait_path = "gfx/admiral/ENG_tyrwhitt.tga" traits = { superior_tactician spotter } skill = 3 }
-
 create_operative_leader = {
 	name = "Sidney Reilly"
 	GFX = GFX_portrait_eng_sidney_reilly

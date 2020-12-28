@@ -285,15 +285,7 @@ create_corps_commander = { name = "Rudiger von der Goltz" id = 88169 portrait_pa
 create_corps_commander = {  name = "Karl von Einem" id = 34043 portrait_path = "gfx/leaders/GER/Karl_von_Einem.dds" traits = { fortress_buster bearer_of_artillery } skill = 3 attack_skill = 2 defense_skill = 2 planning_skill = 3 logistics_skill = 4 }
 
 #NAVY
-create_navy_leader = {  name = "Franz von Hipper" id = 34055 portrait_path = "gfx/admiral/GER_hipper.dds" traits = { spotter  } skill = 4 }
-create_navy_leader = {  name = "Reinhard Scheer" id = 34053 portrait_path = "gfx/admiral/GER_scheer.dds" traits = { superior_tactician  } skill = 4 }
-create_navy_leader = {  name = "Lothar von Arnauld de la Perière" id = 34226 portrait_path = "gfx/admiral/GER_von_arnauld_de_la_periere.dds" traits = { seawolf  } skill = 4 }
-create_navy_leader = {  name = "Karl von Müller" id = 34228 portrait_path = "gfx/admiral/GER_von_muller_k.dds" traits = {   } skill = 4 }
-create_navy_leader = {  name = "Alfred von Tirpitz" id = 34298 portrait_path = "gfx/leaders/GER/Alfred_Tirpitz.dds" traits = { spotter  } skill = 3 }
-create_navy_leader = {  name = "Curt von Prittwitz und Gaffron" id = 34306 portrait_path = "gfx/admiral/GER_von_prittwitz_boc.dds" traits = {   } skill = 3 }
-create_navy_leader = {  name = "Henning von Holtzendorff" id = 34312 portrait_path = "gfx/admiral/GER_von_holtzendorff.dds" traits = { blockade_runner  } skill = 3 }
-create_navy_leader = {  name = "Friedrich Graf von Baudissin" id = 34313 portrait_path = "gfx/admiral/GER_von_baudissin.dds" traits = {   } skill = 3 }
-create_navy_leader = {  name = "Max von Fischel" id = 34314 portrait_path = "gfx/admiral/GER_von_fischel.dds" traits = {   } skill = 3 }
+create_navy_leader = {  name = "Alfred von Tirpitz" id = 34298 portrait_path = "gfx/leaders/GER/Alfred_Tirpitz.dds" traits = { navy_media_personality naval_lineage superior_tactician } skill = 3 attack_skill = 3 defense_skill = 4 maneuvering_skill = 3 coordination_skill = 4 }
 
 add_ideas = {
 	#general_staff

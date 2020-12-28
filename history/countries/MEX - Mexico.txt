@@ -19,9 +19,7 @@ set_country_flag = monroe_doctrine
 							picture = "gfx/leaders/MEX/Francisco_Barra.dds" expire = "1935.1.1" ideology = social_conservatism_ideology traits = {  } }							
 
 	create_country_leader = { name = "Pancho Villa" desc = MEX_pancho_villa_DESC
-							picture = "gfx/leaders/MEX/Pancho_Villa.dds" expire = "1935.1.1" ideology = falangism traits = {  } }
-							
-	create_field_marshal = {  name = "Pancho Villa"  portrait_path = "gfx/leaders/MEX/Pancho_Villa.dds" traits = { media_personality logistics_wizard offensive_doctrine inspirational_leader fast_planner } skill =  4 attack_skill = 5 defense_skill = 3 planning_skill = 4 logistics_skill = 4 }							
+							picture = "gfx/leaders/MEX/Pancho_Villa.dds" expire = "1935.1.1" ideology = falangism traits = {  } }						
 
 	#-------------------------------------------------------
 

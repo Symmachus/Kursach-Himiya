@@ -8852,6 +8852,8 @@ country_event = {
 			create_corps_commander = { name = "Alexandr Kaygorodov" id = 77447 portrait_path = "gfx/leaders/RUS/Alexandr_Kaygorodov.dds" traits = { trickster guerilla_fighter career_officer cavalry_officer } skill = 2 attack_skill = 2 defense_skill = 2 planning_skill = 1 logistics_skill = 1 }
 			create_corps_commander = { name = "Boris Rezukhin" id = 77448 portrait_path = "gfx/leaders/RUS/Boris_Rezukhin.dds" traits = { harsh_leader politically_connected } skill = 2 attack_skill = 1 defense_skill = 2 planning_skill = 1 logistics_skill = 1 }
 			create_corps_commander = { name = "Nikolay Kazagrandi" id = 77449 portrait_path = "gfx/leaders/RUS/Nikolay_Kazagrandi.dds" traits = { infantry_officer organizer ranger } skill = 2 attack_skill = 3 defense_skill = 2 planning_skill = 2 logistics_skill = 2 }
+			create_corps_commander = { name = "Damdin Sükhbaatar" portrait_path = "gfx/leaders/MON/Damdin_Sukhbaataar.dds" traits = { } skill = 1 attack_skill = 1 defense_skill = 2 planning_skill = 2 logistics_skill = 2 }
+			create_corps_commander = { name = "Khatanbaatar Magsarjav" portrait_path = "gfx/leaders/MON/Khatanbaatar_Magsarjav.dds" traits = { } skill = 2 attack_skill = 3 defense_skill = 1 planning_skill = 2 logistics_skill = 1 }			
 		}
 		random_other_country = {
 			limit = { original_tag = MON has_government = despotism }
@@ -8885,7 +8887,9 @@ country_event = {
 			load_oob = MON_Ungern
 			create_corps_commander = { name = "Alexandr Kaygorodov" portrait_path = "gfx/leaders/RUS/Alexandr_Kaygorodov.dds" traits = { trickster guerilla_fighter career_officer cavalry_officer } skill = 2 attack_skill = 2 defense_skill = 2 planning_skill = 1 logistics_skill = 1 }
 			create_corps_commander = { name = "Boris Rezukhin" portrait_path = "gfx/leaders/RUS/Boris_Rezukhin.dds" traits = { harsh_leader politically_connected } skill = 2 attack_skill = 1 defense_skill = 2 planning_skill = 1 logistics_skill = 1 }
-			create_corps_commander = { name = "Nikolay Kazagrandi" portrait_path = "gfx/leaders/RUS/Nikolay_Kazagrandi.dds" traits = { infantry_officer organizer ranger } skill = 2 attack_skill = 3 defense_skill = 2 planning_skill = 2 logistics_skill = 2 }
+			create_corps_commander = { name = "Damdin Sükhbaatar" portrait_path = "gfx/leaders/MON/Damdin_Sukhbaataar.dds" traits = { } skill = 1 attack_skill = 1 defense_skill = 2 planning_skill = 2 logistics_skill = 2 }
+			create_corps_commander = { name = "Khatanbaatar Magsarjav" portrait_path = "gfx/leaders/MON/Khatanbaatar_Magsarjav.dds" traits = { } skill = 2 attack_skill = 3 defense_skill = 1 planning_skill = 2 logistics_skill = 1 }			
+
 		}
 		random_other_country = {
 			limit = { original_tag = MON has_government = despotism }

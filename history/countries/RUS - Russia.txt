@@ -247,6 +247,7 @@ create_field_marshal = {  name = "Alexey Brusilov" id = 76187 portrait_path = "g
 create_field_marshal = {  name = "Mikhail Alexeev" id = 76321 portrait_path = "gfx/leaders/RUS/Mikhail_Alexeev.dds" traits = { brilliant_strategist thorough_planner war_hero expert_delegator trait_reckless } skill = 5 attack_skill = 5 defense_skill = 5 planning_skill = 5 logistics_skill = 3 }
 create_field_marshal = {  name = "Nikolay Nikolaevich Romanov" id = 76836 portrait_path = "gfx/leaders/RUS/Grand_duke_Nikolay_Nikolaevich.dds" traits = { politically_connected organisational_leader war_hero offensive_doctrine } skill = 4 attack_skill = 4 defense_skill = 4 planning_skill = 4 logistics_skill = 5 }
 create_field_marshal = {  name = "Nikolay Ruzsky" id = 76837 portrait_path = "gfx/leaders/RUS/Nikolay_Ruzsky.dds" traits = { war_hero politically_connected defensive_doctrine inflexible_strategist } skill = 3 attack_skill = 4 defense_skill = 5 planning_skill = 4 logistics_skill = 4 }
+create_field_marshal = {  name = "Vladimir Sukhomlinov" id = 77651 portrait_path = "gfx/leaders/RUS/Vladimir_Sukhomlinov.dds" traits = { war_hero cavalry_leader fast_planner } skill = 3 attack_skill = 3 defense_skill = 2 planning_skill = 4 logistics_skill = 2  }
 
 create_corps_commander = { name = "Dmitriy Shcherbachev" id = 77298 portrait_path = "gfx/leaders/RUS/Dmitriy_Scherbachev.dds" traits = { brilliant_strategist organizer } skill = 3 attack_skill = 3 defense_skill = 4 planning_skill = 3 logistics_skill = 4 }
 create_corps_commander = { name = "Anton Denikin" id = 76428 portrait_path = "gfx/leaders/RUS/Anton_Denikin.dds" traits = { infantry_officer infantry_leader adaptable fortress_buster } skill = 3 attack_skill = 5 defense_skill = 5 planning_skill = 5 logistics_skill = 4 }
@@ -277,14 +278,10 @@ create_corps_commander = { name = "Radko Ruskov-Dimitriev" id = 77417 portrait_p
 create_corps_commander = {  name = "Nikolay Dukhonin" id = 77407 portrait_path = "gfx/leaders/RUS/Nikolay_Dukhonin.dds" traits = { organizer infantry_leader ranger adaptable } skill = 3 attack_skill = 4 defense_skill = 2 planning_skill = 2 logistics_skill = 3 }
 
 #NAVY
-create_navy_leader = { name = "Alexandr Kolchak" id = 76649 portrait_path = "gfx/leaders/RUS/Alexandr_Kolchak.dds" traits = { blockade_runner superior_tactician spotter } skill = 4 }
-create_navy_leader = { name = "Evgeniy Alekseyev" id = 77234 portrait_path = "gfx/leaders/RUS/Evgeniy_Alekseyev.dds" traits = { superior_tactician old_guard_navy } skill = 3 }
-create_navy_leader = { name = "Andrey Eberhard" id = 76323 portrait_path = "gfx/leaders/RUS/Andrey_Ebergard.dds" traits = { ironside } skill = 3 }
-create_navy_leader = { name = "Alexandr Mikhailovich Romanov" id = 76455 portrait_path = "gfx/leaders/RUS/Grand_duke_Alexandr_Mikhailovich.dds" traits = { ironside superior_tactician spotter } skill = 5 }
-create_navy_leader = { name = "Alexandr Rusin" id = 77235 portrait_path = "gfx/leaders/RUS/Alexandr_Rusin.dds" traits = { ironside superior_tactician } skill = 3 }
-create_navy_leader = { name = "Vasiliy Altfater" id = 77236 portrait_path = "gfx/leaders/RUS/Vasili_Altfater.dds" traits = { } skill = 3 }
-create_navy_leader = { name = "Vasiliy Kanin" id = 77237 portrait_path = "gfx/leaders/RUS/Vasili_Kanin.dds" traits = { superior_tactician } skill = 3 }
-create_navy_leader = { name = "Adrian Nepenin" id = 77238 portrait_path = "gfx/leaders/RUS/Adrian_Nepenin.dds" traits = { superior_tactician blockade_runner spotter } skill = 4 }
+create_navy_leader = { name = "Alexandr Kolchak" id = 76649 portrait_path = "gfx/leaders/RUS/Alexandr_Kolchak.dds" traits = { gentlemanly blockade_runner superior_tactician spotter } skill = 4 attack_skill = 3 defense_skill = 4 maneuvering_skill = 5 coordination_skill = 3 }
+create_navy_leader = { name = "Andrey Eberhard" id = 76323 portrait_path = "gfx/leaders/RUS/Andrey_Ebergard.dds" traits = { ironside battleship_adherent } skill = 3 attack_skill = 3 defense_skill = 3 maneuvering_skill = 2 coordination_skill = 4 }
+create_navy_leader = { name = "Alexandr Mikhailovich Romanov" id = 76455 portrait_path = "gfx/leaders/RUS/Grand_duke_Alexandr_Mikhailovich.dds" traits = { navy_media_personality ironside superior_tactician spotter } skill = 5 attack_skill = 5 defense_skill = 2 maneuvering_skill = 2 coordination_skill = 4 }
+create_navy_leader = { name = "Adrian Nepenin" id = 77238 portrait_path = "gfx/leaders/RUS/Adrian_Nepenin.dds" traits = { bold superior_tactician blockade_runner spotter } skill = 4 attack_skill = 3 defense_skill = 4 maneuvering_skill = 2 coordination_skill = 4 }
 
 set_politics = {
 	ruling_party = authoritarism

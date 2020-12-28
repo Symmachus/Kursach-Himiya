@@ -8,9 +8,6 @@ set_convoys = 1
 
 create_country_leader = { name = "Bogdo-gegen VIII" desc = MON_bogd_khan_DESC picture = "gfx/leaders/MON/Bogdo-gegen VIII.dds" expire = "1935.1.1" ideology = authoritarism_ideology traits = {  } }
 create_country_leader = { name = "Xu Shuzheng" desc = MON_Chu_Jijiang_DESC picture = "gfx/leaders/CHI/Xu_Shuzheng.dds" expire = "1935.1.1" ideology = despotism_ideology traits = { dictator warmonger } }
-create_corps_commander = {  name = "Damdin Sükhbaatar" id = 56002 portrait_path = "gfx/leaders/MON/Damdin_Sukhbaataar.dds" traits = { } skill = 1 attack_skill = 1 defense_skill = 2 planning_skill = 2 logistics_skill = 2 }
-create_corps_commander = {  name = "Khatanbaatar Magsarjav" id = 56003 portrait_path = "gfx/leaders/MON/Khatanbaatar_Magsarjav.dds" traits = { } skill = 1 attack_skill = 3 defense_skill = 1 planning_skill = 2 logistics_skill = 1 }
-
 
 	set_technology = {
 

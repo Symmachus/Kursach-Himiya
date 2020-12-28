@@ -486,8 +486,8 @@
  FRA_communism_party_long:0 "Французская секция Рабочего Интернационала (левое крыло)"
  FRA_social_democracy_party:0 "РСП" #P. républicain-socialiste
  FRA_social_democracy_party_long:0 "Республиканско-социалистическая партия"
- FRA_social_liberalism_party:0 "РРРСП" #PRRRS
- FRA_social_liberalism_party_long:0 "Республиканская, радикальная и радикально-социалистическая партия"
+ FRA_social_liberalism_party:0 "Независимые радикалы" #Radicaux indépendants
+ FRA_social_liberalism_party_long:0 "Независимые радикалы"
  FRA_market_liberalism_party:0 "ПРД" #P. républicain démocratique
  FRA_market_liberalism_party_long:0 "Партия республиканских демократов"
  FRA_social_conservatism_party:0 "Республиканская федерация" #Fédération républicaine

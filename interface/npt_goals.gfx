@@ -2156,6 +2156,10 @@ spriteTypes = {
 		name = "GFX_goal_risky_deal"
 		texturefile = "gfx/interface/goals/goal_risky_deal.dds"
 	}
+	SpriteType = {
+		name = "GFX_goal_MCW_save_the_emperor"
+		texturefile = "gfx/interface/goals/goal_MCW_save_the_emperor.dds"
+	}	
 	
 
 }

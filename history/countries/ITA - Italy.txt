@@ -236,11 +236,6 @@ create_corps_commander = {  name = "Emanuele Filiberto di Savoia" id = 46076 por
 create_corps_commander = {  name = "Gaetano Giardino" id = 46077 portrait_path = "gfx/leaders/ITA/Gaetano_Giardino.dds" traits = { infantry_expert trait_mountaineer } skill = 3 attack_skill = 3 defense_skill = 3 planning_skill = 2 logistics_skill = 3 }
 
 
-
-create_navy_leader = {  name = "Luigi Amedeo" id = 46001 portrait_path = "gfx/hoi4tgw_portraits/ITA/navy_admirals/ITA_duca_degli_abruzzi.tga" traits = {   } skill = 2 }
-#create_navy_leader = {  name = "Thaon di Revel" id = 46075 portrait_path = "gfx/hoi4tgw_portraits/ITA/navy_admirals/ITA_thaon_di_revel.tga" traits = {   } skill = 2 }
-
-
 add_ideas = {
 	export_focus
 	limited_conscription
